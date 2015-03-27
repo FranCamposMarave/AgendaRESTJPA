@@ -1,0 +1,46 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="G03RarNaturAdventure:war exploded">
+    <output-path>$PROJECT_DIR$/target/Agenda</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="G03RarNaturAdventure" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: es.uji:GeneradorNombres:0.0.1" />
+          <element id="library" level="project" name="Maven: junit:junit:4.11" />
+          <element id="library" level="project" name="Maven: org.mockito:mockito-core:1.10.8" />
+          <element id="library" level="project" name="Maven: org.objenesis:objenesis:2.1" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.33" />
+          <element id="library" level="project" name="Maven: org.apache.derby:derby:10.11.1.1" />
+          <element id="library" level="project" name="Maven: info.cukes:cucumber-junit:1.2.0" />
+          <element id="library" level="project" name="Maven: info.cukes:cucumber-core:1.2.0" />
+          <element id="library" level="project" name="Maven: info.cukes:cucumber-html:0.2.3" />
+          <element id="library" level="project" name="Maven: info.cukes:cucumber-jvm-deps:1.0.3" />
+          <element id="library" level="project" name="Maven: info.cukes:gherkin:2.12.2" />
+          <element id="library" level="project" name="Maven: info.cukes:cucumber-java:1.2.0" />
+          <element id="library" level="project" name="Maven: org.seleniumhq.selenium:selenium-firefox-driver:2.45.0" />
+          <element id="library" level="project" name="Maven: org.seleniumhq.selenium:selenium-remote-driver:2.45.0" />
+          <element id="library" level="project" name="Maven: cglib:cglib-nodep:2.1_3" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.3.1" />
+          <element id="library" level="project" name="Maven: org.seleniumhq.selenium:selenium-api:2.45.0" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.3.6" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.3.3" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.6" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:18.0" />
+          <element id="library" level="project" name="Maven: net.java.dev.jna:jna:3.4.0" />
+          <element id="library" level="project" name="Maven: net.java.dev.jna:platform:3.4.0" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-exec:1.1" />
+          <element id="library" level="project" name="Maven: org.seleniumhq.selenium:selenium-chrome-driver:2.45.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="G03RarNaturAdventure/web/Web" />
+    </root>
+  </artifact>
+</component>
