@@ -4,7 +4,7 @@
         jdbcUrl = jdbc:mysql://localhost:3306/test
         jtaManaged = true
         userName = root
-        password = root
+        password = cuatroochenta
     </Resource>
 
     <Resource id="derbyDataSource" type="DataSource">

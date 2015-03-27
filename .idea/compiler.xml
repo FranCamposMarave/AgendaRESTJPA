@@ -24,10 +24,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="AgendaRESTJPA" />
+        <module name="G03RarNaturAdventure" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AgendaRESTJPA" target="1.7" />
+      <module name="G03RarNaturAdventure" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

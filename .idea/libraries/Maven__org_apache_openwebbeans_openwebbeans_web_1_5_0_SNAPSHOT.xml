@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.apache.openwebbeans:openwebbeans-web:1.5.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openwebbeans/openwebbeans-web/1.5.0-SNAPSHOT/openwebbeans-web-1.5.0-20150214.141255-47.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openwebbeans/openwebbeans-web/1.5.0-SNAPSHOT/openwebbeans-web-1.5.0-20150327.083158-61.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openwebbeans/openwebbeans-web/1.5.0-SNAPSHOT/openwebbeans-web-1.5.0-20150214.141255-47-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openwebbeans/openwebbeans-web/1.5.0-SNAPSHOT/openwebbeans-web-1.5.0-20150327.083158-61-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openwebbeans/openwebbeans-web/1.5.0-SNAPSHOT/openwebbeans-web-1.5.0-20150214.141255-47-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openwebbeans/openwebbeans-web/1.5.0-SNAPSHOT/openwebbeans-web-1.5.0-20150327.083158-61-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

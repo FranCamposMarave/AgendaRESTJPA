@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.apache.openejb:openejb-cxf-rs:5.0.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openejb/openejb-cxf-rs/5.0.0-SNAPSHOT/openejb-cxf-rs-5.0.0-20150303.040749-224.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openejb/openejb-cxf-rs/5.0.0-SNAPSHOT/openejb-cxf-rs-5.0.0-20150327.040703-248.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openejb/openejb-cxf-rs/5.0.0-SNAPSHOT/openejb-cxf-rs-5.0.0-20150303.040749-224-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openejb/openejb-cxf-rs/5.0.0-SNAPSHOT/openejb-cxf-rs-5.0.0-20150327.040703-248-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openejb/openejb-cxf-rs/5.0.0-SNAPSHOT/openejb-cxf-rs-5.0.0-20150303.040749-224-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openejb/openejb-cxf-rs/5.0.0-SNAPSHOT/openejb-cxf-rs-5.0.0-20150327.040703-248-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
