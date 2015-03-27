@@ -18,7 +18,7 @@ import java.net.URI;
  */
 @Path("personas")
 @Stateless
-public class PersonaServicios {
+public class PersonaServicios {//pi
     @Inject
 //    PersonaDAO personaDAO;
     PersonaJPA personaDAO;
