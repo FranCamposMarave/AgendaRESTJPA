@@ -17,7 +17,7 @@ import javax.ws.rs.core.Response;
 @Path("crea")
 @Stateless
 public class CreaPersonas {
-    private GeneradorDatosINE generador = new GeneradorDatosINE();
+    private GeneradorDatosINE generador = new GeneradorDatosINE(); // HOSTIA *PUTA
     @Inject
 //    private BaseDatos  bd;
     private PersonaJPA personaDAO;
