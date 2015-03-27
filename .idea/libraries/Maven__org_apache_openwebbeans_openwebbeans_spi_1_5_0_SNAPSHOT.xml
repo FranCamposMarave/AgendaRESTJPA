@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.openwebbeans:openwebbeans-spi:1.5.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openwebbeans/openwebbeans-spi/1.5.0-SNAPSHOT/openwebbeans-spi-1.5.0-20150214.141255-47.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openwebbeans/openwebbeans-spi/1.5.0-SNAPSHOT/openwebbeans-spi-1.5.0-20150214.141255-47-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openwebbeans/openwebbeans-spi/1.5.0-SNAPSHOT/openwebbeans-spi-1.5.0-20150214.141255-47-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

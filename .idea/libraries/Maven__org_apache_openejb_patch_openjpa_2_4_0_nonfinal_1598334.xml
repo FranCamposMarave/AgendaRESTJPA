@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.openejb.patch:openjpa:2.4.0-nonfinal-1598334">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openejb/patch/openjpa/2.4.0-nonfinal-1598334/openjpa-2.4.0-nonfinal-1598334.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openejb/patch/openjpa/2.4.0-nonfinal-1598334/openjpa-2.4.0-nonfinal-1598334-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/openejb/patch/openjpa/2.4.0-nonfinal-1598334/openjpa-2.4.0-nonfinal-1598334-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
