@@ -1,4 +1,4 @@
-package modelo.datos;
+package model.entities;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -8,13 +8,11 @@ import javax.xml.bind.annotation.XmlTransient;
  * Created by oscar on 27/11/14.
  */
 @XmlRootElement
-//@XmlType(propOrder = {"title", "description"})
 @Entity
 @NamedQueries({
-        @NamedQuery(name="Actividad.encuentraTodas", query = "SELECT a FROM Actividad a"),
-        @NamedQuery(name="Actividad.encuentraTodass", query = "SELECT a FROM Actividad a")
+        @NamedQuery(name="Activity.getAll", query = "SELECT a FROM Activity a"),
 })
-public class Actividad {
+public class Activity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @XmlTransient
@@ -24,11 +22,11 @@ public class Actividad {
 
     private String description;
 
-    public Actividad() {
+    public Activity() {
         super();
     }
 
-    public Actividad(String title, String description) {
+    public Activity(String title, String description) {
         this.title = title;
         this.description = description;
     }
