@@ -3,6 +3,7 @@ package model.entities;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import java.util.Date;
 
 /**
  * Created by oscar on 27/11/14.
@@ -23,19 +24,21 @@ public class Activity {
 
     private String description;
 
+    private Date date;
+
     private float price;
 
     private String picture;
-
 
 
     public Activity() {
         super();
     }
 
-    public Activity(Long id, String title, String description, float price, String picture) {
+    public Activity(Long id, String title, String description, Date date, float price, String picture) {
         this.id = id;
         this.title = title;
+        this.date = date;
         this.description = description;
         this.price = price;
         this.picture = picture;
@@ -63,6 +66,14 @@ public class Activity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public float getPrice() {

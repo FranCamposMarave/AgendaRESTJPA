@@ -1,186 +1,472 @@
-mar 28, 2015 5:33:43 PM org.apache.openejb.persistence.PersistenceBootstrap getDefaultProvider
+mar 28, 2015 8:46:41 PM org.apache.openejb.persistence.PersistenceBootstrap getDefaultProvider
 INFORMACIÓN: Default JPA Provider changed to org.eclipse.persistence.jpa.PersistenceProvider
-mar 28, 2015 5:33:43 PM org.apache.catalina.core.AprLifecycleListener init
+mar 28, 2015 8:46:42 PM org.apache.catalina.core.AprLifecycleListener init
 INFORMACIÓN: La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: .::/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
-mar 28, 2015 5:33:46 PM org.apache.coyote.AbstractProtocol init
+mar 28, 2015 8:46:43 PM org.apache.coyote.AbstractProtocol init
 INFORMACIÓN: Initializing ProtocolHandler ["http-bio-8080"]
-mar 28, 2015 5:33:46 PM org.apache.coyote.AbstractProtocol init
+mar 28, 2015 8:46:43 PM org.apache.coyote.AbstractProtocol init
 INFORMACIÓN: Initializing ProtocolHandler ["ajp-bio-8009"]
-mar 28, 2015 5:33:47 PM org.apache.openejb.util.OptionsLog info
+mar 28, 2015 8:46:44 PM org.apache.openejb.util.OptionsLog info
 INFORMACIÓN: Using 'tomee.remote.support=true'
-mar 28, 2015 5:33:47 PM org.apache.openejb.util.OptionsLog info
+mar 28, 2015 8:46:44 PM org.apache.openejb.util.OptionsLog info
 INFORMACIÓN: Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
-mar 28, 2015 5:33:48 PM org.apache.openejb.OpenEJB$Instance <init>
+mar 28, 2015 8:46:44 PM org.apache.openejb.OpenEJB$Instance <init>
 INFORMACIÓN: ********************************************************************************
-mar 28, 2015 5:33:48 PM org.apache.openejb.OpenEJB$Instance <init>
+mar 28, 2015 8:46:44 PM org.apache.openejb.OpenEJB$Instance <init>
 INFORMACIÓN: OpenEJB http://openejb.apache.org/
-mar 28, 2015 5:33:48 PM org.apache.openejb.OpenEJB$Instance <init>
-INFORMACIÓN: Startup: Sat Mar 28 17:33:48 CET 2015
-mar 28, 2015 5:33:48 PM org.apache.openejb.OpenEJB$Instance <init>
+mar 28, 2015 8:46:44 PM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: Startup: Sat Mar 28 20:46:44 CET 2015
+mar 28, 2015 8:46:44 PM org.apache.openejb.OpenEJB$Instance <init>
 INFORMACIÓN: Copyright 1999-2013 (C) Apache OpenEJB Project, All Rights Reserved.
-mar 28, 2015 5:33:48 PM org.apache.openejb.OpenEJB$Instance <init>
+mar 28, 2015 8:46:44 PM org.apache.openejb.OpenEJB$Instance <init>
 INFORMACIÓN: Version: 4.7.1
-mar 28, 2015 5:33:48 PM org.apache.openejb.OpenEJB$Instance <init>
+mar 28, 2015 8:46:44 PM org.apache.openejb.OpenEJB$Instance <init>
 INFORMACIÓN: Build date: 20140912
-mar 28, 2015 5:33:48 PM org.apache.openejb.OpenEJB$Instance <init>
+mar 28, 2015 8:46:44 PM org.apache.openejb.OpenEJB$Instance <init>
 INFORMACIÓN: Build time: 01:43
-mar 28, 2015 5:33:48 PM org.apache.openejb.OpenEJB$Instance <init>
+mar 28, 2015 8:46:44 PM org.apache.openejb.OpenEJB$Instance <init>
 INFORMACIÓN: ********************************************************************************
-mar 28, 2015 5:33:48 PM org.apache.openejb.OpenEJB$Instance <init>
+mar 28, 2015 8:46:44 PM org.apache.openejb.OpenEJB$Instance <init>
 INFORMACIÓN: openejb.home = /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee
-mar 28, 2015 5:33:48 PM org.apache.openejb.OpenEJB$Instance <init>
+mar 28, 2015 8:46:44 PM org.apache.openejb.OpenEJB$Instance <init>
 INFORMACIÓN: openejb.base = /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee
-mar 28, 2015 5:33:48 PM org.apache.openejb.cdi.CdiBuilder initializeOWB
-INFORMACIÓN: Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@fe7a5bd
-mar 28, 2015 5:33:48 PM org.apache.openejb.cdi.CdiBuilder initializeOWB
+mar 28, 2015 8:46:44 PM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFORMACIÓN: Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@74648cb0
+mar 28, 2015 8:46:44 PM org.apache.openejb.cdi.CdiBuilder initializeOWB
 INFORMACIÓN: Succeeded in installing singleton service
-mar 28, 2015 5:33:48 PM org.apache.openejb.config.ConfigurationFactory init
+mar 28, 2015 8:46:44 PM org.apache.openejb.config.ConfigurationFactory init
 INFORMACIÓN: openejb configuration file is '/home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/conf/tomee.xml'
-mar 28, 2015 5:33:48 PM org.apache.openejb.config.ConfigurationFactory configureService
+mar 28, 2015 8:46:45 PM org.apache.openejb.config.ConfigurationFactory configureService
 INFORMACIÓN: Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
-mar 28, 2015 5:33:48 PM org.apache.openejb.config.ConfigurationFactory configureService
+mar 28, 2015 8:46:45 PM org.apache.openejb.config.ConfigurationFactory configureService
 INFORMACIÓN: Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
-mar 28, 2015 5:33:48 PM org.apache.openejb.util.OptionsLog info
+mar 28, 2015 8:46:45 PM org.apache.openejb.util.OptionsLog info
 INFORMACIÓN: Using 'openejb.system.apps=false'
-mar 28, 2015 5:33:48 PM org.apache.openejb.util.OptionsLog info
+mar 28, 2015 8:46:45 PM org.apache.openejb.util.OptionsLog info
 INFORMACIÓN: Using 'openejb.deployments.classpath=false'
-mar 28, 2015 5:33:48 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+mar 28, 2015 8:46:45 PM org.apache.openejb.assembler.classic.Assembler createRecipe
 INFORMACIÓN: Creating TransactionManager(id=Default Transaction Manager)
-mar 28, 2015 5:33:48 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+mar 28, 2015 8:46:45 PM org.apache.openejb.assembler.classic.Assembler createRecipe
 INFORMACIÓN: Creating SecurityService(id=Tomcat Security Service)
-mar 28, 2015 5:33:48 PM org.apache.openejb.server.ServiceManager initServer
+mar 28, 2015 8:46:45 PM org.apache.openejb.server.ServiceManager initServer
 INFORMACIÓN: Creating ServerService(id=cxf)
-mar 28, 2015 5:33:49 PM org.apache.openejb.server.ServiceManager initServer
+mar 28, 2015 8:46:45 PM org.apache.openejb.server.ServiceManager initServer
 INFORMACIÓN: Creating ServerService(id=cxf-rs)
-mar 28, 2015 5:33:49 PM org.apache.openejb.server.SimpleServiceManager start
+mar 28, 2015 8:46:45 PM org.apache.openejb.server.SimpleServiceManager start
 INFORMACIÓN:   ** Bound Services **
-mar 28, 2015 5:33:49 PM org.apache.openejb.server.SimpleServiceManager printRow
+mar 28, 2015 8:46:45 PM org.apache.openejb.server.SimpleServiceManager printRow
 INFORMACIÓN:   NAME                 IP              PORT  
-mar 28, 2015 5:33:49 PM org.apache.openejb.server.SimpleServiceManager start
+mar 28, 2015 8:46:45 PM org.apache.openejb.server.SimpleServiceManager start
 INFORMACIÓN: -------
-mar 28, 2015 5:33:49 PM org.apache.openejb.server.SimpleServiceManager start
+mar 28, 2015 8:46:45 PM org.apache.openejb.server.SimpleServiceManager start
 INFORMACIÓN: Ready!
-mar 28, 2015 5:33:49 PM org.apache.catalina.startup.Catalina load
-INFORMACIÓN: Initialization processed in 6047 ms
-mar 28, 2015 5:33:49 PM org.apache.tomee.catalina.OpenEJBNamingContextListener bindResource
+mar 28, 2015 8:46:45 PM org.apache.catalina.startup.Catalina load
+INFORMACIÓN: Initialization processed in 3925 ms
+mar 28, 2015 8:46:45 PM org.apache.tomee.catalina.OpenEJBNamingContextListener bindResource
 INFORMACIÓN: Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
-mar 28, 2015 5:33:49 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+mar 28, 2015 8:46:45 PM org.apache.openejb.assembler.classic.Assembler createRecipe
 INFORMACIÓN: Creating Resource(id=UserDatabase)
-mar 28, 2015 5:33:49 PM org.apache.catalina.core.StandardService startInternal
+mar 28, 2015 8:46:45 PM org.apache.catalina.core.StandardService startInternal
 INFORMACIÓN: Arrancando servicio Catalina
-mar 28, 2015 5:33:49 PM org.apache.catalina.core.StandardEngine startInternal
+mar 28, 2015 8:46:45 PM org.apache.catalina.core.StandardEngine startInternal
 INFORMACIÓN: Starting Servlet Engine: Apache Tomcat (TomEE)/7.0.55 (1.7.1)
-mar 28, 2015 5:33:49 PM org.apache.catalina.startup.HostConfig deployWAR
+mar 28, 2015 8:46:46 PM org.apache.catalina.startup.HostConfig deployWAR
 INFORMACIÓN: Despliegue del archivo /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure.war de la aplicación web
-mar 28, 2015 5:33:49 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
+mar 28, 2015 8:46:46 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
 INFORMACIÓN: ------------------------- localhost -> /naturAdventure
-mar 28, 2015 5:33:49 PM org.apache.openejb.util.JarExtractor extract
+mar 28, 2015 8:46:46 PM org.apache.openejb.util.JarExtractor extract
 INFORMACIÓN: Extracting jar: /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure.war
-mar 28, 2015 5:33:50 PM org.apache.openejb.util.JarExtractor extract
+mar 28, 2015 8:46:49 PM org.apache.openejb.util.JarExtractor extract
 INFORMACIÓN: Extracted path: /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure
-mar 28, 2015 5:33:50 PM org.apache.openejb.util.OptionsLog info
+mar 28, 2015 8:46:49 PM org.apache.openejb.util.OptionsLog info
 INFORMACIÓN: Using 'openejb.session.manager=org.apache.tomee.catalina.session.QuickSessionManager'
-mar 28, 2015 5:33:51 PM org.apache.openejb.config.ConfigurationFactory configureApplication
+mar 28, 2015 8:46:53 PM org.apache.openejb.config.ConfigurationFactory configureApplication
 INFORMACIÓN: Configuring enterprise application: /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.InitEjbDeployments deploy
+mar 28, 2015 8:46:53 PM org.apache.openejb.config.InitEjbDeployments deploy
 INFORMACIÓN: Auto-deploying ejb ActivityServices: EjbDeployment(deployment-id=ActivityServices)
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.ConfigurationFactory configureService
+mar 28, 2015 8:46:53 PM org.apache.openejb.config.ConfigurationFactory configureService
 INFORMACIÓN: Configuring Service(id=naturAdventure/mysqlDataSource, type=Resource, provider-id=Default JDBC Database)
-mar 28, 2015 5:33:52 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+mar 28, 2015 8:46:53 PM org.apache.openejb.assembler.classic.Assembler createRecipe
 INFORMACIÓN: Creating Resource(id=naturAdventure/mysqlDataSource)
-mar 28, 2015 5:33:52 PM org.apache.tomee.jdbc.TomEEDataSourceCreator$TomEEDataSource readOnly
+mar 28, 2015 8:46:53 PM org.apache.tomee.jdbc.TomEEDataSourceCreator$TomEEDataSource readOnly
 INFORMACIÓN: Disabling testOnBorrow since no validation query is provided
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.ConfigurationFactory configureService
+mar 28, 2015 8:46:53 PM org.apache.openejb.config.ConfigurationFactory configureService
 INFORMACIÓN: Configuring Service(id=Default Managed Container, type=Container, provider-id=Default Managed Container)
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AutoConfig createContainer
-INFORMACIÓN: Auto-creating a container for bean naturAdventure.Comp1092787950: Container(type=MANAGED, id=Default Managed Container)
-mar 28, 2015 5:33:52 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+mar 28, 2015 8:46:53 PM org.apache.openejb.config.AutoConfig createContainer
+INFORMACIÓN: Auto-creating a container for bean naturAdventure.Comp754663660: Container(type=MANAGED, id=Default Managed Container)
+mar 28, 2015 8:46:53 PM org.apache.openejb.assembler.classic.Assembler createRecipe
 INFORMACIÓN: Creating Container(id=Default Managed Container)
-mar 28, 2015 5:33:52 PM org.apache.openejb.core.managed.SimplePassivater init
+mar 28, 2015 8:46:53 PM org.apache.openejb.core.managed.SimplePassivater init
 INFORMACIÓN: Using directory /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/temp for stateful session passivation
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AutoConfig processResourceRef
-INFORMACIÓN: Auto-linking resource-ref 'openejb/Resource/naturAdventure/mysqlDataSource' in bean naturAdventure.Comp1092787950 to Resource(id=naturAdventure/mysqlDataSource)
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AutoConfig processResourceRef
-INFORMACIÓN: Auto-linking resource-ref 'openejb/Resource/mysqlDataSource' in bean naturAdventure.Comp1092787950 to Resource(id=naturAdventure/mysqlDataSource)
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.ConfigurationFactory configureService
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.AutoConfig processResourceRef
+INFORMACIÓN: Auto-linking resource-ref 'openejb/Resource/naturAdventure/mysqlDataSource' in bean naturAdventure.Comp754663660 to Resource(id=naturAdventure/mysqlDataSource)
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.AutoConfig processResourceRef
+INFORMACIÓN: Auto-linking resource-ref 'openejb/Resource/mysqlDataSource' in bean naturAdventure.Comp754663660 to Resource(id=naturAdventure/mysqlDataSource)
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.ConfigurationFactory configureService
 INFORMACIÓN: Configuring Service(id=Default Stateless Container, type=Container, provider-id=Default Stateless Container)
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AutoConfig createContainer
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.AutoConfig createContainer
 INFORMACIÓN: Auto-creating a container for bean ActivityServices: Container(type=STATELESS, id=Default Stateless Container)
-mar 28, 2015 5:33:52 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+mar 28, 2015 8:46:54 PM org.apache.openejb.assembler.classic.Assembler createRecipe
 INFORMACIÓN: Creating Container(id=Default Stateless Container)
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AutoConfig processResourceRef
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.AutoConfig processResourceRef
 INFORMACIÓN: Auto-linking resource-ref 'openejb/Resource/naturAdventure/mysqlDataSource' in bean ActivityServices to Resource(id=naturAdventure/mysqlDataSource)
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AutoConfig processResourceRef
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.AutoConfig processResourceRef
 INFORMACIÓN: Auto-linking resource-ref 'openejb/Resource/mysqlDataSource' in bean ActivityServices to Resource(id=naturAdventure/mysqlDataSource)
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AutoConfig deploy
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.AutoConfig deploy
 INFORMACIÓN: Configuring PersistenceUnit(name=naturAdventureJTA)
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AutoConfig logAutoCreateResource
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.AutoConfig logAutoCreateResource
 INFORMACIÓN: Auto-creating a Resource with id 'naturAdventure/mysqlDataSourceNonJta' of type 'DataSource for 'naturAdventureJTA'.
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AutoConfig deploy
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.AutoConfig deploy
 INFORMACIÓN: Configuring Service(id=naturAdventure/mysqlDataSourceNonJta, type=Resource, provider-id=naturAdventure/mysqlDataSource)
-mar 28, 2015 5:33:52 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+mar 28, 2015 8:46:54 PM org.apache.openejb.assembler.classic.Assembler createRecipe
 INFORMACIÓN: Creating Resource(id=naturAdventure/mysqlDataSourceNonJta)
-mar 28, 2015 5:33:52 PM org.apache.tomee.jdbc.TomEEDataSourceCreator$TomEEDataSource readOnly
+mar 28, 2015 8:46:54 PM org.apache.tomee.jdbc.TomEEDataSourceCreator$TomEEDataSource readOnly
 INFORMACIÓN: Disabling testOnBorrow since no validation query is provided
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AutoConfig setJtaDataSource
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.AutoConfig setJtaDataSource
 INFORMACIÓN: Adjusting PersistenceUnit naturAdventureJTA <jta-data-source> to Resource ID 'naturAdventure/mysqlDataSource' from 'mysqlDataSource'
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AutoConfig setNonJtaDataSource
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.AutoConfig setNonJtaDataSource
 INFORMACIÓN: Adjusting PersistenceUnit naturAdventureJTA <non-jta-data-source> to Resource ID 'naturAdventure/mysqlDataSourceNonJta' from 'null'
-mar 28, 2015 5:33:52 PM org.apache.openejb.config.AppInfoBuilder build
+mar 28, 2015 8:46:54 PM org.apache.openejb.config.AppInfoBuilder build
 INFORMACIÓN: Enterprise application "/home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure" loaded.
-mar 28, 2015 5:33:52 PM org.apache.openejb.assembler.classic.Assembler createApplication
+mar 28, 2015 8:46:54 PM org.apache.openejb.assembler.classic.Assembler createApplication
 INFORMACIÓN: Assembling app: /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure
-mar 28, 2015 5:33:53 PM org.apache.openejb.assembler.classic.ReloadableEntityManagerFactory createDelegate
-INFORMACIÓN: PersistenceUnit(name=naturAdventureJTA, provider=org.eclipse.persistence.jpa.PersistenceProvider) - provider time 1072ms
-mar 28, 2015 5:33:53 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+mar 28, 2015 8:46:55 PM org.apache.openejb.assembler.classic.ReloadableEntityManagerFactory createDelegate
+INFORMACIÓN: PersistenceUnit(name=naturAdventureJTA, provider=org.eclipse.persistence.jpa.PersistenceProvider) - provider time 1570ms
+mar 28, 2015 8:46:56 PM org.apache.openejb.assembler.classic.JndiBuilder bind
 INFORMACIÓN: Jndi(name=ActivityServicesLocalBean) --> Ejb(deployment-id=ActivityServices)
-mar 28, 2015 5:33:53 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+mar 28, 2015 8:46:56 PM org.apache.openejb.assembler.classic.JndiBuilder bind
 INFORMACIÓN: Jndi(name=global/naturAdventure/ActivityServices!controller.ActivityServices) --> Ejb(deployment-id=ActivityServices)
-mar 28, 2015 5:33:53 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+mar 28, 2015 8:46:56 PM org.apache.openejb.assembler.classic.JndiBuilder bind
 INFORMACIÓN: Jndi(name=global/naturAdventure/ActivityServices) --> Ejb(deployment-id=ActivityServices)
-mar 28, 2015 5:33:53 PM org.apache.openejb.cdi.CdiBuilder initSingleton
-INFORMACIÓN: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@fe7a5bd
-mar 28, 2015 5:33:53 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+mar 28, 2015 8:46:56 PM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFORMACIÓN: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@74648cb0
+mar 28, 2015 8:46:57 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
 INFORMACIÓN: OpenWebBeans Container is starting...
-mar 28, 2015 5:33:54 PM org.apache.webbeans.plugins.PluginLoader startUp
+mar 28, 2015 8:46:57 PM org.apache.webbeans.plugins.PluginLoader startUp
 INFORMACIÓN: Adding OpenWebBeansPlugin : [CdiPlugin]
-mar 28, 2015 5:33:54 PM org.apache.webbeans.plugins.PluginLoader startUp
+mar 28, 2015 8:46:57 PM org.apache.webbeans.plugins.PluginLoader startUp
 INFORMACIÓN: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
-mar 28, 2015 5:33:54 PM org.apache.webbeans.config.BeansDeployer validateInjectionPoints
+mar 28, 2015 8:46:57 PM org.apache.webbeans.config.BeansDeployer validateInjectionPoints
 INFORMACIÓN: All injection points were validated successfully.
-mar 28, 2015 5:33:54 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
-INFORMACIÓN: OpenWebBeans Container has started, it took 195 ms.
-mar 28, 2015 5:33:54 PM org.apache.openejb.assembler.classic.Assembler startEjbs
+mar 28, 2015 8:46:57 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFORMACIÓN: OpenWebBeans Container has started, it took 493 ms.
+mar 28, 2015 8:46:57 PM org.apache.openejb.assembler.classic.Assembler startEjbs
 INFORMACIÓN: Created Ejb(deployment-id=ActivityServices, ejb-name=ActivityServices, container=Default Stateless Container)
-mar 28, 2015 5:33:54 PM org.apache.openejb.assembler.classic.Assembler startEjbs
+mar 28, 2015 8:46:57 PM org.apache.openejb.assembler.classic.Assembler startEjbs
 INFORMACIÓN: Started Ejb(deployment-id=ActivityServices, ejb-name=ActivityServices, container=Default Stateless Container)
-mar 28, 2015 5:33:54 PM org.apache.openejb.assembler.classic.Assembler createApplication
+mar 28, 2015 8:46:57 PM org.apache.openejb.assembler.classic.Assembler createApplication
 INFORMACIÓN: Deployed Application(path=/home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure)
-mar 28, 2015 5:33:54 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener configureFactory
+mar 28, 2015 8:47:00 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener configureFactory
 INFORMACIÓN: Using providers:
-mar 28, 2015 5:33:54 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener configureFactory
-INFORMACIÓN:      org.apache.cxf.jaxrs.provider.JAXBElementProvider@5bd68097
-mar 28, 2015 5:33:54 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener configureFactory
-INFORMACIÓN:      org.apache.openejb.server.cxf.rs.EJBAccessExceptionMapper@5f94689b
-mar 28, 2015 5:33:55 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
+mar 28, 2015 8:47:00 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener configureFactory
+INFORMACIÓN:      org.apache.cxf.jaxrs.provider.JAXBElementProvider@52eac44f
+mar 28, 2015 8:47:00 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener configureFactory
+INFORMACIÓN:      org.apache.openejb.server.cxf.rs.EJBAccessExceptionMapper@32fe4910
+mar 28, 2015 8:47:00 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
 INFORMACIÓN: REST Application: http://localhost:8080/naturAdventure/                -> org.apache.openejb.server.rest.InternalApplication
-mar 28, 2015 5:33:55 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
+mar 28, 2015 8:47:00 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
 INFORMACIÓN:      Service URI: http://localhost:8080/naturAdventure/activities      ->  EJB controller.ActivityServices
-mar 28, 2015 5:33:55 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
+mar 28, 2015 8:47:00 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
 INFORMACIÓN:               GET http://localhost:8080/naturAdventure/activities/     ->      Response listAllActivities()
-mar 28, 2015 5:33:55 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
+mar 28, 2015 8:47:00 PM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
 INFORMACIÓN:               GET http://localhost:8080/naturAdventure/activities/{id} ->      Response getActivity(long)  
-mar 28, 2015 5:33:55 PM org.apache.catalina.startup.HostConfig deployWAR
-INFORMACIÓN: Deployment of web application archive /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure.war has finished in 5.543 ms
-mar 28, 2015 5:33:55 PM org.apache.coyote.AbstractProtocol start
+mar 28, 2015 8:47:01 PM org.apache.catalina.startup.HostConfig deployWAR
+INFORMACIÓN: Deployment of web application archive /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure.war has finished in 14.906 ms
+mar 28, 2015 8:47:01 PM org.apache.catalina.util.SessionIdGenerator createSecureRandom
+INFORMACIÓN: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [414] milliseconds.
+mar 28, 2015 8:47:01 PM org.apache.coyote.AbstractProtocol start
 INFORMACIÓN: Starting ProtocolHandler ["http-bio-8080"]
-mar 28, 2015 5:33:55 PM org.apache.coyote.AbstractProtocol start
+mar 28, 2015 8:47:01 PM org.apache.coyote.AbstractProtocol start
 INFORMACIÓN: Starting ProtocolHandler ["ajp-bio-8009"]
-mar 28, 2015 5:33:55 PM org.apache.catalina.startup.Catalina start
-INFORMACIÓN: Server startup in 5766 ms
-mar 28, 2015 5:34:25 PM org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor processRequest
+mar 28, 2015 8:47:01 PM org.apache.catalina.startup.Catalina start
+INFORMACIÓN: Server startup in 15762 ms
+mar 28, 2015 8:49:40 PM org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor processRequest
+ADVERTENCIA: No root resource matching request path /naturAdventure/2 has been found, Relative Path: /2. Please enable FINE/TRACE log level for more details.
+mar 28, 2015 8:49:40 PM org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper toResponse
+ADVERTENCIA: javax.ws.rs.WebApplicationException
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:162)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:91)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:240)
+	at org.apache.openejb.server.cxf.rs.CxfRsHttpListener.onMessage(CxfRsHttpListener.java:187)
+	at org.apache.openejb.server.rest.RsServlet.service(RsServlet.java:53)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1070)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:314)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+mar 28, 2015 8:49:42 PM org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor processRequest
 ADVERTENCIA: No root resource matching request path /naturAdventure/uploads/%7B%7B%20activity.picture%20%7D%7D has been found, Relative Path: /uploads/%7B%7B%20activity.picture%20%7D%7D. Please enable FINE/TRACE log level for more details.
-mar 28, 2015 5:34:25 PM org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper toResponse
+mar 28, 2015 8:49:42 PM org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper toResponse
+ADVERTENCIA: javax.ws.rs.WebApplicationException
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:162)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:91)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:240)
+	at org.apache.openejb.server.cxf.rs.CxfRsHttpListener.onMessage(CxfRsHttpListener.java:187)
+	at org.apache.openejb.server.rest.RsServlet.service(RsServlet.java:53)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1070)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:314)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+mar 28, 2015 8:49:44 PM org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor processRequest
+ADVERTENCIA: No root resource matching request path /naturAdventure/uploads/%7B%7B%20activity.picture%20%7D%7D has been found, Relative Path: /uploads/%7B%7B%20activity.picture%20%7D%7D. Please enable FINE/TRACE log level for more details.
+mar 28, 2015 8:49:44 PM org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper toResponse
+ADVERTENCIA: javax.ws.rs.WebApplicationException
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:162)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:91)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:240)
+	at org.apache.openejb.server.cxf.rs.CxfRsHttpListener.onMessage(CxfRsHttpListener.java:187)
+	at org.apache.openejb.server.rest.RsServlet.service(RsServlet.java:53)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1070)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+mar 28, 2015 8:49:46 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+ADVERTENCIA: Interceptor for {http://controller/}ActivityServices has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Could not send Message.
+	at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:64)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.interceptor.OutgoingChainInterceptor.handleMessage(OutgoingChainInterceptor.java:81)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:240)
+	at org.apache.openejb.server.cxf.rs.CxfRsHttpListener.onMessage(CxfRsHttpListener.java:187)
+	at org.apache.openejb.server.rest.RsServlet.service(RsServlet.java:53)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1070)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:314)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: ClientAbortException:  java.net.SocketException: Tubería rota
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:367)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:331)
+	at org.apache.catalina.connector.Response.flushBuffer(Response.java:580)
+	at org.apache.catalina.connector.ResponseFacade.flushBuffer(ResponseFacade.java:306)
+	at org.apache.openejb.server.httpd.ServletResponseAdapter.flushBuffer(ServletResponseAdapter.java:205)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination$WrappedOutputStream.close(AbstractHTTPDestination.java:735)
+	at org.apache.cxf.transport.AbstractConduit.close(AbstractConduit.java:56)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination$BackChannelConduit.close(AbstractHTTPDestination.java:677)
+	at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:62)
+	... 29 more
+Caused by: java.net.SocketException: Tubería rota
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:113)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:159)
+	at org.apache.coyote.http11.InternalOutputBuffer.realWriteBytes(InternalOutputBuffer.java:215)
+	at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:480)
+	at org.apache.coyote.http11.InternalOutputBuffer.flush(InternalOutputBuffer.java:119)
+	at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:800)
+	at org.apache.coyote.Response.action(Response.java:172)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:363)
+	... 37 more
+
+mar 28, 2015 8:49:46 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+ADVERTENCIA: Interceptor for {http://controller/}ActivityServices has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Could not send Message.
+	at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:64)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.interceptor.AbstractFaultChainInitiatorObserver.onMessage(AbstractFaultChainInitiatorObserver.java:113)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:324)
+	at org.apache.cxf.interceptor.OutgoingChainInterceptor.handleMessage(OutgoingChainInterceptor.java:81)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:240)
+	at org.apache.openejb.server.cxf.rs.CxfRsHttpListener.onMessage(CxfRsHttpListener.java:187)
+	at org.apache.openejb.server.rest.RsServlet.service(RsServlet.java:53)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1070)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:314)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: ClientAbortException:  java.net.SocketException: Tubería rota
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:367)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:331)
+	at org.apache.catalina.connector.Response.flushBuffer(Response.java:580)
+	at org.apache.catalina.connector.ResponseFacade.flushBuffer(ResponseFacade.java:306)
+	at org.apache.openejb.server.httpd.ServletResponseAdapter.flushBuffer(ServletResponseAdapter.java:205)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination$WrappedOutputStream.close(AbstractHTTPDestination.java:735)
+	at org.apache.cxf.transport.AbstractConduit.close(AbstractConduit.java:56)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination$BackChannelConduit.close(AbstractHTTPDestination.java:677)
+	at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:62)
+	... 31 more
+Caused by: java.net.SocketException: Tubería rota
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:113)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:159)
+	at org.apache.coyote.http11.InternalOutputBuffer.realWriteBytes(InternalOutputBuffer.java:215)
+	at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:480)
+	at org.apache.coyote.http11.InternalOutputBuffer.flush(InternalOutputBuffer.java:119)
+	at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:800)
+	at org.apache.coyote.Response.action(Response.java:172)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:363)
+	... 39 more
+
+mar 28, 2015 8:50:15 PM org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor processRequest
+ADVERTENCIA: No root resource matching request path /naturAdventure/backoffice has been found, Relative Path: /backoffice. Please enable FINE/TRACE log level for more details.
+mar 28, 2015 8:50:15 PM org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper toResponse
+ADVERTENCIA: javax.ws.rs.WebApplicationException
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:162)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:91)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:240)
+	at org.apache.openejb.server.cxf.rs.CxfRsHttpListener.onMessage(CxfRsHttpListener.java:187)
+	at org.apache.openejb.server.rest.RsServlet.service(RsServlet.java:53)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1070)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:314)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+mar 28, 2015 8:50:19 PM org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor processRequest
+ADVERTENCIA: No root resource matching request path /naturAdventure/backoffice/ has been found, Relative Path: /backoffice/. Please enable FINE/TRACE log level for more details.
+mar 28, 2015 8:50:19 PM org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper toResponse
+ADVERTENCIA: javax.ws.rs.WebApplicationException
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:162)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:91)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:263)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:240)
+	at org.apache.openejb.server.cxf.rs.CxfRsHttpListener.onMessage(CxfRsHttpListener.java:187)
+	at org.apache.openejb.server.rest.RsServlet.service(RsServlet.java:53)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1070)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+mar 28, 2015 8:50:46 PM org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor processRequest
+ADVERTENCIA: No root resource matching request path /naturAdventure/backoffice/ has been found, Relative Path: /backoffice/. Please enable FINE/TRACE log level for more details.
+mar 28, 2015 8:50:46 PM org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper toResponse
 ADVERTENCIA: javax.ws.rs.WebApplicationException
 	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:162)
 	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:91)
