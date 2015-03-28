@@ -28,7 +28,7 @@ app.controller('homeController', ['$scope', '$http',
 
 app.controller('activityController', ['$scope', '$http', '$routeParams',
     function ($scope, $http, $routeParams) {
-        var url = 'http://localhost:8080/naturAdventure/activities/' + $routeParams.activityId;
+        var url = 'http://localhost:8080/naturAdventure/activities/' + $routeParams.id;
         $http.get( url ).success(function (data) {
             $scope.activity = data.activity;
         });

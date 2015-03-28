@@ -7,9 +7,7 @@
 
     appControllers.controller('homeController', ['$scope', '$http',
         function ($scope, $http) {
-            $http.get('http://localhost:8080/naturAdventure/activities').success(function (data) {
-                    $scope.activities = data.activity;
-                });
+            getAllActivities();
         }
     ]);
 

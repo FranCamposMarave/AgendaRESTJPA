@@ -6,25 +6,30 @@
     var app = angular.module('app', []);
     app.baseURI = 'http://localhost:8080/natureAdventure/activities';
 
-    app.controller('homeController', ['$scope', 'Service', function ($scope, AgendaService) {
+    app.controller('homeController', ['$scope', 'Service', function ($scope, ActivityService) {
         var self = this;
-        $scope.activities = ActivityService.retrieveAll()
-            .success(function(data){
-                console.log(data);
-                $scope.activities = data.activity;
-            });
-
-        self.retreiveActivity = function(id) {
-            ActivityService.retrieveActivity(id)
-                .success(function(data) {
-                    console.log(data);
-                    $scope.currentActivity = data;
-                });
+        self.getAllActivities = function(){
+            ActivityService.retrieveAll()
+                    .success(function(data){
+                        console.log(data);
+                        $scope.activities = data.activity;
+                    });
         }
-
     }]);
 
-    app.service('activityService', ['$http', function($http) {
+    app.controller('activityController', ['$scope', 'Service', function ($scope, ActivityService) {
+            var self = this;
+            self.retreiveActivity = function(id) {
+                ActivityService.retrieveActivity(id)
+                    .success(function(data) {
+                        console.log(data);
+                        $scope.currentActivity = data;
+                    });
+            }
+
+        }]);
+
+    app.service('ActivityService', ['$http', function($http) {
         this.retrieveAll = function() {
             return $http.get(app.baseURI);
         }
