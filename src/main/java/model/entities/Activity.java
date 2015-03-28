@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlTransient;
 })
 public class Activity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @XmlTransient
     private Long id;
 
@@ -23,13 +23,22 @@ public class Activity {
 
     private String description;
 
+    private float price;
+
+    private String picture;
+
+
+
     public Activity() {
         super();
     }
 
-    public Activity(String title, String description) {
+    public Activity(Long id, String title, String description, float price, String picture) {
+        this.id = id;
         this.title = title;
         this.description = description;
+        this.price = price;
+        this.picture = picture;
     }
 
     public Long getId() {
@@ -54,5 +63,21 @@ public class Activity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 }

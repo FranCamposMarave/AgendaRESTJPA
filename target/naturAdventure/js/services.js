@@ -3,7 +3,7 @@
  */
 
 (function() {
-    var app = angular.module('app.services', []);
+    var app = angular.module('app', []);
     app.baseURI = 'http://localhost:8080/natureAdventure/activities';
 
     app.controller('homeController', ['$scope', 'Service', function ($scope, AgendaService) {
@@ -11,7 +11,7 @@
         $scope.activities = ActivityService.retrieveAll()
             .success(function(data){
                 console.log(data);
-                $scope.activities = data.activities;
+                $scope.activities = data.activity;
             });
 
         self.retreiveActivity = function(id) {

@@ -1,1 +1,14 @@
-127.0.0.1 - - [28/Mar/2015:14:07:04 +0100] "GET /naturAdventure/activities/1 HTTP/1.1" 200 272
+127.0.0.1 - - [28/Mar/2015:14:44:16 +0100] "GET /naturAdventure/ HTTP/1.1" 200 3265
+127.0.0.1 - - [28/Mar/2015:14:44:16 +0100] "GET /naturAdventure/templates/home.html HTTP/1.1" 200 2736
+127.0.0.1 - - [28/Mar/2015:14:44:16 +0100] "GET /naturAdventure/css/style.css HTTP/1.1" 200 629
+127.0.0.1 - - [28/Mar/2015:14:44:16 +0100] "GET /naturAdventure/js/ui-bootstrap-tpls-0.12.1.min.js HTTP/1.1" 200 65256
+127.0.0.1 - - [28/Mar/2015:14:44:16 +0100] "GET /naturAdventure/js/services.js HTTP/1.1" 200 1063
+127.0.0.1 - - [28/Mar/2015:14:44:16 +0100] "GET /naturAdventure/js/routing.js HTTP/1.1" 200 1000
+127.0.0.1 - - [28/Mar/2015:14:44:16 +0100] "GET /naturAdventure/css/bootstrap.min.css HTTP/1.1" 200 113615
+127.0.0.1 - - [28/Mar/2015:14:44:16 +0100] "GET /naturAdventure/js/angular.min.js HTTP/1.1" 200 124355
+127.0.0.1 - - [28/Mar/2015:14:44:16 +0100] "GET /naturAdventure/templates/home.html HTTP/1.1" 200 2736
+127.0.0.1 - - [28/Mar/2015:14:44:17 +0100] "GET /naturAdventure/activities HTTP/1.1" 200 318
+127.0.0.1 - - [28/Mar/2015:14:44:21 +0100] "GET /naturAdventure/templates/activity.html HTTP/1.1" 200 2691
+127.0.0.1 - - [28/Mar/2015:14:44:21 +0100] "GET /naturAdventure/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 23453
+127.0.0.1 - - [28/Mar/2015:14:44:21 +0100] "GET /naturAdventure/activities/1 HTTP/1.1" 200 311
+127.0.0.1 - - [28/Mar/2015:14:44:21 +0100] "GET /naturAdventure/uploads/pic1.jpg HTTP/1.1" 200 347101
