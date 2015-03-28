@@ -1,0 +1,1 @@
+127.0.0.1 - - [28/Mar/2015:14:07:04 +0100] "GET /naturAdventure/activities/1 HTTP/1.1" 200 272

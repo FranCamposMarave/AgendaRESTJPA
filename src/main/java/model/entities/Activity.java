@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity
 @NamedQueries({
         @NamedQuery(name="Activity.getAll", query = "SELECT a FROM Activity a"),
+        @NamedQuery(name="Activity.get", query = "SELECT a FROM Activity a WHERE a.id = :id"),
 })
 public class Activity {
     @Id
