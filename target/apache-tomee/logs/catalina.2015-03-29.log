@@ -1,0 +1,184 @@
+mar 29, 2015 5:07:43 AM org.apache.openejb.persistence.PersistenceBootstrap getDefaultProvider
+INFORMACIÓN: Default JPA Provider changed to org.eclipse.persistence.jpa.PersistenceProvider
+mar 29, 2015 5:07:44 AM org.apache.catalina.core.AprLifecycleListener init
+INFORMACIÓN: La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: .::/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+mar 29, 2015 5:07:44 AM org.apache.coyote.AbstractProtocol init
+INFORMACIÓN: Initializing ProtocolHandler ["http-bio-8080"]
+mar 29, 2015 5:07:44 AM org.apache.coyote.AbstractProtocol init
+INFORMACIÓN: Initializing ProtocolHandler ["ajp-bio-8009"]
+mar 29, 2015 5:07:46 AM org.apache.openejb.util.OptionsLog info
+INFORMACIÓN: Using 'tomee.remote.support=true'
+mar 29, 2015 5:07:46 AM org.apache.openejb.util.OptionsLog info
+INFORMACIÓN: Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+mar 29, 2015 5:07:47 AM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: ********************************************************************************
+mar 29, 2015 5:07:47 AM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: OpenEJB http://openejb.apache.org/
+mar 29, 2015 5:07:47 AM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: Startup: Sun Mar 29 05:07:47 CEST 2015
+mar 29, 2015 5:07:47 AM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: Copyright 1999-2013 (C) Apache OpenEJB Project, All Rights Reserved.
+mar 29, 2015 5:07:47 AM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: Version: 4.7.1
+mar 29, 2015 5:07:47 AM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: Build date: 20140912
+mar 29, 2015 5:07:47 AM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: Build time: 01:43
+mar 29, 2015 5:07:47 AM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: ********************************************************************************
+mar 29, 2015 5:07:47 AM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: openejb.home = /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee
+mar 29, 2015 5:07:47 AM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: openejb.base = /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee
+mar 29, 2015 5:07:47 AM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFORMACIÓN: Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@af8f175
+mar 29, 2015 5:07:47 AM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFORMACIÓN: Succeeded in installing singleton service
+mar 29, 2015 5:07:47 AM org.apache.openejb.config.ConfigurationFactory init
+INFORMACIÓN: openejb configuration file is '/home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/conf/tomee.xml'
+mar 29, 2015 5:07:47 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFORMACIÓN: Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+mar 29, 2015 5:07:47 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFORMACIÓN: Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+mar 29, 2015 5:07:47 AM org.apache.openejb.util.OptionsLog info
+INFORMACIÓN: Using 'openejb.system.apps=false'
+mar 29, 2015 5:07:47 AM org.apache.openejb.util.OptionsLog info
+INFORMACIÓN: Using 'openejb.deployments.classpath=false'
+mar 29, 2015 5:07:47 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFORMACIÓN: Creating TransactionManager(id=Default Transaction Manager)
+mar 29, 2015 5:07:47 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFORMACIÓN: Creating SecurityService(id=Tomcat Security Service)
+mar 29, 2015 5:07:47 AM org.apache.openejb.server.ServiceManager initServer
+INFORMACIÓN: Creating ServerService(id=cxf)
+mar 29, 2015 5:07:47 AM org.apache.openejb.server.ServiceManager initServer
+INFORMACIÓN: Creating ServerService(id=cxf-rs)
+mar 29, 2015 5:07:47 AM org.apache.openejb.server.SimpleServiceManager start
+INFORMACIÓN:   ** Bound Services **
+mar 29, 2015 5:07:47 AM org.apache.openejb.server.SimpleServiceManager printRow
+INFORMACIÓN:   NAME                 IP              PORT  
+mar 29, 2015 5:07:47 AM org.apache.openejb.server.SimpleServiceManager start
+INFORMACIÓN: -------
+mar 29, 2015 5:07:47 AM org.apache.openejb.server.SimpleServiceManager start
+INFORMACIÓN: Ready!
+mar 29, 2015 5:07:47 AM org.apache.catalina.startup.Catalina load
+INFORMACIÓN: Initialization processed in 4385 ms
+mar 29, 2015 5:07:48 AM org.apache.tomee.catalina.OpenEJBNamingContextListener bindResource
+INFORMACIÓN: Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+mar 29, 2015 5:07:48 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFORMACIÓN: Creating Resource(id=UserDatabase)
+mar 29, 2015 5:07:48 AM org.apache.catalina.core.StandardService startInternal
+INFORMACIÓN: Arrancando servicio Catalina
+mar 29, 2015 5:07:48 AM org.apache.catalina.core.StandardEngine startInternal
+INFORMACIÓN: Starting Servlet Engine: Apache Tomcat (TomEE)/7.0.55 (1.7.1)
+mar 29, 2015 5:07:48 AM org.apache.catalina.startup.HostConfig deployWAR
+INFORMACIÓN: Despliegue del archivo /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure.war de la aplicación web
+mar 29, 2015 5:07:48 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFORMACIÓN: ------------------------- localhost -> /naturAdventure
+mar 29, 2015 5:07:48 AM org.apache.openejb.util.JarExtractor extract
+INFORMACIÓN: Extracting jar: /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure.war
+mar 29, 2015 5:07:49 AM org.apache.openejb.util.JarExtractor extract
+INFORMACIÓN: Extracted path: /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure
+mar 29, 2015 5:07:49 AM org.apache.openejb.util.OptionsLog info
+INFORMACIÓN: Using 'openejb.session.manager=org.apache.tomee.catalina.session.QuickSessionManager'
+mar 29, 2015 5:07:52 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFORMACIÓN: Configuring enterprise application: /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure
+mar 29, 2015 5:07:54 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFORMACIÓN: Auto-deploying ejb ActivityServices: EjbDeployment(deployment-id=ActivityServices)
+mar 29, 2015 5:07:54 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFORMACIÓN: Configuring Service(id=naturAdventure/mysqlDataSource, type=Resource, provider-id=Default JDBC Database)
+mar 29, 2015 5:07:54 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFORMACIÓN: Creating Resource(id=naturAdventure/mysqlDataSource)
+mar 29, 2015 5:07:54 AM org.apache.tomee.jdbc.TomEEDataSourceCreator$TomEEDataSource readOnly
+INFORMACIÓN: Disabling testOnBorrow since no validation query is provided
+mar 29, 2015 5:07:54 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFORMACIÓN: Configuring Service(id=Default Managed Container, type=Container, provider-id=Default Managed Container)
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AutoConfig createContainer
+INFORMACIÓN: Auto-creating a container for bean naturAdventure.Comp1223061177: Container(type=MANAGED, id=Default Managed Container)
+mar 29, 2015 5:07:55 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFORMACIÓN: Creating Container(id=Default Managed Container)
+mar 29, 2015 5:07:55 AM org.apache.openejb.core.managed.SimplePassivater init
+INFORMACIÓN: Using directory /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/temp for stateful session passivation
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AutoConfig processResourceRef
+INFORMACIÓN: Auto-linking resource-ref 'openejb/Resource/naturAdventure/mysqlDataSource' in bean naturAdventure.Comp1223061177 to Resource(id=naturAdventure/mysqlDataSource)
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AutoConfig processResourceRef
+INFORMACIÓN: Auto-linking resource-ref 'openejb/Resource/mysqlDataSource' in bean naturAdventure.Comp1223061177 to Resource(id=naturAdventure/mysqlDataSource)
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFORMACIÓN: Configuring Service(id=Default Stateless Container, type=Container, provider-id=Default Stateless Container)
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AutoConfig createContainer
+INFORMACIÓN: Auto-creating a container for bean ActivityServices: Container(type=STATELESS, id=Default Stateless Container)
+mar 29, 2015 5:07:55 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFORMACIÓN: Creating Container(id=Default Stateless Container)
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AutoConfig processResourceRef
+INFORMACIÓN: Auto-linking resource-ref 'openejb/Resource/naturAdventure/mysqlDataSource' in bean ActivityServices to Resource(id=naturAdventure/mysqlDataSource)
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AutoConfig processResourceRef
+INFORMACIÓN: Auto-linking resource-ref 'openejb/Resource/mysqlDataSource' in bean ActivityServices to Resource(id=naturAdventure/mysqlDataSource)
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AutoConfig deploy
+INFORMACIÓN: Configuring PersistenceUnit(name=naturAdventureJTA)
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AutoConfig logAutoCreateResource
+INFORMACIÓN: Auto-creating a Resource with id 'naturAdventure/mysqlDataSourceNonJta' of type 'DataSource for 'naturAdventureJTA'.
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AutoConfig deploy
+INFORMACIÓN: Configuring Service(id=naturAdventure/mysqlDataSourceNonJta, type=Resource, provider-id=naturAdventure/mysqlDataSource)
+mar 29, 2015 5:07:55 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFORMACIÓN: Creating Resource(id=naturAdventure/mysqlDataSourceNonJta)
+mar 29, 2015 5:07:55 AM org.apache.tomee.jdbc.TomEEDataSourceCreator$TomEEDataSource readOnly
+INFORMACIÓN: Disabling testOnBorrow since no validation query is provided
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AutoConfig setJtaDataSource
+INFORMACIÓN: Adjusting PersistenceUnit naturAdventureJTA <jta-data-source> to Resource ID 'naturAdventure/mysqlDataSource' from 'mysqlDataSource'
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AutoConfig setNonJtaDataSource
+INFORMACIÓN: Adjusting PersistenceUnit naturAdventureJTA <non-jta-data-source> to Resource ID 'naturAdventure/mysqlDataSourceNonJta' from 'null'
+mar 29, 2015 5:07:55 AM org.apache.openejb.config.AppInfoBuilder build
+INFORMACIÓN: Enterprise application "/home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure" loaded.
+mar 29, 2015 5:07:55 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFORMACIÓN: Assembling app: /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure
+mar 29, 2015 5:07:55 AM org.apache.openejb.assembler.classic.ReloadableEntityManagerFactory createDelegate
+INFORMACIÓN: PersistenceUnit(name=naturAdventureJTA, provider=org.eclipse.persistence.jpa.PersistenceProvider) - provider time 632ms
+mar 29, 2015 5:07:56 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFORMACIÓN: Jndi(name=ActivityServicesLocalBean) --> Ejb(deployment-id=ActivityServices)
+mar 29, 2015 5:07:56 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFORMACIÓN: Jndi(name=global/naturAdventure/ActivityServices!controller.ActivityServices) --> Ejb(deployment-id=ActivityServices)
+mar 29, 2015 5:07:56 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFORMACIÓN: Jndi(name=global/naturAdventure/ActivityServices) --> Ejb(deployment-id=ActivityServices)
+mar 29, 2015 5:07:56 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFORMACIÓN: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@af8f175
+mar 29, 2015 5:07:56 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFORMACIÓN: OpenWebBeans Container is starting...
+mar 29, 2015 5:07:56 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFORMACIÓN: Adding OpenWebBeansPlugin : [CdiPlugin]
+mar 29, 2015 5:07:56 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFORMACIÓN: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+mar 29, 2015 5:07:56 AM org.apache.webbeans.config.BeansDeployer validateInjectionPoints
+INFORMACIÓN: All injection points were validated successfully.
+mar 29, 2015 5:07:56 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFORMACIÓN: OpenWebBeans Container has started, it took 211 ms.
+mar 29, 2015 5:07:56 AM org.apache.openejb.assembler.classic.Assembler startEjbs
+INFORMACIÓN: Created Ejb(deployment-id=ActivityServices, ejb-name=ActivityServices, container=Default Stateless Container)
+mar 29, 2015 5:07:56 AM org.apache.openejb.assembler.classic.Assembler startEjbs
+INFORMACIÓN: Started Ejb(deployment-id=ActivityServices, ejb-name=ActivityServices, container=Default Stateless Container)
+mar 29, 2015 5:07:56 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFORMACIÓN: Deployed Application(path=/home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure)
+mar 29, 2015 5:07:57 AM org.apache.openejb.server.cxf.rs.CxfRsHttpListener configureFactory
+INFORMACIÓN: Using providers:
+mar 29, 2015 5:07:57 AM org.apache.openejb.server.cxf.rs.CxfRsHttpListener configureFactory
+INFORMACIÓN:      org.apache.cxf.jaxrs.provider.JAXBElementProvider@553a6f8b
+mar 29, 2015 5:07:57 AM org.apache.openejb.server.cxf.rs.CxfRsHttpListener configureFactory
+INFORMACIÓN:      org.apache.openejb.server.cxf.rs.EJBAccessExceptionMapper@6f713a63
+mar 29, 2015 5:07:57 AM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
+INFORMACIÓN: REST Application: http://localhost:8080/naturAdventure/                -> org.apache.openejb.server.rest.InternalApplication
+mar 29, 2015 5:07:57 AM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
+INFORMACIÓN:      Service URI: http://localhost:8080/naturAdventure/activities      ->  EJB controller.ActivityServices
+mar 29, 2015 5:07:57 AM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
+INFORMACIÓN:            DELETE http://localhost:8080/naturAdventure/activities/{id} ->      Response deleteActivity(long)          
+mar 29, 2015 5:07:57 AM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
+INFORMACIÓN:               GET http://localhost:8080/naturAdventure/activities/     ->      Response listAllActivities()           
+mar 29, 2015 5:07:57 AM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
+INFORMACIÓN:               GET http://localhost:8080/naturAdventure/activities/{id} ->      Response getActivity(long)             
+mar 29, 2015 5:07:57 AM org.apache.openejb.server.cxf.rs.CxfRsHttpListener logEndpoints
+INFORMACIÓN:               PUT http://localhost:8080/naturAdventure/activities/{id} ->      Response updateActivity(long, Activity)
+mar 29, 2015 5:07:57 AM org.apache.catalina.startup.HostConfig deployWAR
+INFORMACIÓN: Deployment of web application archive /home/rafa/workspace/NaturAdventure/G03RarNaturAdventure/target/apache-tomee/webapps/naturAdventure.war has finished in 9.345 ms
+mar 29, 2015 5:07:57 AM org.apache.coyote.AbstractProtocol start
+INFORMACIÓN: Starting ProtocolHandler ["http-bio-8080"]
+mar 29, 2015 5:07:57 AM org.apache.coyote.AbstractProtocol start
+INFORMACIÓN: Starting ProtocolHandler ["ajp-bio-8009"]
+mar 29, 2015 5:07:57 AM org.apache.catalina.startup.Catalina start
+INFORMACIÓN: Server startup in 9642 ms

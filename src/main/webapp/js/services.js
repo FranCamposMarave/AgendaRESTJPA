@@ -3,42 +3,34 @@
  */
 
 (function() {
-    var app = angular.module('app', []);
-    app.baseURI = 'http://localhost:8080/natureAdventure/activities';
-
-    app.controller('homeController', ['$scope', 'Service', function ($scope, ActivityService) {
-        var self = this;
-        self.getAllActivities = function(){
-            ActivityService.retrieveAll()
-                    .success(function(data){
-                        console.log(data);
-                        $scope.activities = data.activity;
-                    });
-        }
-    }]);
-
-    app.controller('activityController', ['$scope', 'Service', function ($scope, ActivityService) {
-            var self = this;
-            self.retreiveActivity = function(id) {
-                ActivityService.retrieveActivity(id)
-                    .success(function(data) {
-                        console.log(data);
-                        $scope.currentActivity = data;
-                    });
-            }
-
-        }]);
+    var app = angular.module('rest', []);
+    app.baseURI = 'http://localhost:8080/naturAdventure/activities/';
 
     app.service('ActivityService', ['$http', function($http) {
-        this.retrieveAll = function() {
-            return $http.get(app.baseURI);
-        }
+       this.retrieveAll = function() {
+           return $http.get(app.baseURI);
+       }
 
-        this.retrieveActivity = function(id) {
-            var url = app + id;
-            return $http.get(url);
-        }
+       this.addActivity = function (activity) {
+          var url = app.baseURI;
+          return $http.post(url, activity);
+       }
 
+       this.retrieveActivity = function(id) {
+           var url = app.baseURI + id;
+           return $http.get(url);
+       }
+
+       this.deleteActivity = function(id) {
+           var url = app.baseURI + id;
+           var data = {'id': id}
+           return $http.delete(url, data);
+       }
+
+       this.updateActivity = function (activity) {
+           var url = app.baseURI + activity.id;
+           var data = "{activity:" + JSON.stringify(activity) + "}";
+           return $http.put(url, data );
+       }
     }]);
-
 })();

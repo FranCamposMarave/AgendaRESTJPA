@@ -13,6 +13,7 @@ import java.util.Date;
 @NamedQueries({
         @NamedQuery(name="Activity.getAll", query = "SELECT a FROM Activity a"),
         @NamedQuery(name="Activity.get", query = "SELECT a FROM Activity a WHERE a.id = :id"),
+        @NamedQuery(name="Activity.deleteById", query = "DELETE FROM Activity a WHERE a.id = :id")
 })
 public class Activity {
     @Id
@@ -24,6 +25,7 @@ public class Activity {
 
     private String description;
 
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
     private float price;
@@ -90,5 +92,17 @@ public class Activity {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    @Override
+    public String toString() {
+        return "Activity{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", date=" + date +
+                ", price=" + price +
+                ", picture='" + picture + '\'' +
+                '}';
     }
 }
