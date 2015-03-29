@@ -62,11 +62,7 @@ app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService',
             ActivityService.updateActivity(activity)
                 .success(function(data) {
                     console.log("Activity updated");
-                    ActivityService.retrieveAll()
-                        .success(function(data) {
-                           $scope.activities = data.activity;
-                           console.log("Retrieve activities (count): " + $scope.activities.length);
-                    })
+                    $scope.retrieveAll();
                 })
                 .error(function(data, status, headers, config) {
                     alert("Error updating");

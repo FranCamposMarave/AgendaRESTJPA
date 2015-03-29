@@ -5,34 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b953b5d-5710-49c7-aed3-4cc3317fcf00" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/WEB-INF/resources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/css/bootstrap-social.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/js/angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/js/angular.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/js/controllers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/js/html5shiv.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/js/routing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/js/services.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/js/ui-bootstrap-tpls-0.12.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/uploads/pic1.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-28.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/host-manager.2015-03-28.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/localhost.2015-03-28.log" afterPath="" />
@@ -100,30 +72,13 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/js/ui-bootstrap-tpls-0.12.1.min.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/uploads/pic1.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/entities/Activity.class" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/entities/Activity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/entities/Activity.class" afterPath="$PROJECT_DIR$/target/classes/model/entities/Activity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/model/entities/Activity.class" afterPath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/model/entities/Activity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/dao/ActivityJPA.class" afterPath="$PROJECT_DIR$/target/classes/model/dao/ActivityJPA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" afterPath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ActivityServices.class" afterPath="$PROJECT_DIR$/target/classes/controller/ActivityServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" afterPath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure.war" afterPath="$PROJECT_DIR$/target/naturAdventure.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure.war" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Activity.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Activity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/dao/ActivityJPA.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/ActivityJPA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ActivityServices.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityServices.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html" afterPath="$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/templates/home.html" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/home.html" afterPath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/META-INF/maven/es.uji.belfern/AgendaRESTJPA/pom.properties" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/META-INF/maven/es.uji.belfern/AgendaRESTJPA/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/routing.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/routing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/routing.js" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/routing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/js/routing.js" afterPath="$PROJECT_DIR$/target/naturAdventure/js/routing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/services.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/services.js" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/js/services.js" afterPath="$PROJECT_DIR$/target/naturAdventure/js/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="G03RarNaturAdventure.iws" />
@@ -173,8 +128,8 @@
       <file leaf-file-name="routing.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/routing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5635593" vertical-offset="621" max-vertical-offset="2610">
-              <caret line="66" column="26" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+            <state vertical-scroll-proportion="1.588983" vertical-offset="585" max-vertical-offset="2550">
+              <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -1145,8 +1100,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/routing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5635593" vertical-offset="621" max-vertical-offset="2610">
-          <caret line="66" column="26" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+        <state vertical-scroll-proportion="1.588983" vertical-offset="585" max-vertical-offset="2550">
+          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
           <folding />
         </state>
       </provider>
