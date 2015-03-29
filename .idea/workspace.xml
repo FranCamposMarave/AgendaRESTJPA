@@ -6,12 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b953b5d-5710-49c7-aed3-4cc3317fcf00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/images/no-image.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/services/ImageUploaderService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/angular-file-upload.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/angular-file-upload.min.map" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/templates/activity.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/templates/categories.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/uploads/127820ae-224f-47ca-b5c0-ce3ffac6a180" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/uploads/127820ae-224f-47ca-b5c0-ce3ffac6a180" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/naturAdventure/uploads/127820ae-224f-47ca-b5c0-ce3ffac6a180" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-28.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/host-manager.2015-03-28.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/localhost.2015-03-28.log" afterPath="" />
@@ -21,6 +18,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/OpenEJB-2sr4wgq9opiiuzjx3z8w7t4gv" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/OpenEJB-7ms0fvj21maqdt0m9msf4oeqt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/OpenEJB-9lvwc29g3yibeweziyxsxripi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/OpenEJB-axp5q5z3nv4jpa5h00m6231lo" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/OpenEJB-dfq55r188y2p4y6h3o7dd06g8" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/WEB-INF/resources.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/css/bootstrap-social.css" afterPath="" />
@@ -82,30 +80,22 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/activity.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/categories.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/uploads/pic1.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/entities/Activity.class" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/entities/Activity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ActivityServices.class" afterPath="$PROJECT_DIR$/target/classes/controller/ActivityServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" afterPath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/dao/ActivityJPA.class" afterPath="$PROJECT_DIR$/target/classes/model/dao/ActivityJPA.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" afterPath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure.war" afterPath="$PROJECT_DIR$/target/naturAdventure.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure.war" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ActivityServices.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityServices.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/dao/ActivityJPA.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/ActivityJPA.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-29.log" afterPath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-29.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html" afterPath="$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/templates/home.html" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/templates/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/home.html" afterPath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/index.html" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/index.html" afterPath="$PROJECT_DIR$/target/naturAdventure/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/localhost_access_log.2015-03-29.txt" afterPath="$PROJECT_DIR$/target/apache-tomee/logs/localhost_access_log.2015-03-29.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/META-INF/maven/es.uji.belfern/AgendaRESTJPA/pom.properties" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/META-INF/maven/es.uji.belfern/AgendaRESTJPA/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/routing.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/routing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/routing.js" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/routing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/js/routing.js" afterPath="$PROJECT_DIR$/target/naturAdventure/js/routing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/services.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/services.js" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/css/style.css" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/css/style.css" afterPath="$PROJECT_DIR$/target/naturAdventure/css/style.css" />
@@ -135,46 +125,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1545">
-              <caret line="19" column="102" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
+            <state vertical-scroll-proportion="0.29801324" vertical-offset="0" max-vertical-offset="1665">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="557" max-vertical-offset="1215">
+              <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivityJPA.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/ActivityJPA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1020">
+              <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/routing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1887906" vertical-offset="1082" max-vertical-offset="3705">
-              <caret line="99" column="19" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2144" max-vertical-offset="3705">
+              <caret line="154" column="21" selection-start-line="154" selection-start-column="21" selection-end-line="154" selection-end-column="21" />
               <folding>
-                <element signature="e#0#7889#0" expanded="false" />
+                <element signature="e#0#7871#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityServices.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ActivityServices.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1575">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/services.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -204,15 +192,15 @@
         <option value="$PROJECT_DIR$/src/main/webapp/js/controllers.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/backoffice/js/services.js" />
         <option value="$PROJECT_DIR$/src/main/java/model/entities/Activity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/dao/ActivityJPA.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/angular-file-upload-min.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/services/ImageUploaderService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ActivityServices.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/services.js" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/ActivityJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/routing.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html" />
       </list>
     </option>
   </component>
@@ -360,11 +348,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -387,6 +371,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="G03RarNaturAdventure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="G03RarNaturAdventure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -713,7 +731,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -756,7 +774,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1680">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#7889#0" expanded="false" />
+            <element signature="e#0#7871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -790,7 +808,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1005">
           <caret line="42" column="30" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="30" />
           <folding>
-            <element signature="e#0#7889#0" expanded="false" />
+            <element signature="e#0#7871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -830,7 +848,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="630">
           <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
           <folding>
-            <element signature="e#0#7889#0" expanded="false" />
+            <element signature="e#0#7871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -869,7 +887,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="615">
           <caret line="30" column="84" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="86" />
           <folding>
-            <element signature="e#0#7889#0" expanded="false" />
+            <element signature="e#0#7871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -923,7 +941,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="615">
           <caret line="30" column="84" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="86" />
           <folding>
-            <element signature="e#0#7889#0" expanded="false" />
+            <element signature="e#0#7871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -970,7 +988,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#7889#0" expanded="false" />
+            <element signature="e#0#7871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1061,13 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/ActivityJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61661345" vertical-offset="319" max-vertical-offset="1020">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/angular-file-upload.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.122349106" vertical-offset="0" max-vertical-offset="613">
@@ -1097,14 +1108,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1080">
-          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/ImageUploaderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
@@ -1112,14 +1115,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1545">
-          <caret line="19" column="102" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1143,11 +1138,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/routing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1887906" vertical-offset="1082" max-vertical-offset="3705">
-          <caret line="99" column="19" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2144" max-vertical-offset="3705">
+          <caret line="154" column="21" selection-start-line="154" selection-start-column="21" selection-end-line="154" selection-end-column="21" />
           <folding>
-            <element signature="e#0#7889#0" expanded="false" />
+            <element signature="e#0#7871#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/ActivityJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1020">
+          <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="557" max-vertical-offset="1215">
+          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29801324" vertical-offset="0" max-vertical-offset="1665">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

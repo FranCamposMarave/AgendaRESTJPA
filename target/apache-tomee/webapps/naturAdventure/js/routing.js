@@ -150,9 +150,9 @@ app.controller('activityModalCtrl', function ($scope, $modalInstance, activity, 
 
     if ( activity ){
         $scope.activity = activity;
-        $scope.title = "Editar actividad";
+        $scope.action = "Editar";
     }else{
-        $scope.title = "Crear actividad";
+        $scope.action = "Crear";
         $scope.activity = {};
     }
 

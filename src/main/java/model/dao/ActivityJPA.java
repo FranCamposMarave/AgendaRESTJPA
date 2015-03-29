@@ -58,7 +58,7 @@ public class ActivityJPA {
             oldActivity.setDescription( activity.getDescription() );
             oldActivity.setDate( activity.getDate() );
             oldActivity.setPicture( activity.getPicture() );
-            oldActivity.setPicture( activity.getPicture() );
+            oldActivity.setPrice( activity.getPrice() );
             return true;
         } catch (NoResultException e) {
             return false;
