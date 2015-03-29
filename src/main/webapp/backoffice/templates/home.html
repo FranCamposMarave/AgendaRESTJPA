@@ -17,15 +17,18 @@
                 <h3>{{ activity.title }}</h3>
                 <p>{{ activity.description }}</p>
                 <p>
-                    <button class="btn btn-success" id="update:{{activity.id}}" ng-click="openModal(activity)">
+                    <button class="btn btn-success" id="update:{{activity.id}}" ng-click="openActivityModal(activity)">
                         <i class="fa fa-edit"></i> Editar
                     </button>
-                    <button type="button" class="btn btn-danger" ng-click="delete(activity.id)" id="delete:{{activity.id}}">
+                    <button type="button" class="btn btn-danger" ng-click="openConfirmationModal(activity)" id="delete:{{activity.id}}">
                         <i class="fa fa-trash-o"></i> Borrar
                     </button>
                 </p>
             </div>
         </div>
+    </div>
+    <div class="col-md-12 text-center">
+        <button ng-click="openActivityModal()" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> Añadir Actividad</button>
     </div>
     <!-- Activities End -->
 
@@ -33,7 +36,7 @@
     <script type="text/ng-template" id="activityModalContent.html">
         <div class="modal-header">
             <button type="button" class="close" ng-click="modalCancel()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="activityLabel">{{activity.title}}</h4>
+            <h4 class="modal-title" id="activityLabel">{{title}}</h4>
         </div>
         <div class="modal-body">
             <div class="form-group">
@@ -43,6 +46,11 @@
             <div class="form-group">
                 <label>Descripcion:</label>
                 <textarea ng-model="activity.description" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Imagen:</label>
+                <input type="file" ng-model="file" nv-file-select="" uploader="uploader" name="image"/>
+                <!--<input type="file" ng-model="file" class="form-control" onchange="uploadImage()" /> -->
             </div>
             <div class="form-group">
                 <label>Fecha:</label>
@@ -61,10 +69,28 @@
             <button type="button" class="btn btn-default" ng-click="modalCancel()">Cerrar</button>
             <button type="button" class="btn btn-info"
                     ng-click="update(activity); modalOk()"
-                    data-dismiss="modal"><i class="fa fa-check"></i>Actualizar</button>
+                    data-dismiss="modal"><i class="fa fa-check"></i>{{ title }}</button>
         </div>
     </script>
     <!-- Activity Modal End-->
+
+    <!-- Confirmation Modal Start-->
+    <script type="text/ng-template" id="confirmationModalContent.html">
+        <div class="modal-header danger">
+            <button type="button" class="close" ng-click="modalCancel()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="confirmationLabel"><i class="fa fa-warning"></i> Atención</h4>
+        </div>
+        <div class="modal-body">
+            <p>¿Seguro que desea borrar la actividad {{ activity.title }}? No podrá ser recuperada</p>
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" ng-click="modalCancel()">Cancelar</button>
+            <button type="button" class="btn btn-info"
+                    ng-click="modalOk(activity)"><i class="fa fa-trash"></i> Borrar</button>
+        </div>
+    </script>
+    <!-- Confirmation Modal End-->
 
 
 </div>

@@ -1,3 +1,4 @@
+services/ImageUploaderService.class
 controller/ActivityServices.class
 model/entities/Activity.class
 model/dao/ActivityJPA.class

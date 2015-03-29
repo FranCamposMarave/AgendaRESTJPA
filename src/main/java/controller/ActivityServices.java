@@ -2,12 +2,16 @@ package controller;
 
 import model.dao.ActivityJPA;
 import model.entities.Activity;
+import services.ImageUploaderService;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import javax.ws.rs.core.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URLConnection;
 
 
 @Path("activities")
@@ -16,6 +20,9 @@ public class ActivityServices {
 
     @Inject
     ActivityJPA activityDAO;
+
+    @Context
+    private UriInfo uriInfo;
 
 
     public ActivityServices() {
@@ -38,6 +45,16 @@ public class ActivityServices {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
         return Response.ok(activity).build();
+    }
+
+    @POST
+    @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response addActivity(Activity activity) {
+        activityDAO.add( activity );
+        UriBuilder uriBuilder = uriInfo.getAbsolutePathBuilder();
+        URI uri = uriBuilder.path( activity.getId() + "" ).build();
+        return Response.created(uri).entity( activity ).build();
     }
 
     @DELETE
@@ -66,6 +83,19 @@ public class ActivityServices {
                 activityDAO.add( activity );
                 return Response.ok( activity ).build();
             }
+        }
+    }
+
+    @POST
+    @Path("/image")
+    public Response uploadImageJPG(InputStream image) throws IOException {
+        ImageUploaderService service = new ImageUploaderService();
+        String imageName = service.uploadImage( image, "jpg" );
+
+        if ( imageName != null ){
+            return Response.ok( imageName ).build();
+        }else{
+            return Response.serverError().build();
         }
     }
 

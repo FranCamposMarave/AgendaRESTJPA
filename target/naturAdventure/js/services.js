@@ -13,7 +13,8 @@
 
        this.addActivity = function (activity) {
           var url = app.baseURI;
-          return $http.post(url, activity);
+          var data = "{activity:" + JSON.stringify(activity) + "}";
+          return $http.post(url, data);
        }
 
        this.retrieveActivity = function(id) {

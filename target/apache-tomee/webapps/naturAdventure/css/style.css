@@ -36,6 +36,7 @@ body {
 }
 .thumbnail img {
     width: 100%;
+    height: 110px;
 }
 .ratings {
     padding-right: 10px;
@@ -44,6 +45,17 @@ body {
 }
 .thumbnail {
     padding: 0;
+}
+.thumbnail .caption {
+    height: 250px;
+}
+.thumbnail .caption h3{
+    height: 55px;
+    text-overflow: ellipsis;
+}
+.thumbnail .caption p{
+    height: 100px;
+    text-overflow: ellipsis;
 }
 .thumbnail .caption-full {
     padding: 9px;

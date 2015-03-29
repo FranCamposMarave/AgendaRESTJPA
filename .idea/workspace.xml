@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/webapp/index.html" line="105" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/webapp/index.html" line="106" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/webapp/js/services.js" line="16" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b953b5d-5710-49c7-aed3-4cc3317fcf00" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/images/no-image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/services/ImageUploaderService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/angular-file-upload.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/angular-file-upload.min.map" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/templates/activity.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/templates/categories.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-28.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/host-manager.2015-03-28.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/localhost.2015-03-28.log" afterPath="" />
@@ -42,6 +49,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/js/routing.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/js/services.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/js/ui-bootstrap-tpls-0.12.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/templates/activity.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/templates/categories.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/uploads/pic1.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/WEB-INF/resources.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/css/bootstrap-social.css" afterPath="" />
@@ -70,15 +79,36 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/js/routing.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/js/services.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/js/ui-bootstrap-tpls-0.12.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/activity.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/categories.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/uploads/pic1.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/entities/Activity.class" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/entities/Activity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ActivityServices.class" afterPath="$PROJECT_DIR$/target/classes/controller/ActivityServices.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" afterPath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure.war" afterPath="$PROJECT_DIR$/target/naturAdventure.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure.war" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ActivityServices.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityServices.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-29.log" afterPath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-29.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html" afterPath="$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/templates/home.html" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/home.html" afterPath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/index.html" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/index.html" afterPath="$PROJECT_DIR$/target/naturAdventure/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/META-INF/maven/es.uji.belfern/AgendaRESTJPA/pom.properties" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/META-INF/maven/es.uji.belfern/AgendaRESTJPA/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/routing.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/routing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/routing.js" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/routing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/js/routing.js" afterPath="$PROJECT_DIR$/target/naturAdventure/js/routing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/services.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/services.js" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/css/style.css" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure/css/style.css" afterPath="$PROJECT_DIR$/target/naturAdventure/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="G03RarNaturAdventure.iws" />
@@ -105,21 +135,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.416666" vertical-offset="386" max-vertical-offset="1830">
-              <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.791667" vertical-offset="476" max-vertical-offset="1155">
-              <caret line="49" column="87" selection-start-line="49" selection-start-column="87" selection-end-line="49" selection-end-column="87" />
+            <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1545">
+              <caret line="19" column="102" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -128,19 +148,11 @@
       <file leaf-file-name="routing.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/routing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.588983" vertical-offset="585" max-vertical-offset="2550">
-              <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/services.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
-              <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-              <folding />
+            <state vertical-scroll-proportion="1.1887906" vertical-offset="1082" max-vertical-offset="3705">
+              <caret line="99" column="19" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#7889#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,8 +160,20 @@
       <file leaf-file-name="ActivityServices.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/ActivityServices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="349" max-vertical-offset="1020">
-              <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1575">
+              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -178,14 +202,16 @@
         <option value="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/controllers.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/backoffice/js/services.js" />
         <option value="$PROJECT_DIR$/src/main/java/model/entities/Activity.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/dao/ActivityJPA.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/services.js" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ActivityServices.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/angular-file-upload-min.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/services/ImageUploaderService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ActivityServices.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/services.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/routing.js" />
       </list>
     </option>
@@ -312,6 +338,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="uploads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="G03RarNaturAdventure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="G03RarNaturAdventure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -335,44 +387,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="G03RarNaturAdventure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="G03RarNaturAdventure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -690,7 +704,7 @@
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="100" y="124" width="1166" height="544" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="180" width="1166" height="544" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -707,8 +721,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5972435" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3663142" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43950996" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -737,27 +751,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="1830">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="990">
-          <caret line="16" column="90" selection-start-line="16" selection-start-column="90" selection-end-line="16" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/routing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1680">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#7889#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -789,7 +789,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1005">
           <caret line="42" column="30" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="30" />
-          <folding />
+          <folding>
+            <element signature="e#0#7889#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -827,7 +829,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="630">
           <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-          <folding />
+          <folding>
+            <element signature="e#0#7889#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -864,7 +868,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="615">
           <caret line="30" column="84" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="86" />
-          <folding />
+          <folding>
+            <element signature="e#0#7889#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -916,7 +922,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="615">
           <caret line="30" column="84" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="86" />
-          <folding />
+          <folding>
+            <element signature="e#0#7889#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -961,7 +969,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#7889#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,25 +1046,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="600">
           <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.416666" vertical-offset="386" max-vertical-offset="1830">
-          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,39 +1065,89 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.61661345" vertical-offset="319" max-vertical-offset="1020">
           <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/angular-file-upload.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.122349106" vertical-offset="0" max-vertical-offset="613">
+          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/angular-file-upload.min.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5415282" vertical-offset="1219" max-vertical-offset="1845">
+          <caret line="103" column="54" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15306123" vertical-offset="0" max-vertical-offset="15990">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1080">
+          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/ImageUploaderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1545">
+          <caret line="19" column="102" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/ActivityServices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="349" max-vertical-offset="1020">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1575">
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
-          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/backoffice/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.791667" vertical-offset="476" max-vertical-offset="1155">
-          <caret line="49" column="87" selection-start-line="49" selection-start-column="87" selection-end-line="49" selection-end-column="87" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/routing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.588983" vertical-offset="585" max-vertical-offset="2550">
-          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
-          <folding />
+        <state vertical-scroll-proportion="1.1887906" vertical-offset="1082" max-vertical-offset="3705">
+          <caret line="99" column="19" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#7889#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
