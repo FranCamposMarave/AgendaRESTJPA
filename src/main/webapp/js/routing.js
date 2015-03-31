@@ -1,7 +1,7 @@
 
 // Create the module
 var app = angular.module('app',
-    ['ngRoute', 'rest', 'ui.bootstrap', 'angularFileUpload','angular-loading-bar']);
+    ['ngRoute', 'rest', 'ui.bootstrap', 'angularFileUpload','angular-loading-bar', 'ngAnimate', 'toastr']);
 
 app.config(function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.latencyThreshold = 10;
@@ -43,8 +43,8 @@ app.controller('homeCtrl', ['$scope', '$http',
 ]);
 
 
-app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService', 'FileUploader',
-    function ($scope, $modal, ActivityService, FileUploader) {
+app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
+    function ($scope, $modal, ActivityService, FileUploader, toastr) {
         $scope.retrieveAll = function () {
             ActivityService.retrieveAll()
                 .success(function(data) {
@@ -82,15 +82,15 @@ app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService', 'FileUp
             modalInstance.result.then(function (activity) {
                 ActivityService.deleteActivity(activity.id)
                     .success(function(data) {
+                        toastr.success('La actividad ha sido borrada', 'Correcto');
                         console.log("Activity deleted");
                         $scope.retrieveAll();
-                });
+                    }).error(function(data, status, headers, config) {
+                      console.log("Error deleting activity");
+                      toastr.error('No se ha podido borrar la actividad', 'Error');
+                  });;
             });
         };
-
-
-        $scope.alerts = [
-        ];
 
         $scope.file = null;
         $scope.uploadImage = function(){
@@ -99,7 +99,7 @@ app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService', 'FileUp
     }
 ]);
 
-app.controller('activityCtrl', function ($scope, $routeParams, FileUploader, ActivityService, $location) {
+app.controller('activityCtrl', function ($scope, $routeParams, FileUploader, ActivityService, $location, toastr) {
 
     if ( $routeParams.id ){
         $scope.action = "Editar";
@@ -117,35 +117,22 @@ app.controller('activityCtrl', function ($scope, $routeParams, FileUploader, Act
         if ( $scope.action == 'Crear' ){
             ActivityService.addActivity($scope.activity)
                 .success(function(data) {
-                    console.log("Activity deleted");
-                    $scope.addAlert("success", "La actividad ha sido creada.");
-                    $location.path('/backoffice');
+                    console.log("Activity added");
+                    toastr.success('La actividad ha sido añadida!', 'Correcto');
                 }).error(function(data, status, headers, config) {
-                    alert("Error updating");
-                    $scope.addAlert("danger", "No se ha podido crear la actividad.");
+                    console.log("Error adding activity");
+                    toastr.error('No se ha podido añadir la actividad', 'Error');
                 });
         }else{
             ActivityService.updateActivity($scope.activity)
                 .success(function(data) {
                     console.log("Activity updated");
-                    $scope.addAlert("success", "La actividad ha sido actualizada.");
-                    $location.path('/backoffice');
+                    toastr.success('La actividad ha sido modificada!', 'Correcto');
                 }).error(function(data, status, headers, config) {
-                    alert("Error updating");
-                    $scope.addAlert("danger", "No se ha podido actualizar la actividad.");
+                    console.log("Error updating activity");
+                    toastr.error('No se ha podido modificar la actividad', 'Error');
                 });
         }
-    };
-
-    $scope.alerts = [
-    ];
-
-    $scope.addAlert = function(messageType, messageContent) {
-        $scope.alerts.push({type:messageType, msg: messageContent});
-    };
-
-    $scope.closeAlert = function(index) {
-        $scope.alerts.splice(index, 1);
     };
 
     $scope.today = function() {

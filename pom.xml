@@ -130,6 +130,16 @@
                 <configuration>
                     <tomeeVersion>1.7.1</tomeeVersion>
                     <tomeeClassifier>plume</tomeeClassifier>
+                    <synchronization>
+                        <extensions>
+                            <extension>.class</extension> <!-- if you want to update each time you build with mvn compile -->
+                            <extension>.js</extension>
+                            <extension>.png</extension>
+                            <extension>.css</extension>
+                            <extension>.html</extension>
+                        </extensions>
+                    </synchronization>
+                    <reloadOnUpdate>true</reloadOnUpdate>
                 </configuration>
             </plugin>
         </plugins>
