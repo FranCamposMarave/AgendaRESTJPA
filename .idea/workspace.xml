@@ -12,7 +12,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/G03RarNaturAdventure_war.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/G03RarNaturAdventure_war_exploded.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_1_3.xml" afterPath="" />
@@ -133,19 +132,214 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/lib2.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/NOTICE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/RELEASE-NOTES" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/RUNNING.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/TomEE.amd64.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/TomEE.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/TomEE.ia64.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/TomEE.x86.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/bootstrap.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/catalina-tasks.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/catalina.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/catalina.bat.original" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/catalina.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/catalina.sh.original" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/commons-daemon-native.tar.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/commons-daemon.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/configtest.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/configtest.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/daemon.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/digest.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/digest.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/service.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/service.install.as.admin.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/service.readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/service.remove.as.admin.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/setclasspath.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/setclasspath.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/shutdown.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/shutdown.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/startup.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/startup.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/tomcat-juli.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/tomcat-native.tar.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/tomee.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/tomee.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/tool-wrapper.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/tool-wrapper.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/version.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/bin/version.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/catalina.policy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/catalina.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/conf.d/cxf-rs.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/conf.d/cxf.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/conf.d/hsql.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/logging.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/server.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/server.xml.original" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/system.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/tomcat-users.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/tomcat-users.xml.original" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/tomee.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/conf/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/endorsed/annotation-api.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/endorsed/jaxb-api.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/FastInfoset-1.2.12.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/activemq-broker-5.10.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/activemq-client-5.10.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/activemq-jdbc-store-5.10.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/activemq-kahadb-store-5.10.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/activemq-openwire-legacy-5.10.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/activemq-protobuf-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/activemq-ra-5.10.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/bval-core-0.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/bval-jsr303-0.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/catalina-ant.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/catalina-ha.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/catalina-tribes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/catalina.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/commonj.sdo-2.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/commons-beanutils-core-1.8.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/commons-cli-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/commons-codec-1.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/commons-collections-3.2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/commons-dbcp-1.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/commons-digester-1.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/commons-lang-2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/commons-lang3-3.3.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/commons-logging-1.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/commons-pool-1.5.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-api-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-bindings-soap-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-bindings-xml-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-core-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-databinding-jaxb-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-frontend-jaxrs-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-frontend-jaxws-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-frontend-simple-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-management-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-rs-extension-providers-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-rs-extension-search-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-rs-security-cors-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-rs-security-oauth2-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-transports-http-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-ws-addr-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-ws-policy-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/cxf-rt-ws-security-2.6.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/ecj-4.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/eclipselink-2.4.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/el-api.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/geronimo-connector-3.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/geronimo-javamail_1.4_mail-1.8.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/geronimo-transaction-3.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/hawtbuf-1.10.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/howl-1.0.1-1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/hsqldb-2.3.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/istack-commons-runtime-2.16.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/jansi-1.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/jasper-el.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/jasper.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/javaee-api-6.0-6-tomcat.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/javax.faces-2.1.29.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/jaxb-core-2.2.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/jaxb-impl.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/jettison-1.3.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/joda-time-1.6.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/jsp-api.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/mbean-annotation-api-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/mimepull-1.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/neethi-3.0.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-api-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-client-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-core-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-core-eclipselink-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-cxf-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-cxf-rs-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-cxf-transport-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-ejbd-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-hsql-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-http-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-javaagent.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-jee-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-jee-accessors-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-jpa-integration-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-jstl-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-loader-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-rest-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-server-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openejb-webservices-4.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openjpa-2.4.0-nonfinal-1598334.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/opensaml-2.5.1-1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openwebbeans-ee-1.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openwebbeans-ee-common-1.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openwebbeans-ejb-1.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openwebbeans-el22-1.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openwebbeans-impl-1.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openwebbeans-jsf-1.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openwebbeans-spi-1.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openwebbeans-web-1.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/openws-1.4.2-1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/quartz-openejb-shade-2.2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/saaj-impl-1.3.18.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/serp-1.14.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/servlet-api.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/slf4j-api-1.7.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/slf4j-jdk14-1.7.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/stax2-api-3.1.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/swizzle-stream-1.6.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/sxc-jaxb-core-0.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/sxc-runtime-0.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomcat-api.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomcat-coyote.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomcat-dbcp.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomcat-i18n-es.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomcat-i18n-fr.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomcat-i18n-ja.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomcat-jdbc.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomcat-util.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomcat7-websocket.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomee-catalina-1.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomee-common-1.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomee-jaxrs-1.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomee-jdbc-1.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomee-loader-1.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomee-mojarra-1.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomee-webapp-1.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/tomee-webservices-1.7.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/websocket-api.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/woodstox-core-asl-4.2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/wsdl4j-1.6.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/wss4j-1.6.15.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/xbean-asm5-shaded-4.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/xbean-bundleutils-4.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/xbean-finder-shaded-4.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/xbean-naming-4.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/xbean-reflect-4.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/xml-apis-1.4.01.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/xml-resolver-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/xmlschema-core-2.0.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/xmlsec-1.5.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/lib/xmltooling-1.3.2-1.jar" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-28.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-29.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-31.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/host-manager.2015-03-28.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/host-manager.2015-03-29.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/host-manager.2015-03-31.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/localhost.2015-03-28.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/localhost.2015-03-29.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/localhost.2015-03-31.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/localhost_access_log.2015-03-28.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/localhost_access_log.2015-03-29.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/localhost_access_log.2015-03-31.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/manager.2015-03-28.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/manager.2015-03-29.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/manager.2015-03-31.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/OpenEJB-1xjmbmvc3mq4qf9zn83z4ibz6" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/OpenEJB-2sr4wgq9opiiuzjx3z8w7t4gv" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/OpenEJB-2weepxlcwkl7qwg75xmst8ab8" afterPath="" />
@@ -156,6 +350,46 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/OpenEJB-axp5q5z3nv4jpa5h00m6231lo" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/OpenEJB-bfikzbd4ao34dnwxju4jcww11" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/OpenEJB-dfq55r188y2p4y6h3o7dd06g8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/temp/safeToDelete.tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/META-INF/maven/es.uji.belfern/AgendaRESTJPA/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/META-INF/maven/es.uji.belfern/AgendaRESTJPA/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/META-INF/beans.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/model/entities/Activity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/classes/services/ImageUploaderService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/GeneradorNombres-0.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/cglib-nodep-2.1_3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/commons-codec-1.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/commons-exec-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/commons-logging-1.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/cucumber-core-1.2.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/cucumber-html-0.2.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/cucumber-java-1.2.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/cucumber-junit-1.2.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/cucumber-jvm-deps-1.0.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/derby-10.11.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/gherkin-2.12.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/gson-2.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/guava-18.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/hamcrest-core-1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/httpclient-4.3.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/httpcore-4.3.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/jna-3.4.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/junit-4.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/mockito-core-1.10.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/mysql-connector-java-5.1.33.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/objenesis-2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/platform-3.4.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/selenium-api-2.45.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/selenium-chrome-driver-2.45.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/selenium-firefox-driver-2.45.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/lib/selenium-remote-driver-2.45.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/WEB-INF/resources.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/WEB-INF/resources.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/css/bootstrap-social.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/css/bootstrap-theme.min.css" afterPath="" />
@@ -174,6 +408,13 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/fonts/glyphicons-halflings-regular.woff" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/images/image1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/images/image2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/images/image3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/images/image4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/images/image5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/images/image6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/images/image7.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/js/angular.min.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/js/angular.min.js.map" afterPath="" />
@@ -183,8 +424,105 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/js/routing.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/js/services.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/js/ui-bootstrap-tpls-0.12.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/templates/activity.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/templates/categories.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/templates/home.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/backoffice/uploads/pic1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/css/bootstrap-social.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/css/loading-bar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/images/image1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/images/image2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/images/image3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/images/image4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/images/image5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/images/image6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/images/image7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/images/no-image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/angular-file-upload.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/angular-file-upload.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/angular.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/controllers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/html5shiv.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/loading-bar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/routing.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/services.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/js/ui-bootstrap-tpls-0.12.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/templates/activity.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/templates/categories.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/templates/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/uploads/127820ae-224f-47ca-b5c0-ce3ffac6a180" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/uploads/610d2948-2cec-4ea8-ae5e-8e4a2a754a4e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/uploads/6aef44ec-3e19-452f-9a82-60c4adc2e1f6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/uploads/6d9a4106-b41a-420d-85e8-2615ca24190b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/uploads/7bad4631-02b5-4fa4-9f2a-7631ab638c63" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/uploads/c75223d7-3718-4688-ac7c-681236f3bed9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/uploads/pic1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/META-INF/beans.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/ActivityServices.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/dao/ActivityJPA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/Activity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/services/ImageUploaderService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/META-INF/beans.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/controller/ActivityServices.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/model/dao/ActivityJPA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/model/entities/Activity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/classes/services/ImageUploaderService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/GeneradorNombres-0.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/cglib-nodep-2.1_3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/commons-codec-1.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/commons-exec-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/commons-logging-1.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/cucumber-core-1.2.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/cucumber-html-0.2.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/cucumber-java-1.2.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/cucumber-junit-1.2.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/cucumber-jvm-deps-1.0.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/derby-10.11.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/gherkin-2.12.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/gson-2.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/guava-18.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/hamcrest-core-1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/httpclient-4.3.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/httpcore-4.3.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/jna-3.4.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/junit-4.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/mockito-core-1.10.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/mysql-connector-java-5.1.33.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/objenesis-2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/platform-3.4.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/selenium-api-2.45.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/selenium-chrome-driver-2.45.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/selenium-firefox-driver-2.45.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/lib/selenium-remote-driver-2.45.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/WEB-INF/resources.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/WEB-INF/resources.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/css/bootstrap-social.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/css/bootstrap-theme.min.css" afterPath="" />
@@ -203,6 +541,13 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/fonts/glyphicons-halflings-regular.woff" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/images/image1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/images/image2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/images/image3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/images/image4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/images/image5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/images/image6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/images/image7.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/js/angular.min.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/js/angular.min.js.map" afterPath="" />
@@ -212,15 +557,68 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/js/routing.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/js/services.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/js/ui-bootstrap-tpls-0.12.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/activity.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/categories.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/templates/home.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/backoffice/uploads/pic1.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/naturAdventure.war" afterPath="$PROJECT_DIR$/target/naturAdventure.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure.war" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure.war" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/css/bootstrap-social.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/css/loading-bar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/images/image1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/images/image2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/images/image3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/images/image4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/images/image5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/images/image6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/images/image7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/images/no-image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/js/angular-file-upload.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/js/angular-file-upload.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/js/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/js/angular.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/js/controllers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/js/html5shiv.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/js/loading-bar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/js/routing.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/js/services.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/js/ui-bootstrap-tpls-0.12.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/templates/activity.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/templates/categories.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/templates/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/uploads/127820ae-224f-47ca-b5c0-ce3ffac6a180" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/uploads/610d2948-2cec-4ea8-ae5e-8e4a2a754a4e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/uploads/6aef44ec-3e19-452f-9a82-60c4adc2e1f6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/uploads/6d9a4106-b41a-420d-85e8-2615ca24190b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/uploads/7bad4631-02b5-4fa4-9f2a-7631ab638c63" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/uploads/c75223d7-3718-4688-ac7c-681236f3bed9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/naturAdventure/uploads/pic1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/META-INF/beans.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/test/DeleteScenario.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/test/PostScenario.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/test/PutScenario.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/test/Runner.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/test/delete.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/test/post.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/test/put.feature" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-31.log" afterPath="$PROJECT_DIR$/target/apache-tomee/logs/catalina.2015-03-31.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/logs/localhost_access_log.2015-03-31.txt" afterPath="$PROJECT_DIR$/target/apache-tomee/logs/localhost_access_log.2015-03-31.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/META-INF/maven/es.uji.belfern/AgendaRESTJPA/pom.properties" afterPath="$PROJECT_DIR$/target/apache-tomee/webapps/naturAdventure/META-INF/maven/es.uji.belfern/AgendaRESTJPA/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="G03RarNaturAdventure.iws" />
@@ -270,7 +668,7 @@
       <file leaf-file-name="ActivityServices.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/ActivityServices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1828909" vertical-offset="784" max-vertical-offset="1410">
+            <state vertical-scroll-proportion="8.02" vertical-offset="784" max-vertical-offset="1410">
               <caret line="92" column="59" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="59" />
               <folding />
             </state>
@@ -685,7 +1083,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8820827" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.8820827" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -697,8 +1095,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34441087" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43950996" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34441087" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43950996" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="180" width="1166" height="544" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1115,7 +1513,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/ActivityServices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1828909" vertical-offset="784" max-vertical-offset="1410">
+        <state vertical-scroll-proportion="8.02" vertical-offset="784" max-vertical-offset="1410">
           <caret line="92" column="59" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="59" />
           <folding />
         </state>
