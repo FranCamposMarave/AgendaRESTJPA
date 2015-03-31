@@ -2,5 +2,6 @@
 
 src/main/webapp/WEB-INF/resources.xml
 src/main/webapp/WEB-INF/uploads/*
-#.idea/*
+target/*
+.idea/*
 .settings/*
