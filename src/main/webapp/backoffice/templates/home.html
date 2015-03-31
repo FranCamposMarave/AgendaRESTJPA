@@ -3,8 +3,8 @@
 
     <!-- Activities Start -->
     <div class="col-md-12 page-header">
-        <button ng-click="openActivityModal()" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Añadir Actividad</button>
-        <h1 class="text-left">Próximas actividades</h1>
+        <a href="#/backoffice/activity" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Añadir Actividad</a>
+        <h1 class="text-left"><i class="fa fa-calendar"></i> Próximas actividades</h1>
         <div class="clearfix"></div>
     </div>
     <div>
@@ -19,12 +19,11 @@
             <img src="uploads/{{ activity.picture }}" alt="">
             <div class="caption">
                 <span class="price label label-info">{{ activity.price }} €</span>
-                <h3>{{ activity.title }}</h3>
-                <p class="description">{{ activity.description }}</p>
+                <h5>{{ activity.title }}</h5>
                 <p>
-                    <button class="btn btn-success" id="update:{{activity.id}}" ng-click="openActivityModal(activity)">
+                    <a href="#/backoffice/activity/{{ activity.id }}" class="btn btn-success" id="update:{{activity.id}}">
                         <i class="fa fa-edit"></i> Editar
-                    </button>
+                    </a>
                     <button type="button" class="btn btn-danger" ng-click="openConfirmationModal(activity)" id="delete:{{activity.id}}">
                         <i class="fa fa-trash-o"></i> Borrar
                     </button>
@@ -33,52 +32,6 @@
         </div>
     </div>
     <!-- Activities End -->
-
-    <!-- Activity Modal Start-->
-    <script type="text/ng-template" id="activityModalContent.html">
-        <div class="panel panel-info">
-            <div class="modal-header panel-heading">
-                <button type="button" class="close" ng-click="modalCancel()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title panel-title" id="activityLabel">{{action}} Actividad</h4>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label>Título:</label>
-                    <input type="text" ng-model="activity.title" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Descripcion:</label>
-                    <textarea ng-model="activity.description" class="form-control"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Precio:</label>
-                    <input type="number" ng-model="activity.price" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label>Imagen:</label>
-                    <input type="file" ng-model="file" nv-file-select="" uploader="uploader" name="image"/>
-                </div>
-                <div class="form-group">
-                    <label>Fecha:</label>
-                    <div class="input-group col-md-8">
-                        <input type="text" class="form-control" datepicker-popup="dd-MM-yyyy" ng-model="activity.date" is-open="opened"
-                               current-text="hoy" clear-text="limpiar" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Cerrar" />
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-                        </span>
-                    </div>
-                    <timepicker ng-model="activity.date" hour-step="1" minute-step="30" show-meridian="false"></timepicker>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" ng-click="modalCancel()">Cerrar</button>
-                <button type="button" class="btn btn-info"
-                    ng-click="update(activity); modalOk()"
-                    data-dismiss="modal"><i class="fa fa-check"></i>{{ action }}</button>
-            </div>
-        </div>
-    </script>
-    <!-- Activity Modal End-->
 
     <!-- Confirmation Modal Start-->
     <script type="text/ng-template" id="confirmationModalContent.html">

@@ -1,73 +1,48 @@
-<div class="row">
-
-    <div class="col-md-3">
-        <p class="lead">Actividades</p>
-        <div class="list-group">
-            <a href="#" class="list-group-item">Piragüismo</a>
-            <a href="#" class="list-group-item">Escalada</a>
-            <a href="#" class="list-group-item">Tiro con arco</a>
-        </div>
-    </div>
-
-    <div class="col-md-9">
-
-        <div class="thumbnail">
-            <img class="img-responsive" src="uploads/{{ activity.picture }}" alt="">
-            <div class="caption-full">
-                <h4 class="pull-right">{{ activity.price }}€</h4>
-                <h4><a href="#">{{ activity.title }}</a></h4>
-                <p>{{ activity.description }}</p>
-            </div>
-            <div class="ratings">
-                <p class="pull-right">2 valoraciones</p>
-                <p>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </p>
-            </div>
-        </div>
-
-        <div class="well">
-
-            <div class="text-right">
-                <a class="btn btn-success">Valorar la actividad</a>
-            </div>
-
-            <hr>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    reyes-grangel-69
-                    <span class="pull-right">hace 10 días</span>
-                    <p>Fui el día de la huelga y fue genial!!</p>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    oscar-virguería
-                    <span class="pull-right">hace 12 días</span>
-                    <p>Esto es una virguería</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
+<!--Alerts Start -->
+<div>
+    <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
 </div>
+<!--Alerts End -->
+
+<!-- Panel Start -->
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h4 class="modal-title panel-title" id="activityLabel">{{action}} Actividad</h4>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label>Título:</label>
+            <input type="text" ng-model="activity.title" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Descripcion:</label>
+            <textarea ng-model="activity.description" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Precio:</label>
+            <div class="input-group">
+                <input type="number" ng-model="activity.price" class="form-control" />
+                <span class="input-group-addon">€</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Imagen:</label>
+            <input type="file" ng-model="file" nv-file-select="" uploader="uploader" name="image"/>
+        </div>
+        <div class="form-group">
+            <label>Fecha:</label>
+            <div class="input-group col-md-8">
+                <input type="text" class="form-control" datepicker-popup="dd-MM-yyyy" ng-model="activity.date" is-open="opened"
+                       current-text="hoy" clear-text="limpiar" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Cerrar" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <button type="button" class="btn btn-info"
+                ng-click="accept()"><i class="fa fa-check"></i> {{ action }}</button>
+    </div>
+</div>
+<!-- Panel End-->

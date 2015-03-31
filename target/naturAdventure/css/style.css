@@ -47,21 +47,16 @@ body {
     padding: 0;
 }
 .thumbnail .caption {
-    height: 280px;
 }
-.thumbnail .caption h3{
-    height: 55px;
+.thumbnail .caption h5{
     text-overflow: ellipsis;
+    height: 40px;
 }
 .thumbnail .caption .price{
     display: block;
-    width: 80px;
+    width: 60px;
     margin: auto;
     font-size: 20px;
-}
-.thumbnail .caption .description{
-    height: 100px;
-    text-overflow: ellipsis;
 }
 .thumbnail .caption-full {
     padding: 9px;
@@ -73,3 +68,5 @@ body {
 footer {
     margin: 50px 0;
 }
+
+
