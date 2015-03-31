@@ -90,7 +90,7 @@ public class ActivityServices {
     @Path("/image")
     public Response uploadImageJPG(InputStream image) throws IOException {
         ImageUploaderService service = new ImageUploaderService();
-        String imageName = service.uploadImage( image, "jpg" );
+        String imageName = service.uploadImage( image, "png" );
 
         if ( imageName != null ){
             return Response.ok( imageName ).build();

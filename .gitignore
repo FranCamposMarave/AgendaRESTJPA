@@ -1,3 +1,7 @@
-G03RarNaturAdventure/src/main/webapp/WEB-INF/resources.xml
-G03RarNaturAdventure/.idea
-G03RarNaturAdventure/.settings
+##############GIT IGNORE#######################
+
+src/main/webapp/WEB-INF/resources.xml
+src/main/webapp/WEB-INF/uploads/
+target/
+.idea/
+.settings/
