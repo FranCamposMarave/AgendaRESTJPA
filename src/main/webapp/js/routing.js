@@ -5,14 +5,6 @@ var app = angular.module('app', ['ngRoute', 'rest', 'ui.bootstrap', 'angularFile
 // Config routes
 app.config(function($routeProvider) {
 	$routeProvider
-		.when('/', {
-			templateUrl	: 'templates/home.html',
-			controller 	: 'homeCtrl'
-		})
-		.when('/activity/:activityId', {
-			templateUrl : 'templates/activity.html',
-			controller 	: 'activityCtrl'
-		})
 		.when('/backoffice', {
             templateUrl : 'backoffice/templates/home.html',
             controller 	: 'backofficeCtrl'
@@ -26,7 +18,7 @@ app.config(function($routeProvider) {
             controller 	: 'activityCtrl'
         })
 		.otherwise({
-			redirectTo: '/'
+			redirectTo: '/backoffice'
 		});
 });
 
