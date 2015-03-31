@@ -1,7 +1,11 @@
 
 // Create the module
-var app = angular.module('app', ['ngRoute', 'rest', 'ui.bootstrap', 'angularFileUpload']);
+var app = angular.module('app',
+    ['ngRoute', 'rest', 'ui.bootstrap', 'angularFileUpload','angular-loading-bar']);
 
+app.config(function(cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.latencyThreshold = 10;
+});
 // Config routes
 app.config(function($routeProvider) {
 	$routeProvider
