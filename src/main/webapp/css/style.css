@@ -65,6 +65,12 @@ body {
 .modal-content .danger{
     background: rgba(255, 44, 44, 0.5);
 }
+.ng-invalid.ng-touched {
+    border: thin solid #990000;
+}
+.ng-valid.ng-touched {
+    border: thin solid #009900;
+}
 footer {
     margin: 50px 0;
 }
