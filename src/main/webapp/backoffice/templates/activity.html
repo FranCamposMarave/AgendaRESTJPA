@@ -21,11 +21,9 @@
                 <span class="helpBlock">*Campo obligatorio</span>
                 | <span class="text-info">Caracteres restantes: {{ remainingChars.title }}</span>
             </div>
-            <div ng-show="activityForm.title.$error.required && !activityForm.title.$pristine">
-                <span class="text-danger" ng-show="activityForm.title.$error.required">El título es un campo obligatorio.</span>
-            </div>
-            <div ng-show="activityForm.title.$error.maxlength && !activityForm.title.$pristine">
-                <span class="text-danger" ng-show="activityForm.title.$error.maxlength">Máximo 255 caracteres.</span>
+            <div ng-show="!activityForm.title.$pristine">
+                <p class="text-danger" ng-show="activityForm.title.$error.required">El título es un campo obligatorio.</p>
+                <p class="text-danger" ng-show="activityForm.title.$error.maxlength">Máximo 255 caracteres.</p>
             </div>
         </div>
         <div class="form-group col-md-12">

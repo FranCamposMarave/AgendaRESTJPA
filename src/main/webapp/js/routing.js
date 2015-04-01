@@ -230,6 +230,7 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
     };
     uploader.onErrorItem = function(fileItem, response, status, headers) {
         console.info('onErrorItem', fileItem, response, status, headers);
+        toastr.warning('No se ha podido subir la foto', 'Actividad');
     };
 
     console.info('uploader', uploader);
