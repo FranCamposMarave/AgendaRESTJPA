@@ -82,12 +82,16 @@ app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService', 'FileUp
             modalInstance.result.then(function (activity) {
                 ActivityService.deleteActivity(activity.id)
                     .success(function(data) {
-                        toastr.success('La actividad ha sido borrada', 'Correcto');
+                        toastr.success('La actividad ha sido borrada', 'Borrar');
                         console.log("Activity deleted");
                         $scope.retrieveAll();
                     }).error(function(data, status, headers, config) {
                       console.log("Error deleting activity");
-                      toastr.error('No se ha podido borrar la actividad', 'Error');
+                      if ( status == 404 ){
+                        toastr.error('No existe la actividad', 'Borrar');
+                      }else{
+                        toastr.error('Error en la conexión al servidor', 'Borrar');
+                      }
                   });;
             });
         };
@@ -118,19 +122,23 @@ app.controller('activityCtrl', function ($scope, $routeParams, FileUploader, Act
             ActivityService.addActivity($scope.activity)
                 .success(function(data) {
                     console.log("Activity added");
-                    toastr.success('La actividad ha sido añadida!', 'Correcto');
+                    toastr.success('La actividad ha sido añadida!', 'Añadir');
                 }).error(function(data, status, headers, config) {
                     console.log("Error adding activity");
-                    toastr.error('No se ha podido añadir la actividad', 'Error');
+                    toastr.error('Error en la conexión al servidor', 'Añadir');
                 });
         }else{
             ActivityService.updateActivity($scope.activity)
                 .success(function(data) {
                     console.log("Activity updated");
-                    toastr.success('La actividad ha sido modificada!', 'Correcto');
+                    toastr.success('La actividad ha sido actualizada!', 'Actualizar');
                 }).error(function(data, status, headers, config) {
                     console.log("Error updating activity");
-                    toastr.error('No se ha podido modificar la actividad', 'Error');
+                    if ( status == 400 ){
+                        toastr.error('La actividad a modificar no existe', 'Actualizar');
+                    }else{
+                        toastr.error('Error en la conexión al servidor', 'Actualizar');
+                    }
                 });
         }
     };

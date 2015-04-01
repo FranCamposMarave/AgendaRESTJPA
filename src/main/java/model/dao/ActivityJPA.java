@@ -2,13 +2,14 @@ package model.dao;
 
 import model.entities.Activity;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-//@Stateless
+@Stateless
 public class ActivityJPA {
 
     public static Activity NULL = new Activity();
