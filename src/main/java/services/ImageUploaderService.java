@@ -29,4 +29,10 @@ public class ImageUploaderService {
         }finally {
         }
     }
+
+    public boolean deleteImage(String image){
+        File file = new File(IMAGES_LOCATION + image);
+
+        return file.delete();
+    }
 }

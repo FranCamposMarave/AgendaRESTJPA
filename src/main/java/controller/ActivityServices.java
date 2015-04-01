@@ -61,9 +61,15 @@ public class ActivityServices {
     @Path("/{id}")
     @Produces("application/json")
     public Response deleteActivity(@PathParam("id") long id) {
-        if ( activityDAO.delete(id) ){
+        Activity activity = activityDAO.get(id);
+        if (activityDAO.delete(id)) {
+            UriBuilder uriBuilder = uriInfo.getAbsolutePathBuilder();
+            URI uri = uriBuilder.path( activity.getId() + "" ).build();
+
+            ImageUploaderService service = new ImageUploaderService();
+            service.deleteImage(activity.getPicture());
             return Response.status(Response.Status.ACCEPTED).build();
-        }else{
+        } else {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
     }

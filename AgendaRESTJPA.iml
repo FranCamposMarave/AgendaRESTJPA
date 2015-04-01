@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <webroots>
+          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
@@ -44,11 +57,11 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.geronimo.components:geronimo-transaction:3.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.objectweb.howl:howl:1.0.1-1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.geronimo.javamail:geronimo-javamail_1.4_mail:1.8.4" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.apache.xbean:xbean-asm5-shaded:4.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.apache.xbean:xbean-finder-shaded:4.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.apache.xbean:xbean-reflect:4.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.apache.xbean:xbean-naming:4.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.apache.xbean:xbean-bundleutils:4.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.xbean:xbean-asm5-shaded:4.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.xbean:xbean-finder-shaded:4.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.xbean:xbean-reflect:4.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.xbean:xbean-naming:4.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.xbean:xbean-bundleutils:4.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hsqldb:hsqldb:2.3.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: commons-dbcp:commons-dbcp:1.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: commons-pool:commons-pool:1.5.7" level="project" />
