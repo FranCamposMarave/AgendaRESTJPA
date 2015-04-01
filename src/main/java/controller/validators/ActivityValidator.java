@@ -3,7 +3,7 @@ package controller.validators;
 import model.entities.Activity;
 
 import javax.ejb.Stateless;
-import java.util.Date;
+
 
 /**
  * Created by cuatroochenta on 1/4/15.
@@ -22,7 +22,7 @@ public class ActivityValidator implements Validator<Activity> {
         if( object.getPrice() < 0.0f ){
             return false;
         }
-        if ( object.getDate() = = null ){
+        if ( object.getDate() == null ){
             return false;
         }
         return true;
