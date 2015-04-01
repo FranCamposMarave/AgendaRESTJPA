@@ -1,5 +1,7 @@
 package controller;
 
+import controller.validators.ActivityValidator;
+import controller.validators.Validator;
 import model.dao.ActivityJPA;
 import model.entities.Activity;
 import services.ImageUploaderService;
@@ -20,6 +22,9 @@ public class ActivityServices {
 
     @Inject
     ActivityJPA activityDAO;
+
+    @Inject
+    Validator<Activity> validatorActivity;
 
     @Context
     private UriInfo uriInfo;
@@ -51,6 +56,9 @@ public class ActivityServices {
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.APPLICATION_JSON)
     public Response addActivity(Activity activity) {
+        if ( !validatorActivity.validate( activity) ){
+            return Response.status( Response.Status.FORBIDDEN ).build();
+        }
         activityDAO.add( activity );
         UriBuilder uriBuilder = uriInfo.getAbsolutePathBuilder();
         URI uri = uriBuilder.path( activity.getId() + "" ).build();

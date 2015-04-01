@@ -1,6 +1,0 @@
-##############GIT IGNORE#######################
-
-src/main/webapp/WEB-INF/resources.xml
-src/main/webapp/WEB-INF/uploads/*
-#.idea/*
-.settings/*

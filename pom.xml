@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>es.uji.belfern</groupId>
-    <artifactId>AgendaRESTJPA</artifactId>
+    <artifactId>G03RarNaturAdventure</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
