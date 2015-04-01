@@ -123,6 +123,7 @@ app.controller('activityCtrl', function ($scope, $routeParams, FileUploader, Act
                 .success(function(data) {
                     console.log("Activity added");
                     toastr.success('La actividad ha sido añadida!', 'Añadir');
+                    $scope.activityForm.$submitted = true;
                 }).error(function(data, status, headers, config) {
                     console.log("Error adding activity");
                     toastr.error('Error en la conexión al servidor', 'Añadir');
@@ -132,6 +133,7 @@ app.controller('activityCtrl', function ($scope, $routeParams, FileUploader, Act
                 .success(function(data) {
                     console.log("Activity updated");
                     toastr.success('La actividad ha sido actualizada!', 'Actualizar');
+                    $scope.activityForm.$submitted = true;
                 }).error(function(data, status, headers, config) {
                     console.log("Error updating activity");
                     if ( status == 400 ){
