@@ -1,6 +1,7 @@
 ##############GIT IGNORE#######################
 
 src/main/webapp/WEB-INF/resources.xml
+G03RarNaturAdventure.iml
 src/main/webapp/WEB-INF/uploads/*
 target/*
 .idea/*

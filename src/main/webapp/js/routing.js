@@ -43,8 +43,8 @@ app.controller('homeCtrl', ['$scope', '$http',
 ]);
 
 
-app.controller('backofficeCtrl', ['$scope', '$rootScope', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
-    function ($scope, $rootScope, $modal, ActivityService, FileUploader, toastr) {
+app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, ActivityService, FileUploader, toastr) {
         $scope.retrieveAll = function () {
             ActivityService.retrieveAll()
                 .success(function(data) {
@@ -94,7 +94,7 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$modal' ,'ActivitySer
                       }else{
                         toastr.error('Error en la conexión al servidor', 'Borrar');
                       }
-                  });;
+                  });
             });
         };
 
@@ -103,7 +103,7 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$modal' ,'ActivitySer
         }
 
         $rootScope.$on('toastMessage', function(event, toast){
-            toast();
+            $timeout( toast, 1000 );
         });
     }
 ]);
@@ -124,7 +124,21 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
         $scope.activity = {};
     }
 
-    $scope.accept = function () {
+    $scope.remainingChars = { "title" : 255, "description" : 255 };
+    $scope.$watch(
+        function(scope){ return scope.activity.title },
+        function(newValue, oldValue){
+            $scope.remainingChars.title = 255 - newValue.length;
+        }
+    );
+    $scope.$watch(
+        function(scope){ return scope.activity.description },
+        function(newValue, oldValue){
+            $scope.remainingChars.description = 255 - newValue.length;
+        }
+    );
+
+    $scope.submit = function () {
         if ( $scope.action == 'Crear' ){
             ActivityService.addActivity($scope.activity)
                 .success(function(data) {
@@ -147,7 +161,7 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
                 .success(function(data) {
                     console.log("Activity updated");
                     $rootScope.$broadcast('toastMessage', function(){
-                        toastr.success('La actividad ha sido actualizada!', 'Actualizar');
+                        toastr.success(' La actividad ha sido actualizada!', 'Actualizar');
                     });
                     $location.path('/');
                 }).error(function(data, status, headers, config) {
