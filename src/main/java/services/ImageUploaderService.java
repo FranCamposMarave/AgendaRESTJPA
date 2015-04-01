@@ -15,7 +15,7 @@ public class ImageUploaderService {
     public String uploadImage(InputStream image, String format){
         try {
             BufferedImage bi = ImageIO.read(image);
-            String imageName = UUID.randomUUID().toString();
+            String imageName = UUID.randomUUID().toString() + "." + format;
 
             File outFile = new File( IMAGES_LOCATION + imageName );
             ImageIO.write(bi, format, outFile);

@@ -43,8 +43,8 @@ app.controller('homeCtrl', ['$scope', '$http',
 ]);
 
 
-app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
-    function ($scope, $modal, ActivityService, FileUploader, toastr) {
+app.controller('backofficeCtrl', ['$scope', '$rootScope', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $modal, ActivityService, FileUploader, toastr) {
         $scope.retrieveAll = function () {
             ActivityService.retrieveAll()
                 .success(function(data) {
@@ -86,9 +86,11 @@ app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService', 'FileUp
                         console.log("Activity deleted");
                         $scope.retrieveAll();
                     }).error(function(data, status, headers, config) {
-                      console.log("Error deleting activity");
+                      console.log("Error deleting activity. Error code: " + status );
                       if ( status == 404 ){
                         toastr.error('No existe la actividad', 'Borrar');
+                      }else if ( status == 500 ){
+                        toastr.error('Error interno del servidor', 'Borrar');
                       }else{
                         toastr.error('Error en la conexión al servidor', 'Borrar');
                       }
@@ -98,12 +100,17 @@ app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService', 'FileUp
 
         $scope.file = null;
         $scope.uploadImage = function(){
-
         }
+
+        $rootScope.$on('toastMessage', function(event, toast){
+            toast();
+        });
     }
 ]);
 
-app.controller('activityCtrl', function ($scope, $routeParams, FileUploader, ActivityService, $location, toastr) {
+
+
+app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileUploader, ActivityService, $location, toastr) {
 
     if ( $routeParams.id ){
         $scope.action = "Editar";
@@ -122,25 +129,35 @@ app.controller('activityCtrl', function ($scope, $routeParams, FileUploader, Act
             ActivityService.addActivity($scope.activity)
                 .success(function(data) {
                     console.log("Activity added");
-                    toastr.success('La actividad ha sido añadida!', 'Añadir');
+                    $rootScope.$broadcast('toastMessage', function(){
+                        toastr.success('La actividad ha sido añadida!', 'Añadir');
+                    });
+                    $location.path('/');
                     $scope.activityForm.$submitted = true;
                 }).error(function(data, status, headers, config) {
-                    console.log("Error adding activity");
-                    toastr.error('Error en la conexión al servidor', 'Añadir');
+                    if ( status == 500 ){
+                        toastr.error('Error interno del servidor', 'Actualizar');
+                    }else{
+                        console.log("Error adding activity. Error code: " + status );
+                        toastr.error('Error en la conexión al servidor', 'Añadir');
+                    }
                 });
         }else{
             ActivityService.updateActivity($scope.activity)
                 .success(function(data) {
                     console.log("Activity updated");
-                    toastr.success('La actividad ha sido actualizada!', 'Actualizar');
-                    $scope.activityForm.$submitted = true;
+                    $rootScope.$broadcast('toastMessage', function(){
+                        toastr.success('La actividad ha sido actualizada!', 'Actualizar');
+                    });
+                    $location.path('/');
                 }).error(function(data, status, headers, config) {
-                    console.log("Error updating activity");
+                    console.log("Error updating activity. Error code: " + status );
                     if ( status == 400 ){
                         toastr.error('La actividad a modificar no existe', 'Actualizar');
+                    }else if ( status == 500 ){
+                        toastr.error('Error interno del servidor', 'Actualizar');
                     }else{
-                        toastr.error('Error en la conexión al servidor', 'Actualizar');
-                    }
+                        toastr.error('Error en la conexión al servidor', 'Actualizar');}
                 });
         }
     };
