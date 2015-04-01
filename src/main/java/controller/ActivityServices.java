@@ -1,5 +1,7 @@
 package controller;
 
+
+import controller.validators.Validator;
 import model.dao.ActivityJPA;
 import model.entities.Activity;
 import services.ImageUploaderService;
@@ -11,7 +13,7 @@ import javax.ws.rs.core.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
-import java.net.URLConnection;
+
 
 
 @Path("activities")
@@ -20,6 +22,9 @@ public class ActivityServices {
 
     @Inject
     ActivityJPA activityDAO;
+
+    @Inject
+    Validator<Activity> validatorActivity;
 
     @Context
     private UriInfo uriInfo;
@@ -51,6 +56,9 @@ public class ActivityServices {
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.APPLICATION_JSON)
     public Response addActivity(Activity activity) {
+        if ( !validatorActivity.validate( activity) ){
+            return Response.status( Response.Status.FORBIDDEN ).build();
+        }
         activityDAO.add( activity );
         UriBuilder uriBuilder = uriInfo.getAbsolutePathBuilder();
         URI uri = uriBuilder.path( activity.getId() + "" ).build();
@@ -61,9 +69,12 @@ public class ActivityServices {
     @Path("/{id}")
     @Produces("application/json")
     public Response deleteActivity(@PathParam("id") long id) {
-        if ( activityDAO.delete(id) ){
+        Activity activity = activityDAO.get(id);
+        if (activityDAO.delete(id)) {
+            ImageUploaderService service = new ImageUploaderService();
+            service.deleteImage(activity.getPicture());
             return Response.status(Response.Status.ACCEPTED).build();
-        }else{
+        } else {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
     }

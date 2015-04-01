@@ -4,6 +4,10 @@
         jdbcUrl = jdbc:mysql://localhost:3306/naturAdventure
         jtaManaged = true
         userName = root
-        password =
+<<<<<<< HEAD
+        password = cuatroochenta
+=======
+        password = root
+>>>>>>> a2f7e9484b9fc7fa42383d2e47d6cff38e633f5e
     </Resource>
 </Resources>

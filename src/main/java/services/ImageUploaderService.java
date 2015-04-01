@@ -1,11 +1,8 @@
 package services;
 
 import javax.imageio.ImageIO;
-import javax.imageio.stream.ImageInputStream;
-import javax.ws.rs.core.MediaType;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.net.URLConnection;
 import java.util.UUID;
 
 /**
@@ -28,5 +25,11 @@ public class ImageUploaderService {
             return null;
         }finally {
         }
+    }
+
+    public boolean deleteImage(String image){
+        File file = new File(IMAGES_LOCATION + image);
+
+        return file.delete();
     }
 }
