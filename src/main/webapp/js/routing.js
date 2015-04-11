@@ -75,7 +75,7 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                 resolve: {
                     'activity': function () {
                         return act;
-                    },
+                    }
                 }
             });
 
