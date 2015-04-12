@@ -90,7 +90,7 @@ public class ActivityServices {
         }
         else {
             if ( activityDAO.update( activity ) ){
-                if (!oldPicture.equals(activity.getPicture())){
+                if (!(oldPicture==null) && !(activity.getPicture().equals(null)) && !(oldPicture.equals(activity.getPicture()))){
                     ImageUploaderService service = new ImageUploaderService();
                     service.deleteImage(oldPicture);
                 }
