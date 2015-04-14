@@ -14,6 +14,7 @@
        this.addActivity = function (activity) {
           var url = app.baseURI;
           var data = "{activity:" + JSON.stringify(activity) + "}";
+           console.log(activity);
           return $http.post(url, data);
        }
 

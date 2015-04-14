@@ -59,6 +59,8 @@ public class ActivityServices {
         if ( !validatorActivity.validate( activity) ){
             return Response.status( Response.Status.FORBIDDEN ).build();
         }
+        System.out.println(activity);
+
         activityDAO.add( activity );
         UriBuilder uriBuilder = uriInfo.getAbsolutePathBuilder();
         URI uri = uriBuilder.path( activity.getId() + "" ).build();

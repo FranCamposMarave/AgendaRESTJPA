@@ -55,8 +55,10 @@ public class ActivityJPA {
         TypedQuery<Activity> query = em.createNamedQuery("Activity.get", Activity.class);
         query.setParameter("id", activity.getId());
         try {
-            Activity oldActivity = query.getSingleResult();oldActivity.setTitle( activity.getTitle() );
+            Activity oldActivity = query.getSingleResult();
+            oldActivity.setTitle( activity.getTitle() );
             oldActivity.setDescription( activity.getDescription() );
+            oldActivity.setCategory( activity.getCategory() );
             oldActivity.setDate( activity.getDate() );
             oldActivity.setPicture( activity.getPicture() );
             oldActivity.setPrice( activity.getPrice() );

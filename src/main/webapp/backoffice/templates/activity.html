@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="form-group col-md-12">
-            <label>Descripcion:</label>
+            <label>Descripción:</label>
             <textarea ng-model="activity.description" name="description" required class="form-control" ng-maxlength="255"></textarea>
             <div>
                 <span class="helpBlock">*Campo obligatorio</span>
@@ -38,6 +38,16 @@
             </div>
             <div ng-show="activityForm.description.$error.maxlength && !activityForm.description.$pristine">
                 <span class="text-danger" ng-show="activityForm.description.$error.maxlength">Máximo 255 caracteres.</span>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <label>Categoría:</label>
+            <textarea ng-model="activity.category" name="category" required class="form-control"></textarea>
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+            </div>
+            <div ng-show="activityForm.category.$error.required && !activityForm.category.$pristine">
+                <span class="text-danger" ng-show="activityForm.category.$error.required">La categoría es un campo obligatorio.</span>
             </div>
         </div>
         <div class="form-group col-md-6">
