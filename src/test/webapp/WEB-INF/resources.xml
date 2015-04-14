@@ -4,7 +4,7 @@
         jdbcUrl = jdbc:mysql://localhost:3306/personas
         jtaManaged = true
         userName = root
-        password = root
+        password = rootroot
     </Resource>
     <!--<Resource id="derbyDataSource" type="DataSource">-->
         <!--jdbcDriver = org.apache.derby.jdbc.ClientDriver-->

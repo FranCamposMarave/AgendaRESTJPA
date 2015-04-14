@@ -22,6 +22,10 @@ public class ActivityValidator implements Validator<Activity> {
         if( object.getPrice() < 0.0f ){
             return false;
         }
+
+        if( object.getPrice() > 99999.99f){
+            return false;
+        }
         if ( object.getDate() == null ){
             return false;
         }

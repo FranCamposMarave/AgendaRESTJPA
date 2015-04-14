@@ -84,11 +84,16 @@ public class ActivityServices {
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateActivity(@PathParam("id") long id, Activity activity) {
+        String oldPicture = activityDAO.get(id).getPicture();
         if( id != activity.getId() ) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
         else {
             if ( activityDAO.update( activity ) ){
+                if (!(oldPicture==null) && !(activity.getPicture().equals(null)) && !(oldPicture.equals(activity.getPicture()))){
+                    ImageUploaderService service = new ImageUploaderService();
+                    service.deleteImage(oldPicture);
+                }
                 return Response.status(Response.Status.NO_CONTENT).build();
             }else {
                 activityDAO.add( activity );

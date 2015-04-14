@@ -43,8 +43,8 @@ app.controller('homeCtrl', ['$scope', '$http',
 ]);
 
 
-app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
-    function ($scope, $modal, ActivityService, FileUploader, toastr) {
+app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, ActivityService, FileUploader, toastr) {
         $scope.retrieveAll = function () {
             ActivityService.retrieveAll()
                 .success(function(data) {
@@ -75,7 +75,7 @@ app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService', 'FileUp
                 resolve: {
                     'activity': function () {
                         return act;
-                    },
+                    }
                 }
             });
 
@@ -86,24 +86,31 @@ app.controller('backofficeCtrl', ['$scope', '$modal' ,'ActivityService', 'FileUp
                         console.log("Activity deleted");
                         $scope.retrieveAll();
                     }).error(function(data, status, headers, config) {
-                      console.log("Error deleting activity");
+                      console.log("Error deleting activity. Error code: " + status );
                       if ( status == 404 ){
                         toastr.error('No existe la actividad', 'Borrar');
+                      }else if ( status == 500 ){
+                        toastr.error('Error interno del servidor', 'Borrar');
                       }else{
                         toastr.error('Error en la conexión al servidor', 'Borrar');
                       }
-                  });;
+                  });
             });
         };
 
         $scope.file = null;
         $scope.uploadImage = function(){
-
         }
+
+        $rootScope.$on('toastMessage', function(event, toast){
+            $timeout( toast, 1000 );
+        });
     }
 ]);
 
-app.controller('activityCtrl', function ($scope, $routeParams, FileUploader, ActivityService, $location, toastr) {
+
+
+app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileUploader, ActivityService, $location, toastr) {
 
     if ( $routeParams.id ){
         $scope.action = "Editar";
@@ -117,28 +124,54 @@ app.controller('activityCtrl', function ($scope, $routeParams, FileUploader, Act
         $scope.activity = {};
     }
 
-    $scope.accept = function () {
+    $scope.remainingChars = { "title" : 255, "description" : 255 };
+    $scope.$watch(
+        function(scope){ return scope.activity.title },
+        function(newValue, oldValue){
+            $scope.remainingChars.title = 255 - newValue.length;
+        }
+    );
+    $scope.$watch(
+        function(scope){ return scope.activity.description },
+        function(newValue, oldValue){
+            $scope.remainingChars.description = 255 - newValue.length;
+        }
+    );
+
+    $scope.submit = function () {
         if ( $scope.action == 'Crear' ){
             ActivityService.addActivity($scope.activity)
                 .success(function(data) {
                     console.log("Activity added");
-                    toastr.success('La actividad ha sido añadida!', 'Añadir');
+                    $rootScope.$broadcast('toastMessage', function(){
+                        toastr.success('La actividad ha sido añadida!', 'Añadir');
+                    });
+                    $location.path('/');
+                    $scope.activityForm.$submitted = true;
                 }).error(function(data, status, headers, config) {
-                    console.log("Error adding activity");
-                    toastr.error('Error en la conexión al servidor', 'Añadir');
+                    if ( status == 500 ){
+                        toastr.error('Error interno del servidor', 'Actualizar');
+                    }else{
+                        console.log("Error adding activity. Error code: " + status );
+                        toastr.error('Error en la conexión al servidor', 'Añadir');
+                    }
                 });
         }else{
             ActivityService.updateActivity($scope.activity)
                 .success(function(data) {
                     console.log("Activity updated");
-                    toastr.success('La actividad ha sido actualizada!', 'Actualizar');
+                    $rootScope.$broadcast('toastMessage', function(){
+                        toastr.success(' La actividad ha sido actualizada!', 'Actualizar');
+                    });
+                    $location.path('/');
                 }).error(function(data, status, headers, config) {
-                    console.log("Error updating activity");
+                    console.log("Error updating activity. Error code: " + status );
                     if ( status == 400 ){
                         toastr.error('La actividad a modificar no existe', 'Actualizar');
+                    }else if ( status == 500 ){
+                        toastr.error('Error interno del servidor', 'Actualizar');
                     }else{
-                        toastr.error('Error en la conexión al servidor', 'Actualizar');
-                    }
+                        toastr.error('Error en la conexión al servidor', 'Actualizar');}
                 });
         }
     };
@@ -197,6 +230,7 @@ app.controller('activityCtrl', function ($scope, $routeParams, FileUploader, Act
     };
     uploader.onErrorItem = function(fileItem, response, status, headers) {
         console.info('onErrorItem', fileItem, response, status, headers);
+        toastr.warning('No se ha podido subir la foto', 'Actividad');
     };
 
     console.info('uploader', uploader);
