@@ -3,14 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-<<<<<<< HEAD
     <groupId>es.rar.developers</groupId>
     <artifactId>NaturAdventure</artifactId>
-=======
-    <groupId>es.uji.belfern</groupId>
-    <artifactId>G03RarNaturAdventure</artifactId>
->>>>>>> 5af9b22742a9f0b7d53f6819c87a254e2c0fca42
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
