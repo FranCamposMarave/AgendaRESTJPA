@@ -1,18 +1,19 @@
+
 <!-- Container Start -->
 <div class="col-md-12">
     <!-- Broadcrumb Start -->
     <ol class="breadcrumb">
         <li><a href="#home">Home</a></li>
-        <li><a href="#categories">Categorias</a></li>
-        <li class="active">{{action}} Categoria</li>
+        <li><a href="#categories">Categorías</a></li>
+        <li class="active">{{action}} Categoría</li>
     </ol>
     <!-- Broadcrumb End -->
     <!-- PageHeader Start -->
     <div class="page-header">
-        <h2 class="text-primary"><i class="fa {{action=='Crear'?'fa-plus-circle': 'fa-pencil-square-o'}}"></i> {{action}} Categoria</h2>
+        <h2 class="text-primary"><i class="fa {{action=='Crear'?'fa-plus-circle': 'fa-pencil-square-o'}}"></i> {{action}} Categoría</h2>
     </div>
     <!-- PageHeader End -->
-    <!-- Category Form Start -->
+    <!-- Activity Form Start -->
     <form novalidate name="categoryForm" ng-submit="submit()">
         <div class="form-group col-md-12">
             <label>Título:</label>
@@ -26,8 +27,13 @@
                 <p class="text-danger" ng-show="categoryForm.title.$error.maxlength">Máximo 255 caracteres.</p>
             </div>
         </div>
+
+        <div class="col-md-12 text-right">
+            <button type="submit" class="btn btn-primary" ng-disabled="categoryForm.$invalid || categoryForm.$submitted">
+                <i class="fa fa-check"></i> {{ action }}</button>
+        </div>
     </form>
-    <!-- Category Form End-->
+    <!-- Activity Form End-->
 </div>
 <!-- Container End-->
 <div class="clearfix"></div>

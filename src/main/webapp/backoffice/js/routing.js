@@ -21,6 +21,10 @@ app.config(function($routeProvider) {
             templateUrl : 'templates/activity.html',
             controller 	: 'activityCtrl'
         })
+        .when('/backoffice/category/', {
+            templateUrl : 'templates/category.html',
+            controller 	: 'categoryCtrl'
+        })
 		.otherwise({
 			redirectTo: '/backoffice'
 		});

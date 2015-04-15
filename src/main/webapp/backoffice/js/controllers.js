@@ -245,3 +245,65 @@ app.controller('DropdownCtrl', function ($scope, $log) {
     $scope.status.isopen = !$scope.status.isopen;
   };
 });
+
+app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, CategoryService, $location, toastr) {
+
+    if ( $routeParams.id ){
+        $scope.action = "Editar";
+        CategoryService.retrieveCategory($routeParams.id)
+            .success(function(data) {
+                $scope.category = data.category;
+                console.log("Retrieved category: " + $scope.cotegory.title);
+            })
+    }else{
+        $scope.action = "Crear";
+        $scope.category = {};
+    }
+
+    $scope.remainingChars = { "title" : 255};
+    $scope.$watch(
+        function(scope){ return scope.category.title },
+        function(newValue, oldValue){
+            $scope.remainingChars.title = 255 - newValue.length;
+        }
+    );
+
+    $scope.submit = function () {
+        if ( $scope.action == 'Crear' ){
+            CategoryService.addCategory($scope.category)
+                .success(function(data) {
+                    console.log("Category added");
+                    $rootScope.$broadcast('toastMessage', function(){
+                        toastr.success('La categoria ha sido añadida!', 'Añadir');
+                    });
+                    $location.path('/');
+                    $scope.categoryForm.$submitted = true;
+                }).error(function(data, status, headers, config) {
+                    if ( status == 500 ){
+                        toastr.error('Error interno del servidor', 'Actualizar');
+                    }else{
+                        console.log("Error adding category. Error code: " + status );
+                        toastr.error('Error en la conexión al servidor', 'Añadir');
+                    }
+                });
+        }else{
+            CategoryService.updateCategory($scope.category)
+                .success(function(data) {
+                    console.log("Category updated");
+                    $rootScope.$broadcast('toastMessage', function(){
+                        toastr.success(' La categoría ha sido actualizada!', 'Actualizar');
+                    });
+                    $location.path('/');
+                }).error(function(data, status, headers, config) {
+                    console.log("Error updating category. Error code: " + status );
+                    if ( status == 400 ){
+                        toastr.error('La categoría a modificar no existe', 'Actualizar');
+                    }else if ( status == 500 ){
+                        toastr.error('Error interno del servidor', 'Actualizar');
+                    }else{
+                        toastr.error('Error en la conexión al servidor', 'Actualizar');}
+                });
+        }
+    };
+
+});

@@ -1,6 +1,5 @@
 package model.dao;
 
-import model.entities.Activity;
 import model.entities.Category;
 
 import javax.ejb.Stateless;
