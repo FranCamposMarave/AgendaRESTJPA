@@ -1,0 +1,34 @@
+<!-- Container Start -->
+<div class="col-md-12">
+    <!-- Broadcrumb Start -->
+    <ol class="breadcrumb">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categorias</a></li>
+        <li class="active">{{action}} Categoria</li>
+    </ol>
+    <!-- Broadcrumb End -->
+    <!-- PageHeader Start -->
+    <div class="page-header">
+        <h2 class="text-primary"><i class="fa {{action=='Crear'?'fa-plus-circle': 'fa-pencil-square-o'}}"></i> {{action}} Categoria</h2>
+    </div>
+    <!-- PageHeader End -->
+    <!-- Category Form Start -->
+    <form novalidate name="categoryForm" ng-submit="submit()">
+        <div class="form-group col-md-12">
+            <label>Título:</label>
+            <input type="text" ng-model="category.title" name="title" required class="form-control" ng-maxlength="255">
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+                | <span class="text-info">Caracteres restantes: {{ remainingChars.title }}</span>
+            </div>
+            <div ng-show="!categoryForm.title.$pristine">
+                <p class="text-danger" ng-show="categoryForm.title.$error.required">El título es un campo obligatorio.</p>
+                <p class="text-danger" ng-show="categoryForm.title.$error.maxlength">Máximo 255 caracteres.</p>
+            </div>
+        </div>
+    </form>
+    <!-- Category Form End-->
+</div>
+<!-- Container End-->
+<div class="clearfix"></div>
+<hr/>
