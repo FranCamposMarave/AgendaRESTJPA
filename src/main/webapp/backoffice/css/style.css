@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+.home-jumbotron .title{
+    color: #fff;
+    font-size: 4em;
+    text-shadow: 1px 1px 0px rgba(150, 150, 150, 0.8);
+    font-family: 'Varela Round', sans-serif;
+}
+.home-jumbotron .subtitle{
+    color: #eee;
+    font-size: 3em;
+    text-shadow: 1px 1px 0px rgba(150, 150, 150, 0.8);
+}
+.home-jumbotron{
+    background: url('../images/image3.jpg') center no-repeat;
+    text-align: center;
+    padding: 10% 0;
+}
+.slide-image {
+    width: 100%;
+}
+.carousel-holder {
+    margin-bottom: 30px;
+}
+.carousel-control, .item {
+    border-radius: 4px;
+}
+.caption {
+    overflow: hidden;
+}
+.caption h4 {
+    white-space: nowrap;
+}
+.thumbnail img {
+    width: 100%;
+    height: 110px;
+}
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+.thumbnail {
+    padding: 0;
+}
+.thumbnail .caption {
+}
+.thumbnail .caption h5{
+    text-overflow: ellipsis;
+    height: 40px;
+}
+.thumbnail .caption .price{
+    display: block;
+    width: 120px;
+    margin: auto;
+    font-size: 20px;
+}
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+.modal-content .danger{
+    background: rgba(255, 44, 44, 0.5);
+}
+.ng-invalid.ng-touched {
+    border: thin solid #990000;
+}
+.ng-valid.ng-touched {
+    border: thin solid #009900;
+}
+footer {
+    margin: 50px 0;
+}
+
+
