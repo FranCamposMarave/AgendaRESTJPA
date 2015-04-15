@@ -10,20 +10,28 @@ import java.util.Date;
  */
 @XmlRootElement
 @Entity
+@Table(uniqueConstraints =
+    @UniqueConstraint(columnNames = {"title","category","date"}))
 @NamedQueries({
         @NamedQuery(name="Activity.getAll", query = "SELECT a FROM Activity a"),
         @NamedQuery(name="Activity.get", query = "SELECT a FROM Activity a WHERE a.id = :id"),
         @NamedQuery(name="Activity.deleteById", query = "DELETE FROM Activity a WHERE a.id = :id")
 })
 public class Activity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @XmlTransient
     private Long id;
 
+
     private String title;
 
     private String description;
+
+//    @ManyToOne(optional = false)
+//    @JoinColumn(name = "Category_id", nullable = false)
+    private Category category;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
@@ -32,16 +40,16 @@ public class Activity {
 
     private String picture;
 
-
     public Activity() {
         super();
     }
 
-    public Activity(Long id, String title, String description, Date date, float price, String picture) {
+    public Activity(Long id, String title, String description, Category category, Date date, float price, String picture) {
         this.id = id;
         this.title = title;
         this.date = date;
         this.description = description;
+        this.category=category;
         this.price = price;
         this.picture = picture;
     }
@@ -74,6 +82,14 @@ public class Activity {
         return date;
     }
 
+    public Category getCategory(){
+        return category;
+    }
+
+    public void setCategory(Category category){
+        this.category=category;
+    }
+
     public void setDate(Date date) {
         this.date = date;
     }
@@ -100,6 +116,7 @@ public class Activity {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
                 ", date=" + date +
                 ", price=" + price +
                 ", picture='" + picture + '\'' +

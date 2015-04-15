@@ -140,6 +140,7 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
 
     $scope.submit = function () {
         if ( $scope.action == 'Crear' ){
+            $scope.activity.category={id:"2",title:"sdfg"};
             ActivityService.addActivity($scope.activity)
                 .success(function(data) {
                     console.log("Activity added");

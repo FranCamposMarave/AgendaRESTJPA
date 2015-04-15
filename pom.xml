@@ -4,11 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>es.rar.developers</groupId>
-<<<<<<< HEAD
-    <artifactId>NaturAdventure</artifactId>
-=======
     <artifactId>G03RarNaturAdventure</artifactId>
->>>>>>> 4bcd4a3a69d4de3737b56a993fb2d5d1f6a784e0
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
