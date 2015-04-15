@@ -9,18 +9,14 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import java.net.URI;
 
-/**
- * Created by Fran on 15/04/2015.
- */
+@Path("categories")
 @Stateless
 public class CategoryServices {
     @Inject
     CategoryJPA categoryDAO;
 
-
     @Context
     private UriInfo uriInfo;
-
 
     public CategoryServices() {
         super();
