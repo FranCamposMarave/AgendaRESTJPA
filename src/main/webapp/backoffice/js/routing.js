@@ -10,15 +10,15 @@ app.config(function(cfpLoadingBarProvider) {
 app.config(function($routeProvider) {
 	$routeProvider
 		.when('/backoffice', {
-            templateUrl : 'backoffice/templates/home.html',
+            templateUrl : 'templates/home.html',
             controller 	: 'backofficeCtrl'
         })
         .when('/backoffice/activity/:id', {
-            templateUrl : 'backoffice/templates/activity.html',
+            templateUrl : 'templates/activity.html',
             controller 	: 'activityCtrl'
         })
         .when('/backoffice/activity/', {
-            templateUrl : 'backoffice/templates/activity.html',
+            templateUrl : 'templates/activity.html',
             controller 	: 'activityCtrl'
         })
 		.otherwise({
