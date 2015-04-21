@@ -154,6 +154,71 @@ app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
     }
 ]);
 
+app.controller('categoriesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'CategoryService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, CategoryService, FileUploader, toastr) {
+        $scope.retrieveAll = function () {
+            CategoryService.retrieveAll()
+                .success(function(data) {
+                    $scope.categories = data.category;
+                    console.log("Retrieve categories (count): " + $scope.categories.length);
+                })
+        };
+        $scope.retrieveAll();
+        $scope.retrieve = function(id) {
+            CategoryService.retrieveCategory(id)
+                .success(function(data) {
+                    $scope.currentCategory = data.category;
+                    console.log("Retrieved category: " + $scope.currentCategory.title);
+                })
+        };
+        $scope.delete = function(id) {
+            CategoryService.deleteCategory(id)
+                .success(function(data) {
+                    console.log("Category deleted");
+                    $scope.retrieveAll();
+                });
+        };
+
+        $scope.openConfirmationModal = function (act) {
+            var modalInstance = $modal.open({
+                templateUrl: 'confirmationModalContent.html',
+                controller: 'confirmationModalCtrl',
+                resolve: {
+                    'activity': function () {
+                        return act;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (category) {
+                CategoryService.deleteCategory(category.id)
+                    .success(function(data) {
+                        toastr.success('La categoria ha sido borrada', 'Borrar');
+                        console.log("Category deleted");
+                        $scope.retrieveAll();
+                    }).error(function(data, status, headers, config) {
+                        console.log("Error deleting category. Error code: " + status );
+                        if ( status == 404 ){
+                            toastr.error('No existe la categoria', 'Borrar');
+                        }else if ( status == 500 ){
+                            toastr.error('Error interno del servidor', 'Borrar');
+                        }else{
+                            toastr.error('Error en la conexión al servidor', 'Borrar');
+                        }
+                    });
+            });
+        };
+
+        $scope.file = null;
+        $scope.uploadImage = function(){
+        }
+
+        $rootScope.$on('toastMessage', function(event, toast){
+            $timeout( toast, 1000 );
+        });
+    }
+]);
+
 
 
 app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileUploader, ActivityService, CategoryService, $location, toastr) {
@@ -324,7 +389,7 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
         CategoryService.retrieveCategory($routeParams.id)
             .success(function(data) {
                 $scope.category = data.category;
-                console.log("Retrieved category: " + $scope.cotegory.title);
+                console.log("Retrieved category: " + $scope.category.title);
             })
     }else{
         $scope.action = "Crear";
@@ -369,6 +434,68 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
                     console.log("Error updating category. Error code: " + status );
                     if ( status == 400 ){
                         toastr.error('La categoría a modificar no existe', 'Actualizar');
+                    }else if ( status == 500 ){
+                        toastr.error('Error interno del servidor', 'Actualizar');
+                    }else{
+                        toastr.error('Error en la conexión al servidor', 'Actualizar');}
+                });
+        }
+    };
+
+});
+
+app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, MonitorService, $location, toastr) {
+
+    if ( $routeParams.id ){
+        $scope.action = "Editar";
+        MonitorService.retrieveMonitor($routeParams.id)
+            .success(function(data) {
+                $scope.monitor = data.monitor;
+                console.log("Retrieved monitor: " + $scope.monitor.title);
+            })
+    }else{
+        $scope.action = "Crear";
+        $scope.monitor = {};
+    }
+
+    $scope.remainingChars = { "name" : 255};
+    $scope.$watch(
+        function(scope){ return scope.monitor.name },
+        function(newValue, oldValue){
+            $scope.remainingChars.title = 255 - newValue.length;
+        }
+    );
+
+    $scope.submit = function () {
+        if ( $scope.action == 'Crear' ){
+            MonitorService.addMonitor($scope.monitor)
+                .success(function(data) {
+                    console.log("Monitor added");
+                    $rootScope.$broadcast('toastMessage', function(){
+                        toastr.success('El monitor ha sido añadido!', 'Añadir');
+                    });
+                    $location.path('/');
+                    $scope.monitorForm.$submitted = true;
+                }).error(function(data, status, headers, config) {
+                    if ( status == 500 ){
+                        toastr.error('Error interno del servidor', 'Actualizar');
+                    }else{
+                        console.log("Error adding monitor. Error code: " + status );
+                        toastr.error('Error en la conexión al servidor', 'Añadir');
+                    }
+                });
+        }else{
+            MonitorService.updateMonitor($scope.monitor)
+                .success(function(data) {
+                    console.log("Monitor updated");
+                    $rootScope.$broadcast('toastMessage', function(){
+                        toastr.success(' El monitor ha sido actualizado!', 'Actualizar');
+                    });
+                    $location.path('/');
+                }).error(function(data, status, headers, config) {
+                    console.log("Error updating monitor. Error code: " + status );
+                    if ( status == 400 ){
+                        toastr.error('El monitor a modificar no existe', 'Actualizar');
                     }else if ( status == 500 ){
                         toastr.error('Error interno del servidor', 'Actualizar');
                     }else{

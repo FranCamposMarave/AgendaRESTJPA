@@ -33,6 +33,14 @@ app.config(function($routeProvider) {
             templateUrl : 'templates/categories.html',
             controller 	: 'categoriesCtrl'
         })
+        .when('/monitor', {
+            templateUrl : 'templates/monitor.html',
+            controller 	: 'monitorCtrl'
+        })
+        .when('/monitors', {
+            templateUrl : 'templates/monitors.html',
+            controller 	: 'monitorsCtrl'
+        })
 		.otherwise({
 			redirectTo: '/'
 		});
