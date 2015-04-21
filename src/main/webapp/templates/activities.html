@@ -1,13 +1,22 @@
 <div class="row">
-    <div class="col-md-offset-1 col-md-10">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><a href="#/">Inicio</a></li>
+            <li class="active">Actividades</li>
+        </ol>
+        <div class="clearfix"></div>
+        <div class="page-header">
+            <h1 class="col-md-offset-1"><i class="fa fa-thumb-tack"></i> Próximas actividades</h1>
+        </div>
         <div class="col-sm-6 col-md-3" ng-repeat="activity in activities">
-            <div class="thumbnail">
-                <img src="{{ ! activity.picture ? 'images/no-image.png' : 'uploads/'+activity.picture }}" alt="">
-                <div class="caption">
-                    <h3>{{activity.title}}</h3>
-                    <p>{{activity.description}}</p>
-                    <div class="text-center">
-                        <a href="#" class="btn btn-primary" role="button"><i class="fa fa-plus"></i> información</a>
+            <div class="thumbnail activity-box">
+             git   <div class="activity-box-body">
+                    <span class="category">{{activity.category.title}}</span>
+                    <span class="title">{{activity.title}}</span>
+                    <span class="price">{{activity.price}}€</span>
+                    <span class="description">{{activity.description}}</span>
+                    <div class="activity-box-footer">
+                        <a href="#" class="pure-button button-secondary">Ver Detalles</a>
                     </div>
                 </div>
             </div>

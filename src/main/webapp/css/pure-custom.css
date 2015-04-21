@@ -7,18 +7,78 @@
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+.button-success:hover, .button-success:active,
+.button-error:hover, .button-error:active,
+.button-warning:hover, .button-warning:active,
+.button-secondary:hover, .button-secondary:active {
+    color: white;
+    text-decoration: none;
+}
+
 .button-success {
-    background: rgb(28, 184, 65); /* this is a green */
+    background: #4CAF50;
 }
 
 .button-error {
-    background: rgb(202, 60, 60); /* this is a maroon */
+    background: #E53935;
 }
 
 .button-warning {
-    background: rgb(223, 117, 20); /* this is an orange */
+    background: #FFC400;
 }
 
 .button-secondary {
-    background: rgb(66, 184, 221); /* this is a light blue */
+    background: #03A9F4
 }
+
+.activity-box {
+    background: #2d3e50;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.activity-box .title{
+    color: #E1F5FE;
+    font-size: 1.4em;
+}
+
+.activity-box .activity-box-body{
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+.activity-box .price{
+    font-size: 4em;
+    color: #E3F2FD;
+    text-align: center;
+    margin: 0.2em 0 0;
+    font-weight: 100;
+    display: block;
+}
+
+.activity-box .description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: 70px;
+}
+
+.activity-box .category{
+    color: #F44336;
+    display: block;
+    font-family: 'Sans-serif', 'Verdana';
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.activity-box .activity-box-footer{
+    padding: 10px;
+    text-align: center;
+}
+
+body{
+    /*background: #2d3e50;*/
+}
+

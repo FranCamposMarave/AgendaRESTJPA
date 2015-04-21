@@ -70,7 +70,7 @@ label {
  * -- PURE BUTTON STYLES --
  * I want my pure-button elements to look a little different
  */
-.pure-button {
+/*.pure-button {
     background-color: #1f8dd6;
     color: white;
     padding: 0.5em 2em;
@@ -82,7 +82,7 @@ a.pure-button-primary {
     color: #1f8dd6;
     border-radius: 5px;
     font-size: 120%;
-}
+}*/
 
 
 /*
@@ -96,7 +96,7 @@ a.pure-button-primary {
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 .home-menu {
-    background: #2d3e50;
+    background: #42A5F5;
 }
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -111,18 +111,30 @@ a.pure-button-primary {
     font-size: 120%;
 }
 
+.home-menu .pure-menu-heading:hover,
+.home-menu .pure-menu-heading:active{
+    text-decoration: none;
+    cursor: default;
+}
+
 .home-menu .pure-menu-selected a {
     color: white;
 }
 
 .home-menu a {
-    color: #6FBEF3;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-weight: bolder;
+    -webkit-font-smoothing: antialiased;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
-    background: none;
-    border: none;
-    color: #AECFE5;
+    color: #42A5F5;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 
@@ -132,7 +144,9 @@ a.pure-button-primary {
  */
 
 .splash-container {
-    background: #1f8dd6;
+    background: transparent url('../../images/header-bg.jpg') 0 0 no-repeat fixed;
+    background-size: 100% 100%;
+    /*background: #1f8dd6;*/
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
