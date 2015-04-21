@@ -9,24 +9,32 @@ app.config(function(cfpLoadingBarProvider) {
 // Config routes
 app.config(function($routeProvider) {
 	$routeProvider
-		.when('/backoffice', {
+		.when('/', {
             templateUrl : 'templates/home.html',
             controller 	: 'backofficeCtrl'
         })
-        .when('/backoffice/activity/:id', {
+        .when('/activity/:id', {
             templateUrl : 'templates/activity.html',
             controller 	: 'activityCtrl'
         })
-        .when('/backoffice/activity/', {
+        .when('/activity', {
             templateUrl : 'templates/activity.html',
             controller 	: 'activityCtrl'
         })
-        .when('/backoffice/category/', {
+        .when('/activities', {
+            templateUrl : 'templates/activities.html',
+            controller 	: 'activitiesCtrl'
+        })
+        .when('/category', {
             templateUrl : 'templates/category.html',
             controller 	: 'categoryCtrl'
         })
+        .when('/categories', {
+            templateUrl : 'templates/categories.html',
+            controller 	: 'categoriesCtrl'
+        })
 		.otherwise({
-			redirectTo: '/backoffice'
+			redirectTo: '/'
 		});
 });
 

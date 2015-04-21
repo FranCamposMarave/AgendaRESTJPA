@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 0px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 .home-jumbotron .title{
     color: #fff;
@@ -74,5 +74,3 @@ body {
 footer {
     margin: 50px 0;
 }
-
-
