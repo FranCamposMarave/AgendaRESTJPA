@@ -69,38 +69,4 @@
             return $http.put(url, data );
         }
     }]);
-
-    app.service('MonitorService', ['$http', function($http) {
-
-        this.retrieveAll = function() {
-            console.log(app.baseURI + app.monitorURI);
-            return $http.get(app.baseURI + app.monitorURI);
-        }
-
-        this.addMonitor = function (monitor) {
-            var url = app.baseURI + app.monitorURI;
-            console.log(url);
-            var data = "{monitor:" + JSON.stringify(monitor) + "}";
-            console.log(monitor);
-            return $http.post(url, data);
-        }
-
-        this.retrieveMonitor = function(id) {
-            var url = app.baseURI + app.monitorURI + id;
-            return $http.get(url);
-        }
-
-        this.deleteMonitor = function(id) {
-            var url = app.baseURI + app.monitorURI + id;
-            var data = {'id': id}
-            return $http.delete(url, data);
-        }
-
-        this.updateMonitor = function (monitor) {
-            var url = app.baseURI + app.monitorURI + monitor.id ;
-            var data = "{monitor:" + JSON.stringify(monitor) + "}";
-            return $http.put(url, data );
-        }
-    }]);
-
 })();
