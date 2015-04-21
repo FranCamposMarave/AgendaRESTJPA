@@ -5,9 +5,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.Date;
 
-/**
- * Created by oscar on 27/11/14.
- */
 @XmlRootElement
 @Entity
 @Table(uniqueConstraints =
@@ -24,13 +21,13 @@ public class Activity {
     @XmlTransient
     private Long id;
 
-
     private String title;
 
     private String description;
 
 //    @ManyToOne(optional = false)
 //    @JoinColumn(name = "Category_id", nullable = false)
+    //@OneToOne(fetch = FetchType.LAZY)
     private Category category;
 
     @Temporal(TemporalType.TIMESTAMP)

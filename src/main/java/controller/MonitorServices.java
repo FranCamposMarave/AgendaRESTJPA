@@ -59,7 +59,7 @@ public class MonitorServices {
         */
         monitorDAO.add(monitor);
         UriBuilder uriBuilder = uriInfo.getAbsolutePathBuilder();
-        URI uri = uriBuilder.path( monitor.getNif() + "" ).build();
+        URI uri = uriBuilder.path( monitor.getId() + "" ).build();
         return Response.created(uri).entity( monitor ).build();
     }
 
@@ -79,7 +79,7 @@ public class MonitorServices {
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateMonitors(@PathParam("id") Long id, Monitor monitor) {
-        if( !id.equals(monitor.getNif())  ) {
+        if( !id.equals(monitor.getId())  ) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
         else {

@@ -256,7 +256,6 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
 
     $scope.submit = function () {
         if ( $scope.action == 'Crear' ){
-            console.log( "Category: " + $scope.activity.category);
             ActivityService.addActivity($scope.activity)
             .success(function(data) {
                 console.log("Activity added");
@@ -405,6 +404,7 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
     );
 
     $scope.submit = function () {
+
         if ( $scope.action == 'Crear' ){
             CategoryService.addCategory($scope.category)
                 .success(function(data) {
@@ -468,6 +468,7 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
 
     $scope.submit = function () {
         if ( $scope.action == 'Crear' ){
+            console.log("Submint monitor")
             MonitorService.addMonitor($scope.monitor)
                 .success(function(data) {
                     console.log("Monitor added");
@@ -505,3 +506,70 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
     };
 
 });
+
+
+app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'MonitorService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, MonitorService, FileUploader, toastr) {
+        $scope.retrieveAll = function () {
+            MonitorService.retrieveAll()
+                .success(function(data) {
+                    $scope.monitors = data.monitor;
+                    console.log("Retrieve monitors (count): " + $scope.monitors.length);
+                })
+        };
+
+        $scope.retrieveAll();
+        $scope.retrieve = function(id) {
+            MonitorService.retrieve(id)
+                .success(function(data) {
+                    $scope.currentMonitor = data.monitor;
+                    console.log("Retrieved monitor: " + $scope.currentMonitor.title);
+                })
+        };
+        $scope.delete = function(id) {
+            MonitorService.deleteMonitor(id)
+                .success(function(data) {
+                    console.log("Monitor deleted");
+                    $scope.retrieveAll();
+                });
+        };
+
+        $scope.openConfirmationModal = function (act) {
+            var modalInstance = $modal.open({
+                templateUrl: 'confirmationModalContent.html',
+                controller: 'confirmationModalCtrl',
+                resolve: {
+                    'activity': function () {
+                        return act;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (monitor) {
+                MonitorService.deleteMonitor(monitor.id)
+                    .success(function(data) {
+                        toastr.success('El monitor ha sido borrado', 'Borrar');
+                        console.log("Monitor deleted");
+                        $scope.retrieveAll();
+                    }).error(function(data, status, headers, config) {
+                        console.log("Error deleting monitor. Error code: " + status );
+                        if ( status == 404 ){
+                            toastr.error('No existe el monitor', 'Borrar');
+                        }else if ( status == 500 ){
+                            toastr.error('Error interno del servidor', 'Borrar');
+                        }else{
+                            toastr.error('Error en la conexión al servidor', 'Borrar');
+                        }
+                    });
+            });
+        };
+
+        $scope.file = null;
+        $scope.uploadImage = function(){
+        }
+
+        $rootScope.$on('toastMessage', function(event, toast){
+            $timeout( toast, 1000 );
+        });
+    }
+]);
