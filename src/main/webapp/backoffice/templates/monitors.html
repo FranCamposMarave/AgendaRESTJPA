@@ -1,31 +1,30 @@
 <!-- Row Start -->
 <div class="row text-center">
 
-    <!-- Activities Start -->
+    <!-- Monitors Start -->
     <div class="col-md-12 page-header">
-        <a href="#/category" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Añadir Categoría</a>
-        <h1 class="text-left"><i class="fa fa-list"></i> Categorías</h1>
+        <a href="#/monitor" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Añadir Monitor</a>
+        <h1 class="text-left"><i class="fa fa-cubes"></i> Monitores</h1>
         <div class="clearfix"></div>
     </div>
     <div class="clearfix"></div>
-    <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="category in categories">
+    <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="monitor in monitors">
         <div class="thumbnail">
-            <!--<img src="{{ ! activity.picture ? 'images/no-image.png' : 'uploads/'+activity.picture }}" alt="">-->
             <div class="caption">
-                <!--<span class="price label label-info">{{ activity.price }} €</span>-->
-                <h5>{{ category.title }}</h5>
+                <span class="price label label-info">{{ monitor.nif }} €</span>
+                <h5>{{ monitor.name }}{{monitor.id}}</h5>
                 <p>
-                    <a href="#/category/{{ category.id }}" class="btn btn-success" id="update:{{category.id}}">
+                    <a href="#/backoffice/monitor/{{ monitor.id }}" class="btn btn-success" id="update:{{monitor.id}}">
                         <i class="fa fa-edit"></i> Editar
                     </a>
-                    <button type="button" class="btn btn-danger" ng-click="openConfirmationModal(category)" id="delete:{{category.id}}">
+                    <button type="button" class="btn btn-danger" ng-click="openConfirmationModal(monitor)" id="delete:{{monitor.id}}">
                         <i class="fa fa-trash-o"></i> Borrar
                     </button>
                 </p>
             </div>
         </div>
     </div>
-    <!-- Activities End -->
+    <!-- Monitors End -->
 
     <!-- Confirmation Modal Start-->
     <script type="text/ng-template" id="confirmationModalContent.html">
@@ -35,11 +34,10 @@
                 <h4 class="modal-title panel-title" id="confirmationLabel"><i class="fa fa-warning"></i> Atención</h4>
             </div>
             <div class="modal-body">
-                <p>¿Seguro que desea borrar la categoría {{ category.title }}? No podrá ser recuperada</p>
+                <p>¿Seguro que desea borrar al monitor {{ monitor.name }}? No podrá ser recuperada</p>
                 <div class="pull-right">
                     <button type="button" class="btn btn-default" ng-click="modalCancel()">Cancelar</button>
-                    <button type="button" class="btn btn-danger"
-                            ng-click="modalOk(category)"><i class="fa fa-trash"></i> Borrar</button>
+                    <button type="button" class="btn btn-danger" ng-click="modalOk(monitor)"><i class="fa fa-trash"></i> Borrar</button>
                 </div>
                 <div class="clearfix"></div>
             </div>

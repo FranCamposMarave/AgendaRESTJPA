@@ -5,9 +5,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.Date;
 
-/**
- * Created by oscar on 27/11/14.
- */
 @XmlRootElement
 @Entity
 @NamedQueries({
@@ -28,12 +25,12 @@ public class Monitor {
 
     private String lastName;
 
-
     public Monitor() {
         super();
     }
 
-    public Monitor(String nif, String name, String lastName) {
+    public Monitor(Long id, String nif, String name, String lastName) {
+        this.id = id;
         this.nif = nif;
         this.name = name;
         this.lastName = lastName;
@@ -59,6 +56,7 @@ public class Monitor {
     }
 
     public Long getId() { return id;}
+    public void setId(Long id) {this.id = id;}
 
 
     @Override

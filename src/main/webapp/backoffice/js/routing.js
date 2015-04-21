@@ -1,4 +1,3 @@
-
 // Create the module
 var app = angular.module('bk-app',
     ['bk-controllers','ngRoute']);
@@ -29,9 +28,25 @@ app.config(function($routeProvider) {
             templateUrl : 'templates/category.html',
             controller 	: 'categoryCtrl'
         })
+        .when('/category/:id', {
+            templateUrl : 'templates/category.html',
+            controller 	: 'categoryCtrl'
+        })
         .when('/categories', {
             templateUrl : 'templates/categories.html',
             controller 	: 'categoriesCtrl'
+        })
+        .when('/monitor', {
+            templateUrl : 'templates/monitor.html',
+            controller 	: 'monitorCtrl'
+        })
+        .when('/monitors', {
+            templateUrl : 'templates/monitors.html',
+            controller 	: 'monitorsCtrl'
+        })
+        .when('/monitor/:id', {
+            templateUrl : 'templates/monitor.html',
+            controller 	: 'monitorCtrl'
         })
 		.otherwise({
 			redirectTo: '/'

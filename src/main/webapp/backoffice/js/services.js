@@ -5,6 +5,7 @@
     app.baseURI = 'http://localhost:8080/naturAdventure/';
     app.activityURI = "activities/";
     app.categoryURI = "categories/";
+    app.monitorURI = "monitors/";
 
     app.service('ActivityService', ['$http', function($http) {
 
@@ -66,6 +67,39 @@
         this.updateCategory = function (category) {
             var url = app.baseURI + app.categoryURI + category.id ;
             var data = "{category:" + JSON.stringify(category) + "}";
+            return $http.put(url, data );
+        }
+    }]);
+
+    app.service('MonitorService', ['$http', function($http) {
+
+        this.retrieveAll = function() {
+            console.log(app.baseURI + app.monitorURI);
+            return $http.get(app.baseURI + app.monitorURI);
+        }
+
+        this.addMonitor = function (monitor) {
+            var url = app.baseURI + app.monitorURI;
+            console.log(url);
+            var data = "{monitor:" + JSON.stringify(monitor) + "}";
+            console.log(monitor);
+            return $http.post(url, data);
+        }
+
+        this.retrieveMonitor = function(id) {
+            var url = app.baseURI + app.monitorURI + id;
+            return $http.get(url);
+        }
+
+        this.deleteMonitor = function(id) {
+            var url = app.baseURI + app.monitorURI + id;
+            var data = {'id': id}
+            return $http.delete(url, data);
+        }
+
+        this.updateMonitor = function (monitor) {
+            var url = app.baseURI + app.monitorURI + monitor.id ;
+            var data = "{monitor:" + JSON.stringify(monitor) + "}";
             return $http.put(url, data );
         }
     }]);
