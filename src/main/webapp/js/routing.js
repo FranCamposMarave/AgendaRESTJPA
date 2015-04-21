@@ -9,12 +9,16 @@ app.config(function(cfpLoadingBarProvider) {
 // Config routes
 app.config(function($routeProvider) {
 	$routeProvider
-		.when('/index', {
+		.when('/', {
             templateUrl : 'templates/home.html',
             controller 	: 'homeCtrl'
         })
+        .when('/activities', {
+            templateUrl : 'templates/activities.html',
+            controller 	: 'activitiesCtrl'
+        })
 
 		.otherwise({
-			redirectTo: '/index'
+			redirectTo: '/'
 		});
 });
