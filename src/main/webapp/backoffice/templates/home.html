@@ -14,7 +14,7 @@
                 <span class="price label label-info">{{ activity.price }} €</span>
                 <h5>{{ activity.title }}</h5>
                 <p>
-                    <a href="#/backoffice/activity/{{ activity.id }}" class="btn btn-success" id="update:{{activity.id}}">
+                    <a href="#/activity/{{ activity.id }}" class="btn btn-success" id="update:{{activity.id}}">
                         <i class="fa fa-edit"></i> Editar
                     </a>
                     <button type="button" class="btn btn-danger" ng-click="openConfirmationModal(activity)" id="delete:{{activity.id}}">
