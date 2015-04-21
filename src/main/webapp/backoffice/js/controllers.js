@@ -29,8 +29,8 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
             ActivityService.retrieveAll()
                 .success(function(data) {
                    $scope.activities = data.activity;
-                   console.log("Retrieve activities (count): " + $scope.activities.length);
-            })
+                   console.log("Retrieve activities (count): " + $scope.activities[0].title);
+            });
         };
         $scope.retrieveAll();
         $scope.retrieve = function(id) {
@@ -156,15 +156,20 @@ app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
 
 
 
-app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileUploader, ActivityService, $location, toastr) {
+app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileUploader, ActivityService, CategoryService, $location, toastr) {
 
+    CategoryService.retrieveAll()
+        .success(function(data) {
+            $scope.categories = data.category;
+            console.log("Retrieve categories (count): " + $scope.categories[0].title);
+        });
     if ( $routeParams.id ){
         $scope.action = "Editar";
         ActivityService.retrieveActivity($routeParams.id)
             .success(function(data) {
                $scope.activity = data.activity;
                console.log("Retrieved activity: " + $scope.activity.title);
-        })
+        });
     }else{
         $scope.action = "Crear";
         $scope.activity = {};
@@ -186,7 +191,6 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
 
     $scope.submit = function () {
         if ( $scope.action == 'Crear' ){
-            $scope.activity.category={id:"2",title:"sdfg"};
             ActivityService.addActivity($scope.activity)
                 .success(function(data) {
                     console.log("Activity added");
