@@ -3,21 +3,22 @@
 
     <!-- Monitors Start -->
     <div class="col-md-12 page-header">
-        <a href="#/monitor" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Añadir Monitor</a>
-        <h1 class="text-left"><i class="fa fa-cubes"></i> Monitores</h1>
+        <a href="#/monitor" class="pure-button pure-button-primary pull-right"><i class="fa fa-plus"></i> Añadir Monitor</a>
+        <h1 class="text-left"><i class="fa fa-group"></i> Monitores</h1>
         <div class="clearfix"></div>
     </div>
     <div class="clearfix"></div>
     <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="monitor in monitors">
         <div class="thumbnail">
             <div class="caption">
-                <span class="price label label-info">{{ monitor.nif }} €</span>
-                <h5>{{ monitor.name }}{{monitor.id}}</h5>
+                <p class="text-center"><i class="fa fa-male fa-4x"></i> </p>
+                <span class="price label label-success">{{ monitor.nif }}</span>
+                <h5>{{ monitor.name }} {{monitor.lastName}}</h5>
                 <p>
-                    <a href="#/backoffice/monitor/{{ monitor.id }}" class="btn btn-success" id="update:{{monitor.id}}">
+                    <a href="#/monitor/{{ monitor.id }}" class="pure-button button-success" id="update:{{monitor.id}}">
                         <i class="fa fa-edit"></i> Editar
                     </a>
-                    <button type="button" class="btn btn-danger" ng-click="openConfirmationModal(monitor)" id="delete:{{monitor.id}}">
+                    <button type="button" class="pure-button button-error" ng-click="openConfirmationModal(monitor)" id="delete:{{monitor.id}}">
                         <i class="fa fa-trash-o"></i> Borrar
                     </button>
                 </p>
@@ -34,7 +35,7 @@
                 <h4 class="modal-title panel-title" id="confirmationLabel"><i class="fa fa-warning"></i> Atención</h4>
             </div>
             <div class="modal-body">
-                <p>¿Seguro que desea borrar al monitor {{ monitor.name }}? No podrá ser recuperada</p>
+                <p>¿Seguro que desea borrar al monitor {{ monitor.name }}? No podrá ser recuperado.</p>
                 <div class="pull-right">
                     <button type="button" class="btn btn-default" ng-click="modalCancel()">Cancelar</button>
                     <button type="button" class="btn btn-danger" ng-click="modalOk(monitor)"><i class="fa fa-trash"></i> Borrar</button>

@@ -83,7 +83,8 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
         }
 
         $rootScope.$on('toastMessage', function(event, toast){
-            $timeout( toast, 1000 );
+            toast();
+            event.preventDefault();
         });
     }
 ]);
@@ -412,7 +413,7 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
                     $rootScope.$broadcast('toastMessage', function(){
                         toastr.success('La categoria ha sido añadida!', 'Añadir');
                     });
-                    $location.path('/');
+                    $location.path('#/categories');
                     $scope.categoryForm.$submitted = true;
                 }).error(function(data, status, headers, config) {
                     if ( status == 500 ){
@@ -429,7 +430,7 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
                     $rootScope.$broadcast('toastMessage', function(){
                         toastr.success(' La categoría ha sido actualizada!', 'Actualizar');
                     });
-                    $location.path('/');
+                    $location.path('#/categories');
                 }).error(function(data, status, headers, config) {
                     console.log("Error updating category. Error code: " + status );
                     if ( status == 400 ){
@@ -475,7 +476,7 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
                     $rootScope.$broadcast('toastMessage', function(){
                         toastr.success('El monitor ha sido añadido!', 'Añadir');
                     });
-                    $location.path('/');
+                    $location.path('#/monitors');
                     $scope.monitorForm.$submitted = true;
                 }).error(function(data, status, headers, config) {
                     if ( status == 500 ){
@@ -492,7 +493,7 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
                     $rootScope.$broadcast('toastMessage', function(){
                         toastr.success(' El monitor ha sido actualizado!', 'Actualizar');
                     });
-                    $location.path('/');
+                    $location.path('#/monitors');
                 }).error(function(data, status, headers, config) {
                     console.log("Error updating monitor. Error code: " + status );
                     if ( status == 400 ){

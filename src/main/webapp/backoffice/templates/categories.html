@@ -3,22 +3,20 @@
 
     <!-- Activities Start -->
     <div class="col-md-12 page-header">
-        <a href="#/category" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Añadir Categoría</a>
-        <h1 class="text-left"><i class="fa fa-list"></i> Categorías</h1>
+        <a href="#/category" class="pure-button pure-button-primary pull-right"><i class="fa fa-plus"></i> Añadir Categoría</a>
+        <h1 class="text-left"><i class="fa fa-tags"></i> Categorías</h1>
         <div class="clearfix"></div>
     </div>
     <div class="clearfix"></div>
     <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="category in categories">
         <div class="thumbnail">
-            <!--<img src="{{ ! activity.picture ? 'images/no-image.png' : 'uploads/'+activity.picture }}" alt="">-->
             <div class="caption">
-                <!--<span class="price label label-info">{{ activity.price }} €</span>-->
-                <h5>{{ category.title }}</h5>
+                <h4><i class="fa fa-tag"></i> {{ category.title }}</h4>
                 <p>
-                    <a href="#/category/{{ category.id }}" class="btn btn-success" id="update:{{category.id}}">
+                    <a href="#/category/{{ category.id }}" class="pure-button button-success" id="update:{{category.id}}">
                         <i class="fa fa-edit"></i> Editar
                     </a>
-                    <button type="button" class="btn btn-danger" ng-click="openConfirmationModal(category)" id="delete:{{category.id}}">
+                    <button type="button" class="pure-button button-error" ng-click="openConfirmationModal(category)" id="delete:{{category.id}}">
                         <i class="fa fa-trash-o"></i> Borrar
                     </button>
                 </p>

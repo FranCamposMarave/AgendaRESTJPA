@@ -3,7 +3,7 @@
 
     <!-- Activities Start -->
     <div class="col-md-12 page-header">
-        <a href="#/activity" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Añadir Actividad</a>
+        <a href="#/activity" class="pure-button pure-button-primary pull-right"><i class="fa fa-plus"></i> Añadir Actividad</a>
         <h1 class="text-left"><i class="fa fa-cubes"></i> Actividades</h1>
         <div class="clearfix"></div>
     </div>
@@ -15,10 +15,10 @@
                 <span class="price label label-info">{{ activity.price }} €</span>
                 <h5>{{ activity.title }}</h5>
                 <p>
-                    <a href="#/activity/{{ activity.id }}" class="btn btn-success" id="update:{{activity.id}}">
+                    <a href="#/activity/{{ activity.id }}" class="pure-button button-success" id="update:{{activity.id}}">
                         <i class="fa fa-edit"></i> Editar
                     </a>
-                    <button type="button" class="btn btn-danger" ng-click="openConfirmationModal(activity)" id="delete:{{activity.id}}">
+                    <button type="button" class="pure-button button-error" ng-click="openConfirmationModal(activity)" id="delete:{{activity.id}}">
                         <i class="fa fa-trash-o"></i> Borrar
                     </button>
                 </p>
