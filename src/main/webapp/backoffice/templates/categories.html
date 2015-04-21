@@ -8,17 +8,17 @@
         <div class="clearfix"></div>
     </div>
     <div class="clearfix"></div>
-    <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="activity in activities">
+    <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="category in categories">
         <div class="thumbnail">
-            <img src="{{ ! activity.picture ? 'images/no-image.png' : 'uploads/'+activity.picture }}" alt="">
+            <!--<img src="{{ ! activity.picture ? 'images/no-image.png' : 'uploads/'+activity.picture }}" alt="">-->
             <div class="caption">
-                <span class="price label label-info">{{ activity.price }} €</span>
-                <h5>{{ activity.title }}</h5>
+                <!--<span class="price label label-info">{{ activity.price }} €</span>-->
+                <h5>{{ category.title }}</h5>
                 <p>
-                    <a href="#/backoffice/activity/{{ activity.id }}" class="btn btn-success" id="update:{{activity.id}}">
+                    <a href="#/category/{{ category.id }}" class="btn btn-success" id="update:{{category.id}}">
                         <i class="fa fa-edit"></i> Editar
                     </a>
-                    <button type="button" class="btn btn-danger" ng-click="openConfirmationModal(activity)" id="delete:{{activity.id}}">
+                    <button type="button" class="btn btn-danger" ng-click="openConfirmationModal(category)" id="delete:{{category.id}}">
                         <i class="fa fa-trash-o"></i> Borrar
                     </button>
                 </p>
@@ -35,11 +35,11 @@
                 <h4 class="modal-title panel-title" id="confirmationLabel"><i class="fa fa-warning"></i> Atención</h4>
             </div>
             <div class="modal-body">
-                <p>¿Seguro que desea borrar la actividad {{ activity.title }}? No podrá ser recuperada</p>
+                <p>¿Seguro que desea borrar la categoría {{ category.title }}? No podrá ser recuperada</p>
                 <div class="pull-right">
                     <button type="button" class="btn btn-default" ng-click="modalCancel()">Cancelar</button>
                     <button type="button" class="btn btn-danger"
-                            ng-click="modalOk(activity)"><i class="fa fa-trash"></i> Borrar</button>
+                            ng-click="modalOk(category)"><i class="fa fa-trash"></i> Borrar</button>
                 </div>
                 <div class="clearfix"></div>
             </div>

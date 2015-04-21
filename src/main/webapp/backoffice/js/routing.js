@@ -29,6 +29,10 @@ app.config(function($routeProvider) {
             templateUrl : 'templates/category.html',
             controller 	: 'categoryCtrl'
         })
+        .when('/category/:id', {
+            templateUrl : 'templates/category.html',
+            controller 	: 'categoryCtrl'
+        })
         .when('/categories', {
             templateUrl : 'templates/categories.html',
             controller 	: 'categoriesCtrl'
