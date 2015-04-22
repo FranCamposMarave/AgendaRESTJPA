@@ -10,6 +10,7 @@ import java.util.Date;
 @NamedQueries({
         @NamedQuery(name="Monitor.getAll", query = "SELECT m FROM Monitor m"),
         @NamedQuery(name="Monitor.get", query = "SELECT m FROM Monitor m WHERE m.id = :id"),
+        @NamedQuery(name="Monitor.getByNif", query = "SELECT m FROM Monitor m WHERE m.nif = :nif"),
         @NamedQuery(name="Monitor.deleteByNif", query = "DELETE FROM Monitor m WHERE m.id = :id")
 })
 public class Monitor {

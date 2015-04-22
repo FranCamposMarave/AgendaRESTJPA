@@ -26,6 +26,7 @@
             <div ng-show="monitorForm.price.$error.required && !monitorForm.price.$pristine">
                 <span class="text-danger" ng-show="monitorForm.price.$error.required">El nif es un campo obligatorio.</span>
             </div>
+                <span class="text-danger">{{ errors.nif }}</span>
         </div>
 
 
@@ -53,8 +54,8 @@
 
 
         <div class="col-md-12 text-right">
-            <button type="submit" class="pure-button pure-button-primary" ng-disabled="monitorForm.$invalid || monitorForm.$submitted">
-                <i class="fa fa-check"></i> {{ action }}</button>
+            <button type="submit" class="pure-button pure-button-primary" ng-disabled="monitorForm.$invalid">
+                <i class="fa fa-check"></i> {{ action }}</button
         </div>
     </form>
 

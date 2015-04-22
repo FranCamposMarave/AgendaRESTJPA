@@ -1,7 +1,7 @@
 package controller;
 
 
-import controller.validators.Validator;
+import controller.validators.ActivityValidator;
 import model.dao.ActivityJPA;
 import model.entities.Activity;
 import services.ImageUploaderService;
@@ -24,7 +24,7 @@ public class ActivityServices {
     ActivityJPA activityDAO;
 
     @Inject
-    Validator<Activity> validatorActivity;
+    ActivityValidator validatorActivity;
 
     @Context
     private UriInfo uriInfo;

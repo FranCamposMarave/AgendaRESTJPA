@@ -220,8 +220,6 @@ app.controller('categoriesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
     }
 ]);
 
-
-
 app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileUploader, ActivityService, CategoryService, $location, toastr) {
 
     CategoryService.retrieveAll()
@@ -367,8 +365,6 @@ app.controller('confirmationModalCtrl', function ($scope, $modalInstance, activi
 
 });
 
-
-
 app.controller('DropdownCtrl', function ($scope, $log) {
   $scope.items = [
     {link:'1', name:'Piragüismo'},
@@ -481,6 +477,9 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
                 }).error(function(data, status, headers, config) {
                     if ( status == 500 ){
                         toastr.error('Error interno del servidor', 'Actualizar');
+                    }else if ( status == 409 ){
+                        toastr.error('Ya existe un monitor con el Nif introducido.', 'Actualizar');
+                        $scope.errors.nif = "Ya existe un monitor con ese Nif";
                     }else{
                         console.log("Error adding monitor. Error code: " + status );
                         toastr.error('Error en la conexión al servidor', 'Añadir');
@@ -500,6 +499,9 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
                         toastr.error('El monitor a modificar no existe', 'Actualizar');
                     }else if ( status == 500 ){
                         toastr.error('Error interno del servidor', 'Actualizar');
+                    }else if ( status == 409 ){
+                        toastr.error('Ya existe un monitor con el Nif introducido.', 'Actualizar');
+                        $scope.errors.nif = "Ya existe un monitor con ese Nif";
                     }else{
                         toastr.error('Error en la conexión al servidor', 'Actualizar');}
                 });
@@ -507,7 +509,6 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
     };
 
 });
-
 
 app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'MonitorService', 'FileUploader', 'toastr',
     function ($scope, $rootScope, $timeout, $modal, MonitorService, FileUploader, toastr) {

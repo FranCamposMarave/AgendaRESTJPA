@@ -36,6 +36,16 @@ public class MonitorJPA {
         }
     }
 
+    public Monitor getByNif(String nif) {
+        TypedQuery<Monitor> query = em.createNamedQuery("Monitor.getByNif", Monitor.class);
+        query.setParameter("nif", nif);
+        try {
+            return query.getSingleResult();
+        } catch (NoResultException e) {
+            return NULL;
+        }
+    }
+
     public boolean delete(Long id) {
         TypedQuery<Monitor> query = em.createNamedQuery("Monitor.deleteByNif", Monitor.class);
         query.setParameter("id", id);

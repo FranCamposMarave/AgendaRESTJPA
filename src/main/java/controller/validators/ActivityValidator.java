@@ -8,7 +8,6 @@ import javax.ejb.Stateless;
 /**
  * Created by cuatroochenta on 1/4/15.
  */
-@Stateless
 public class ActivityValidator implements Validator<Activity> {
 
     @Override

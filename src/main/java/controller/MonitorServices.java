@@ -1,6 +1,8 @@
 package controller;
 
 
+import controller.validators.MonitorValidator;
+import controller.validators.Validator;
 import model.dao.MonitorJPA;
 import model.entities.Monitor;
 
@@ -18,10 +20,9 @@ public class MonitorServices {
     @Inject
     MonitorJPA monitorDAO;
 
-    /*
     @Inject
     MonitorValidator validatorMonitor;
-*/
+
     @Context
     private UriInfo uriInfo;
 
@@ -52,11 +53,15 @@ public class MonitorServices {
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.APPLICATION_JSON)
     public Response addMonitor(Monitor monitor) {
-        /*
+
         if ( !validatorMonitor.validate( monitor) ){
             return Response.status( Response.Status.FORBIDDEN ).build();
         }
-        */
+
+        if ( monitorDAO.getByNif(monitor.getNif()) != null ){
+            return Response.status( Response.Status.CONFLICT ).build();
+        }
+
         monitorDAO.add(monitor);
         UriBuilder uriBuilder = uriInfo.getAbsolutePathBuilder();
         URI uri = uriBuilder.path( monitor.getId() + "" ).build();
