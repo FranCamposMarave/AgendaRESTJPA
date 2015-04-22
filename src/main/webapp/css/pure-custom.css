@@ -78,7 +78,40 @@
     text-align: center;
 }
 
-body{
-    /*background: #2d3e50;*/
+.img-activity {
+    border: 1px solid #42A5F5;
+    border-radius: 6px;
+    padding:0;
 }
+
+.custom-article {
+    border: 3px solid #42A5F5;
+    border-radius: 6px;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.custom-activity-title{
+    color: #42A5F5;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.custom-article .pull-left {
+    padding-left: 25px;
+}
+
+.custom-article .pull-right {
+    margin-right: 20px;
+}
+
+.custom-article .category {
+    padding-left: 30px;
+    padding-top: 20px;
+    color:
+}
+
 
