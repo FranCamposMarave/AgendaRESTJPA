@@ -552,6 +552,7 @@ app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'M
                         toastr.success('El monitor ha sido borrado', 'Borrar');
                         console.log("Monitor deleted");
                         $scope.retrieveAll();
+
                     }).error(function(data, status, headers, config) {
                         console.log("Error deleting monitor. Error code: " + status );
                         if ( status == 404 ){

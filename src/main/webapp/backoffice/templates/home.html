@@ -9,7 +9,7 @@
     <div class="clearfix"></div>
     <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="activity in activities">
         <div class="thumbnail">
-            <img src="{{ ! activity.picture ? 'images/no-image.png' : 'uploads/'+activity.picture }}" alt="">
+            <img src="{{ ! activity.picture ? 'images/no-image.png' : '../uploads/'+activity.picture }}" alt="">
             <div class="caption">
                 <span class="price label label-info">{{ activity.price }} €</span>
                 <h5>{{ activity.title }}</h5>
