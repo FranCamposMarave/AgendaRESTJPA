@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col-md-3">
+    <div class="col-md-2">
         <p class="lead">Actividades</p>
         <div class="list-group">
             <a href="#" class="list-group-item">Piragüismo</a>
@@ -9,19 +9,27 @@
         </div>
     </div>
 
-    <div class="col-md-9">
+    <div class="col-md-10">
         <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
 
             <div class="custom-article">
-                <h4 class="pull-left custom-activity-title"><a href="#">{{ activity.title }}</a></h4>
-                <h4 class="pull-right label label-primary">Precio: <b>{{ activity.price }}€</b></h4>
-                <div class="clearfix"></div>
-                <div class="col-md-12">
-                    <img class="col-md-6 col-sm-12 img-responsive" src="{{ ! activity.picture ? 'images/no-image.png' : '../uploads/'+activity.picture }}" alt="">
-                    <p class="col-md-6 col-sm-12"><b>Descripción:</b> {{activity.description}}</p>
+                <div class="col-md-6">
+                    <h4 class="custom-activity-title">{{ activity.title }}</h4>
+                    <img class="img-responsive" src="{{ ! activity.picture ? 'images/no-image.png' : 'uploads/'+activity.picture }}" alt="">
                 </div>
-                <p class="category"><i class="fa fa-tag"></i> {{activity.category.title}}</p>
-
+                <div class="col-md-6">
+                    <h4>
+                        <span class="pull-right price">{{activity.price}}€</span>
+                    </h4>
+                    <div class="clearfix"></div>
+                    <div class="col-md-12">
+                        <p class="text-justify">{{activity.description}}</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <h4>
+                    <span class="pull-right label label-success"><i class="fa fa-tag"></i> {{activity.category.title}}</span>
+                </h4>
             </div>
 
 

@@ -10,11 +10,12 @@ import java.util.Date;
  */
 @XmlRootElement
 @Entity
-@Table(name = "activity",
-        uniqueConstraints={@UniqueConstraint(columnNames={"title","date"})})
+@Table( uniqueConstraints={
+        @UniqueConstraint( columnNames={"title", "date"} )
+})
 @NamedQueries({
         @NamedQuery(name="Activity.getAll", query = "SELECT a FROM Activity a"),
-        @NamedQuery(name="Activity.get", query = "DELETE FROM Activity a WHERE a.id = :id"),
+        @NamedQuery(name="Activity.get", query = "SELECT a FROM Activity a WHERE a.id = :id"),
         @NamedQuery(name="Activity.deleteById", query = "DELETE FROM Activity a WHERE a.id = :id")
 
 })
@@ -30,8 +31,6 @@ public class Activity {
 
     private String description;
 
-//    @ManyToOne(optional = false)
-//    @JoinColumn(name = "Category_id", nullable = false)
     private Category category;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -123,4 +122,17 @@ public class Activity {
                 ", picture='" + picture + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Activity activity = (Activity) o;
+
+        if (id != null ? !id.equals(activity.id) : activity.id != null) return false;
+
+        return true;
+    }
+
 }

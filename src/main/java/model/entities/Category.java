@@ -10,8 +10,9 @@ import java.util.Date;
  */
 @XmlRootElement
 @Entity
-@Table(name = "category",
-        uniqueConstraints={@UniqueConstraint(columnNames={"title"})})
+@Table( uniqueConstraints= {
+        @UniqueConstraint(columnNames={"title"})
+})
 @NamedQueries({
         @NamedQuery(name="Category.getAll", query = "SELECT c FROM Category c"),
         @NamedQuery(name="Category.get", query = "SELECT c FROM Category c WHERE c.id = :id"),

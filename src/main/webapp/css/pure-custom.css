@@ -111,7 +111,12 @@
 .custom-article .category {
     padding-left: 30px;
     padding-top: 20px;
-    color:
+}
+
+.custom-article .price {
+    font-size: 2.5em;
+    color: #42A5F5;
+    font-weight: 500;
 }
 
 

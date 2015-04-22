@@ -18,10 +18,10 @@ import java.net.URI;
 public class MonitorServices {
 
     @Inject
-    MonitorJPA monitorDAO;
+    private MonitorJPA monitorDAO;
 
     @Inject
-    MonitorValidator validatorMonitor;
+    private Validator<Monitor> validatorMonitor;
 
     @Context
     private UriInfo uriInfo;
@@ -58,7 +58,7 @@ public class MonitorServices {
             return Response.status( Response.Status.FORBIDDEN ).build();
         }
 
-        if ( monitorDAO.getByNif(monitor.getNif()) != null ){
+        if ( monitorDAO.getByNif(monitor.getNif()) != MonitorJPA.NULL ){
             return Response.status( Response.Status.CONFLICT ).build();
         }
 
@@ -88,6 +88,13 @@ public class MonitorServices {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
         else {
+            if ( !validatorMonitor.validate( monitor) ){
+                return Response.status( Response.Status.FORBIDDEN ).build();
+            }
+            Monitor existent = monitorDAO.getByNif(monitor.getNif());
+            if ( existent != MonitorJPA.NULL && ! existent.equals(monitor) ){
+                return Response.status( Response.Status.CONFLICT ).build();
+            }
             if ( monitorDAO.update( monitor ) ){
                 return Response.status(Response.Status.NO_CONTENT).build();
             }else {

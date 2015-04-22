@@ -70,5 +70,15 @@ public class Monitor {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        Monitor monitor = (Monitor) o;
+
+        if (!id.equals(monitor.id)) return false;
+
+        return true;
+    }
 }
