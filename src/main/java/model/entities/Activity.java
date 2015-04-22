@@ -10,7 +10,7 @@ import java.util.Date;
  */
 @XmlRootElement
 @Entity
-@Table(name = "dm_action_plan",
+@Table(name = "activity",
         uniqueConstraints={@UniqueConstraint(columnNames={"title","date"})})
 @NamedQueries({
         @NamedQuery(name="Activity.getAll", query = "SELECT a FROM Activity a"),
