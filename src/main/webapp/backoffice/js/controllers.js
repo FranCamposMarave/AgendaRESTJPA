@@ -263,7 +263,7 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
                 $rootScope.$broadcast('toastMessage', function(){
                     toastr.success('La actividad ha sido añadida!', 'Añadir');
                 });
-                $location.path('/');
+                $location.path('activities');
                 $scope.activityForm.$submitted = true;
             }).error(function(data, status, headers, config) {
                 if ( status == 500 ){
@@ -280,7 +280,7 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
                 $rootScope.$broadcast('toastMessage', function(){
                     toastr.success(' La actividad ha sido actualizada!', 'Actualizar');
                 });
-                $location.path('/');
+                $location.path('activities');
             }).error(function(data, status, headers, config) {
                 console.log("Error updating activity. Error code: " + status );
                 if ( status == 400 ){
@@ -413,7 +413,7 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
                     $rootScope.$broadcast('toastMessage', function(){
                         toastr.success('La categoria ha sido añadida!', 'Añadir');
                     });
-                    $location.path('#/categories');
+                    $location.path('categories');
                     $scope.categoryForm.$submitted = true;
                 }).error(function(data, status, headers, config) {
                     if ( status == 500 ){
@@ -430,7 +430,7 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
                     $rootScope.$broadcast('toastMessage', function(){
                         toastr.success(' La categoría ha sido actualizada!', 'Actualizar');
                     });
-                    $location.path('#/categories');
+                    $location.path('categories');
                 }).error(function(data, status, headers, config) {
                     console.log("Error updating category. Error code: " + status );
                     if ( status == 400 ){
@@ -476,7 +476,7 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
                     $rootScope.$broadcast('toastMessage', function(){
                         toastr.success('El monitor ha sido añadido!', 'Añadir');
                     });
-                    $location.path('#/monitors');
+                    $location.path('monitors');
                     $scope.monitorForm.$submitted = true;
                 }).error(function(data, status, headers, config) {
                     if ( status == 500 ){
@@ -493,7 +493,7 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
                     $rootScope.$broadcast('toastMessage', function(){
                         toastr.success(' El monitor ha sido actualizado!', 'Actualizar');
                     });
-                    $location.path('#/monitors');
+                    $location.path('monitors');
                 }).error(function(data, status, headers, config) {
                     console.log("Error updating monitor. Error code: " + status );
                     if ( status == 400 ){
