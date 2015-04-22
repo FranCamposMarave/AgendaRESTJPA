@@ -10,64 +10,25 @@
     </div>
 
     <div class="col-md-9">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
 
-        <div class="thumbnail">
-            <img class="img-responsive" src="uploads/{{ activity.picture }}" alt="" width="50">
-            <div class="caption-full">
-                <h4 class="pull-right">{{ activity.price }}€</h4>
-                <h4><a href="#">{{ activity.title }}</a></h4>
-                <p>{{ activity.description }}</p>
-            </div>
-            <div class="ratings">
-                <p class="pull-right">2 valoraciones</p>
-                <p>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </p>
-            </div>
-        </div>
-
-        <div class="well">
-
-            <div class="text-right">
-                <a class="btn btn-success">Valorar la actividad</a>
-            </div>
-
-            <hr>
-
-            <div class="row">
+            <div class="custom-article">
+                <h4 class="pull-left custom-activity-title"><a href="#">{{ activity.title }}</a></h4>
+                <h4 class="pull-right label label-primary">Precio: <b>{{ activity.price }}€</b></h4>
+                <div class="clearfix"></div>
                 <div class="col-md-12">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    angel-191
-                    <span class="pull-right">hace 10 días</span>
-                    <p>Fui con la familia y nos encanto!!</p>
+                    <img class="col-md-6 col-sm-12 img-responsive" src="{{ ! activity.picture ? 'images/no-image.png' : '../uploads/'+activity.picture }}" alt="">
+                    <p class="col-md-6 col-sm-12"><b>Descripción:</b> {{activity.description}}</p>
                 </div>
+                <p class="category"><i class="fa fa-tag"></i> {{activity.category.title}}</p>
+
             </div>
 
-            <hr>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    artyc.95
-                    <span class="pull-right">hace 12 días</span>
-                    <p>Wow no recuerdo nada igual! Lo recomiendo a todo el mundo!</p>
-                </div>
-            </div>
+
 
         </div>
-
     </div>
+
 
 </div>
