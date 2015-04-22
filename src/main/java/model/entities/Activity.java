@@ -10,12 +10,13 @@ import java.util.Date;
  */
 @XmlRootElement
 @Entity
-@Table(uniqueConstraints =
-    @UniqueConstraint(columnNames = {"title","category","date"}))
+@Table(name = "dm_action_plan",
+        uniqueConstraints={@UniqueConstraint(columnNames={"title","date"})})
 @NamedQueries({
         @NamedQuery(name="Activity.getAll", query = "SELECT a FROM Activity a"),
-        @NamedQuery(name="Activity.get", query = "SELECT a FROM Activity a WHERE a.id = :id"),
+        @NamedQuery(name="Activity.get", query = "DELETE FROM Activity a WHERE a.id = :id"),
         @NamedQuery(name="Activity.deleteById", query = "DELETE FROM Activity a WHERE a.id = :id")
+
 })
 public class Activity {
 
