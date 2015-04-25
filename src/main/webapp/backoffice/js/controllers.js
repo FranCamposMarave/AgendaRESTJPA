@@ -243,13 +243,13 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
     $scope.$watch(
         function(scope){ return scope.activity.title },
         function(newValue, oldValue){
-            $scope.remainingChars.title = 255 - newValue.length;
+            $scope.remainingChars.title = 255 - newValue ? newValue.length : 0;
         }
     );
     $scope.$watch(
         function(scope){ return scope.activity.description },
         function(newValue, oldValue){
-            $scope.remainingChars.description = 255 - newValue.length;
+            $scope.remainingChars.description = 255 - newValue ? newValue.length : 0;
         }
     );
 
@@ -396,7 +396,7 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
     $scope.$watch(
         function(scope){ return scope.category.title },
         function(newValue, oldValue){
-            $scope.remainingChars.title = 255 - newValue.length;
+            $scope.remainingChars.title = 255 - newValue ? newValue.length : 0;
         }
     );
 
@@ -459,52 +459,63 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
     $scope.$watch(
         function(scope){ return scope.monitor.name },
         function(newValue, oldValue){
-            $scope.remainingChars.title = 255 - newValue.length;
+            $scope.remainingChars.name = 255 - newValue ? newValue.length : 0;
         }
     );
+
+    $scope.validateDNI = function( dni ) {
+        var dni_letters = "TRWAGMYFPDXBNJZSQVHLCKE";
+        var letter = dni_letters.charAt( parseInt( dni, 10 ) % 23 );
+
+        return letter == dni.charAt(8);
+    };
 
     $scope.submit = function () {
         if ( $scope.action == 'Crear' ){
             console.log("Submint monitor")
             MonitorService.addMonitor($scope.monitor)
-                .success(function(data) {
-                    console.log("Monitor added");
-                    $rootScope.$broadcast('toastMessage', function(){
-                        toastr.success('El monitor ha sido añadido!', 'Añadir');
-                    });
-                    $location.path('monitors');
-                    $scope.monitorForm.$submitted = true;
-                }).error(function(data, status, headers, config) {
-                    if ( status == 500 ){
-                        toastr.error('Error interno del servidor', 'Actualizar');
-                    }else if ( status == 409 ){
-                        toastr.error('Ya existe un monitor con el Nif introducido.', 'Actualizar');
-                        $scope.errors.nif = "Ya existe un monitor con ese Nif";
-                    }else{
-                        console.log("Error adding monitor. Error code: " + status );
-                        toastr.error('Error en la conexión al servidor', 'Añadir');
-                    }
+            .success(function(data) {
+                console.log("Monitor added");
+                $rootScope.$broadcast('toastMessage', function(){
+                    toastr.success('El monitor ha sido añadido!', 'Añadir');
                 });
+                $location.path('monitors');
+                $scope.monitorForm.$submitted = true;
+            })
+            .error(function(data, status, headers, config) {
+                if ( status == 500 ){
+                    toastr.error('Error interno del servidor', 'Añadir');
+                }else if ( status == 409 ){
+                    toastr.error('Ya existe un monitor con el Nif introducido.', 'Añadir');
+                }else if ( status == 403 ){
+                    toastr.error('Los datos introducidos son incorrectos.', 'Añadir');
+
+
+                }else{
+                    toastr.error('Error en la conexión al servidor', 'Añadir');
+                }
+            });
         }else{
             MonitorService.updateMonitor($scope.monitor)
-                .success(function(data) {
-                    console.log("Monitor updated");
-                    $rootScope.$broadcast('toastMessage', function(){
-                        toastr.success(' El monitor ha sido actualizado!', 'Actualizar');
-                    });
-                    $location.path('monitors');
-                }).error(function(data, status, headers, config) {
-                    console.log("Error updating monitor. Error code: " + status );
-                    if ( status == 400 ){
-                        toastr.error('El monitor a modificar no existe', 'Actualizar');
-                    }else if ( status == 500 ){
-                        toastr.error('Error interno del servidor', 'Actualizar');
-                    }else if ( status == 409 ){
-                        toastr.error('Ya existe un monitor con el Nif introducido.', 'Actualizar');
-                        $scope.errors.nif = "Ya existe un monitor con ese Nif";
-                    }else{
-                        toastr.error('Error en la conexión al servidor', 'Actualizar');}
+            .success(function(data) {
+                console.log("Monitor updated");
+                $rootScope.$broadcast('toastMessage', function(){
+                    toastr.success(' El monitor ha sido actualizado!', 'Actualizar');
                 });
+                $location.path('monitors');
+            })
+            .error(function(data, status, headers, config) {
+                console.log("Error updating monitor. Error code: " + status );
+                if ( status == 400 ){
+                    toastr.error('El monitor a modificar no existe', 'Actualizar');
+                }else if ( status == 500 ){
+                    toastr.error('Error interno del servidor', 'Actualizar');
+                }else if ( status == 409 ){
+                    toastr.error('Ya existe un monitor con el Nif introducido.', 'Actualizar');
+                    $scope.errors.nif = "Ya existe un monitor con ese Nif";
+                }else{
+                    toastr.error('Error en la conexión al servidor', 'Actualizar');}
+            });
         }
     };
 
@@ -514,26 +525,26 @@ app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'M
     function ($scope, $rootScope, $timeout, $modal, MonitorService, FileUploader, toastr) {
         $scope.retrieveAll = function () {
             MonitorService.retrieveAll()
-                .success(function(data) {
-                    $scope.monitors = data.monitor;
-                    console.log("Retrieve monitors (count): " + $scope.monitors.length);
-                })
+            .success(function(data) {
+                $scope.monitors = data.monitor;
+                console.log("Retrieve monitors (count): " + $scope.monitors.length);
+            })
         };
 
         $scope.retrieveAll();
         $scope.retrieve = function(id) {
             MonitorService.retrieve(id)
-                .success(function(data) {
-                    $scope.currentMonitor = data.monitor;
-                    console.log("Retrieved monitor: " + $scope.currentMonitor.title);
-                })
+            .success(function(data) {
+                $scope.currentMonitor = data.monitor;
+                console.log("Retrieved monitor: " + $scope.currentMonitor.title);
+            })
         };
         $scope.delete = function(id) {
             MonitorService.deleteMonitor(id)
-                .success(function(data) {
-                    console.log("Monitor deleted");
-                    $scope.retrieveAll();
-                });
+            .success(function(data) {
+                console.log("Monitor deleted");
+                $scope.retrieveAll();
+            });
         };
 
         $scope.openConfirmationModal = function (act) {
@@ -549,21 +560,22 @@ app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'M
 
             modalInstance.result.then(function (monitor) {
                 MonitorService.deleteMonitor(monitor.id)
-                    .success(function(data) {
-                        toastr.success('El monitor ha sido borrado', 'Borrar');
-                        console.log("Monitor deleted");
-                        $scope.retrieveAll();
+                .success(function(data) {
+                    toastr.success('El monitor ha sido borrado', 'Borrar');
+                    console.log("Monitor deleted");
+                    $scope.retrieveAll();
 
-                    }).error(function(data, status, headers, config) {
-                        console.log("Error deleting monitor. Error code: " + status );
-                        if ( status == 404 ){
-                            toastr.error('No existe el monitor', 'Borrar');
-                        }else if ( status == 500 ){
-                            toastr.error('Error interno del servidor', 'Borrar');
-                        }else{
-                            toastr.error('Error en la conexión al servidor', 'Borrar');
-                        }
-                    });
+                })
+                .error(function(data, status, headers, config) {
+                    console.log("Error deleting monitor. Error code: " + status );
+                    if ( status == 404 ){
+                        toastr.error('No existe el monitor', 'Borrar');
+                    }else if ( status == 500 ){
+                        toastr.error('Error interno del servidor', 'Borrar');
+                    }else{
+                        toastr.error('Error en la conexión al servidor', 'Borrar');
+                    }
+                });
             });
         };
 

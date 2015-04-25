@@ -16,7 +16,8 @@
     <form novalidate name="activityForm" ng-submit="submit()">
         <div class="form-group col-md-12">
             <label>Título:</label>
-            <input type="text" ng-model="activity.title" name="title" required class="form-control" ng-maxlength="255">
+            <input type="text" ng-model="activity.title" ng-model-options="{ updateOn: 'blur' }"
+                   name="title" required class="form-control" ng-maxlength="255">
             <div>
                 <span class="helpBlock">*Campo obligatorio</span>
                 | <span class="text-info">Caracteres restantes: {{ remainingChars.title }}</span>
@@ -28,7 +29,8 @@
         </div>
         <div class="form-group col-md-12">
             <label>Descripción:</label>
-            <textarea ng-model="activity.description" name="description" required class="form-control" ng-maxlength="255"></textarea>
+            <textarea ng-model="activity.description" ng-model-options="{ updateOn: 'blur' }"
+                      name="description" required class="form-control" ng-maxlength="255"></textarea>
             <div>
                 <span class="helpBlock">*Campo obligatorio</span>
                  | <span class="text-info">Caracteres restantes: {{ remainingChars.description }}</span>
@@ -42,7 +44,8 @@
         </div>
         <div class="form-group col-md-12">
             <label>Categoría:</label>
-            <select ng-model="activity.category.id" name="category" required class="form-control" ng-options="c.id as c.title for c in categories"></select>
+            <select ng-model="activity.category.id" ng-model-options="{ updateOn: 'blur' }"
+                    name="category" required class="form-control" ng-options="c.id as c.title for c in categories"></select>
             <div>
                 <span class="helpBlock">*Campo obligatorio</span>
             </div>
@@ -53,7 +56,8 @@
         <div class="form-group col-md-6">
             <label>Precio:</label>
             <div class="input-group">
-                <input type="number" ng-model="activity.price" name="price" required class="form-control" min="0" max="100000"/>
+                <input type="number" ng-model="activity.price" ng-model-options="{ updateOn: 'blur' }"
+                       name="price" required class="form-control" min="0" max="100000"/>
                 <span class="input-group-addon">€</span>
             </div>
             <div>
@@ -76,7 +80,8 @@
             <label>Fecha:</label>
             <div class="input-group col-md-8">
                 <input type="text" name="date" class="form-control" required datepicker-popup="dd-MM-yyyy" ng-model="activity.date" is-open="opened"
-                       current-text="hoy" clear-text="limpiar" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Cerrar" />
+                       current-text="hoy" clear-text="limpiar" datepicker-options="dateOptions" ng-model-options="{ updateOn: 'blur' }"
+                       date-disabled="disabled(date, mode)" ng-required="true" close-text="Cerrar" />
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
                     </span>
@@ -93,10 +98,11 @@
         </div>
         <div class="form-group col-md-12">
             <label>Imagen:</label>
-            <input type="file" ng-model="file" nv-file-select="" uploader="uploader" name="file"/>
+            <input type="file" ng-model="file" ng-model-options="{ updateOn: 'blur' }"
+                   nv-file-select="" uploader="uploader" name="file"/>
         </div>
         <div class="col-md-12 text-right">
-            <button type="submit" class="pure-button pure-button-primary" ng-disabled="activityForm.$invalid">
+            <button type="submit" class="pure-button pure-button-primary">
                 <i class="fa fa-check"></i> {{ action }}</button>
         </div>
     </form>
