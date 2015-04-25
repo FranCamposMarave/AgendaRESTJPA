@@ -82,10 +82,6 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
         $scope.uploadImage = function(){
         }
 
-        $rootScope.$on('toastMessage', function(event, toast){
-            toast();
-            event.preventDefault();
-        });
     }
 ]);
 
@@ -243,13 +239,13 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
     $scope.$watch(
         function(scope){ return scope.activity.title },
         function(newValue, oldValue){
-            $scope.remainingChars.title = 255 - newValue ? newValue.length : 0;
+            $scope.remainingChars.title = 255 - newValue.length;
         }
     );
     $scope.$watch(
         function(scope){ return scope.activity.description },
         function(newValue, oldValue){
-            $scope.remainingChars.description = 255 - newValue ? newValue.length : 0;
+            $scope.remainingChars.description = 255 - newValue.length;
         }
     );
 
@@ -258,14 +254,12 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
             ActivityService.addActivity($scope.activity)
             .success(function(data) {
                 console.log("Activity added");
-                $rootScope.$broadcast('toastMessage', function(){
-                    toastr.success('La actividad ha sido añadida!', 'Añadir');
-                });
+                toastr.success('La actividad ha sido añadida!', 'Añadir');
                 $location.path('activities');
                 $scope.activityForm.$submitted = true;
             }).error(function(data, status, headers, config) {
                 if ( status == 500 ){
-                    toastr.error('Error interno del servidor', 'Actualizar');
+                    toastr.error('Error interno del servidor', 'Añadir');
                 }else{
                     console.log("Error adding activity. Error code: " + status );
                     toastr.error('Error en la conexión al servidor', 'Añadir');
@@ -275,9 +269,7 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
             ActivityService.updateActivity($scope.activity)
             .success(function(data) {
                 console.log("Activity updated");
-                $rootScope.$broadcast('toastMessage', function(){
-                    toastr.success(' La actividad ha sido actualizada!', 'Actualizar');
-                });
+                toastr.success(' La actividad ha sido actualizada!', 'Actualizar');
                 $location.path('activities');
             }).error(function(data, status, headers, config) {
                 console.log("Error updating activity. Error code: " + status );
@@ -406,14 +398,12 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
             CategoryService.addCategory($scope.category)
                 .success(function(data) {
                     console.log("Category added");
-                    $rootScope.$broadcast('toastMessage', function(){
-                        toastr.success('La categoria ha sido añadida!', 'Añadir');
-                    });
+                    toastr.success('La categoría ha sido añadida!', 'Añadir');
                     $location.path('categories');
                     $scope.categoryForm.$submitted = true;
                 }).error(function(data, status, headers, config) {
                     if ( status == 500 ){
-                        toastr.error('Error interno del servidor', 'Actualizar');
+                        toastr.error('Error interno del servidor', 'Añadir');
                     }else{
                         console.log("Error adding category. Error code: " + status );
                         toastr.error('Error en la conexión al servidor', 'Añadir');
@@ -423,9 +413,7 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
             CategoryService.updateCategory($scope.category)
                 .success(function(data) {
                     console.log("Category updated");
-                    $rootScope.$broadcast('toastMessage', function(){
-                        toastr.success(' La categoría ha sido actualizada!', 'Actualizar');
-                    });
+                    toastr.success(' La categoría ha sido actualizada!', 'Actualizar');
                     $location.path('categories');
                 }).error(function(data, status, headers, config) {
                     console.log("Error updating category. Error code: " + status );
@@ -459,7 +447,7 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
     $scope.$watch(
         function(scope){ return scope.monitor.name },
         function(newValue, oldValue){
-            $scope.remainingChars.name = 255 - newValue ? newValue.length : 0;
+            $scope.remainingChars.name = 255 - newValue?newValue.length : 0;
         }
     );
 
@@ -476,9 +464,7 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
             MonitorService.addMonitor($scope.monitor)
             .success(function(data) {
                 console.log("Monitor added");
-                $rootScope.$broadcast('toastMessage', function(){
-                    toastr.success('El monitor ha sido añadido!', 'Añadir');
-                });
+                toastr.success('El monitor ha sido añadido!', 'Añadir');
                 $location.path('monitors');
                 $scope.monitorForm.$submitted = true;
             })
@@ -499,9 +485,7 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
             MonitorService.updateMonitor($scope.monitor)
             .success(function(data) {
                 console.log("Monitor updated");
-                $rootScope.$broadcast('toastMessage', function(){
-                    toastr.success(' El monitor ha sido actualizado!', 'Actualizar');
-                });
+                toastr.success(' El monitor ha sido actualizado!', 'Actualizar');
                 $location.path('monitors');
             })
             .error(function(data, status, headers, config) {
