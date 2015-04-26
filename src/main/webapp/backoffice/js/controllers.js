@@ -3,8 +3,12 @@
  */
 
 var app = angular.module('bk-controllers',
-    ['rest', 'ui.bootstrap', 'angularFileUpload','angular-loading-bar', 'ngAnimate', 'toastr']);
+    ['rest', 'ui.bootstrap', 'angularFileUpload','angular-loading-bar',
+    'ngAnimate', 'toastr', 'ngSanitize', 'ui.select']);
 
+app.config(function(uiSelectConfig) {
+    uiSelectConfig.theme = 'selectize';
+});
 
 app.controller('headerCtrl', ['$scope', '$location',
     function($scope, $location){
@@ -15,13 +19,17 @@ app.controller('headerCtrl', ['$scope', '$location',
 ]);
 
 app.controller('homeCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-        $http.get('http://localhost:8080/naturAdventure/activities').success(function (data) {
-            $scope.activities = data.activity;
-        });
+    function ($scope, ActivityService) {
+        $scope.retrieveAll = function () {
+            ActivityService.retrieveAll()
+            .success(function(data) {
+               $scope.activities = data.activity;
+               console.log("Retrieve activities (count): " + $scope.activities[0].title);
+            });
+        };
+        $scope.retrieveAll();
     }
 ]);
-
 
 app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
     function ($scope, $rootScope, $timeout, $modal, ActivityService, FileUploader, toastr) {
@@ -84,7 +92,6 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
 
     }
 ]);
-
 
 app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
     function ($scope, $rootScope, $timeout, $modal, ActivityService, FileUploader, toastr) {
@@ -429,7 +436,7 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
 
 });
 
-app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, MonitorService, $location, toastr) {
+app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, MonitorService, $location, toastr, CategoryService) {
 
     if ( $routeParams.id ){
         $scope.action = "Editar";
@@ -441,7 +448,17 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
     }else{
         $scope.action = "Crear";
         $scope.monitor = {};
+        $scope.monitor.categories = [];
     }
+
+    $scope.retrieveAll = function () {
+                CategoryService.retrieveAll()
+                    .success(function(data) {
+                        $scope.categories = data.category;
+                        console.log("Retrieve categories (count): " + $scope.categories.length);
+                    })
+            };
+            $scope.retrieveAll();
 
     $scope.remainingChars = { "name" : 255};
     $scope.$watch(

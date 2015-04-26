@@ -70,6 +70,7 @@ public class MonitorJPA {
             oldMonitor.setNif(monitor.getNif());
             oldMonitor.setName(monitor.getName());
             oldMonitor.setLastName(monitor.getLastName());
+            oldMonitor.setCategories( monitor.getCategories() );
             return true;
         } catch (NoResultException e) {
             return false;

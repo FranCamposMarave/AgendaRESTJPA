@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.Date;
+import java.util.Set;
 
 @XmlRootElement
 @Entity
@@ -26,15 +27,24 @@ public class Monitor {
 
     private String lastName;
 
+    @OneToMany
+    @JoinTable
+    (name="MONITOR_CATEGORY",
+     joinColumns={ @JoinColumn(name="monitor_id", referencedColumnName="ID") },
+     inverseJoinColumns={ @JoinColumn(name="category_id", referencedColumnName="ID", unique=false) }
+    )
+    private Set<Category> categories;
+
     public Monitor() {
         super();
     }
 
-    public Monitor(Long id, String nif, String name, String lastName) {
+    public Monitor(Long id, String nif, String name, String lastName, Set<Category> categories) {
         this.id = id;
         this.nif = nif;
         this.name = name;
         this.lastName = lastName;
+        this.categories = categories;
     }
 
     public String getNif() {
@@ -58,6 +68,14 @@ public class Monitor {
 
     public Long getId() { return id;}
     public void setId(Long id) {this.id = id;}
+
+    public Set<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
+    }
 
 
     @Override
