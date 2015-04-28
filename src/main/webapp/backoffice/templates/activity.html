@@ -43,6 +43,19 @@
             </div>
         </div>
         <div class="form-group col-md-12">
+            <label>Lugar:</label>
+            <input type="text" ng-model="activity.place" ng-model-options="{ updateOn: 'blur' }"
+                   name="place" required class="form-control" ng-maxlength="255">
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+                | <span class="text-info">Caracteres restantes: {{ remainingChars.title }}</span>
+            </div>
+            <div ng-show="!activityForm.title.$pristine">
+                <p class="text-danger" ng-show="activityForm.place.$error.required">El lugar es un campo obligatorio.</p>
+                <p class="text-danger" ng-show="activityForm.place.$error.maxlength">Máximo 255 caracteres.</p>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
             <label>Categoría:</label>
             <select ng-model="activity.category.id" ng-model-options="{ updateOn: 'blur' }"
                     name="category" required class="form-control" ng-options="c.id as c.title for c in categories"></select>
