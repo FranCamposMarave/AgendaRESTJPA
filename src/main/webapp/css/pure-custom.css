@@ -100,11 +100,11 @@
     text-transform: uppercase;
 }
 
-.custom-article .pull-left {
+.custom-article .block-left {
     padding-left: 25px;
 }
 
-.custom-article .pull-right {
+.custom-article .block-left {
     margin-right: 20px;
 }
 
@@ -119,4 +119,14 @@
     font-weight: 500;
 }
 
+.col-separator{
+    margin: 1% 0;
+}
 
+.left-menu{
+    margin-left: 1%;
+}
+
+.nav-stacked .title{
+    background-color: #eaeaea;
+}

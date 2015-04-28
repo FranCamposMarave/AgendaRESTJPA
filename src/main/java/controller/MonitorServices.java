@@ -1,7 +1,6 @@
 package controller;
 
 
-import controller.validators.MonitorValidator;
 import controller.validators.Validator;
 import model.dao.MonitorJPA;
 import model.entities.Monitor;

@@ -19,8 +19,13 @@ app.controller('homeCtrl', ['$scope',
     }
 ]);
 
-app.controller('activitiesCtrl', ['$scope', 'ActivityService',
-    function($scope, ActivityService){
+app.controller('activitiesCtrl', ['$scope', 'ActivityService', 'CategoryService',
+    function($scope, ActivityService, CategoryService){
+        CategoryService.retrieveAll()
+        .success(function(data) {
+            $scope.categories = data.category;
+            console.log("Retrieve categories (count): " + $scope.categories.length);
+        });
         $scope.retrieveAll = function () {
             ActivityService.retrieveAll()
             .success(function(data) {
@@ -45,10 +50,10 @@ app.controller('activitiesCtrl', ['$scope', 'ActivityService',
 app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileUploader, ActivityService, CategoryService, $location, toastr) {
 
     CategoryService.retrieveAll()
-        .success(function(data) {
-            $scope.categories = data.category;
-            console.log("Retrieve categories (count): " + $scope.categories.length);
-        });
+    .success(function(data) {
+        $scope.categories = data.category;
+        console.log("Retrieve categories (count): " + $scope.categories.length);
+    });
     if ( $routeParams.id ){
         $scope.action = "Editar";
         ActivityService.retrieveActivity($routeParams.id)

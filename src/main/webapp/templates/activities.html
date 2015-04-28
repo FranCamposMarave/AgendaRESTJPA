@@ -1,14 +1,24 @@
 <div class="row">
-    <div class="col-md-12">
+
+    <div class="col-separator clearfix"></div>
+
+    <div class="col-md-2 left-menu">
+        <ul class="nav nav-pills nav-stacked vertical-nav">
+            <li class="title"><a  href="#">Categorías</a></li>
+            <li ng-repeat="category in categories" >
+                <a href="" class="list-group-item">{{category.title}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-9">
         <ol class="breadcrumb">
             <li><a href="#/">Inicio</a></li>
             <li class="active">Actividades</li>
+            <li class="active">Próximas actividades</li>
         </ol>
         <div class="clearfix"></div>
-        <div class="page-header">
-            <h1 class="col-md-offset-1 text-center"><i class="fa fa-thumb-tack"></i> Próximas actividades</h1>
-        </div>
-        <div class="col-sm-6 col-md-3" ng-repeat="activity in activities">
+        <div class="col-sm-6 col-md-4" ng-repeat="activity in activities">
             <div class="thumbnail activity-box">
                 <div class="activity-box-body">
                     <span class="category">{{activity.category.title}}</span>

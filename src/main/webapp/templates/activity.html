@@ -1,21 +1,23 @@
 <div class="row">
 
-    <div class="col-md-2">
-        <p class="lead">Actividades</p>
-        <div class="list-group">
-            <a href="#" class="list-group-item">Piragüismo</a>
-            <a href="#" class="list-group-item">Escalada</a>
-            <a href="#" class="list-group-item">Tiro con arco</a>
-        </div>
+    <div class="col-separator clearfix"></div>
+
+    <div class="col-md-2 left-menu">
+        <ul class="nav nav-pills nav-stacked vertical-nav">
+            <li class="title"><a  href="#">Categorías</a></li>
+            <li ng-repeat="category in categories" >
+                <a href="" class="list-group-item">{{category.title}}</a>
+            </li>
+        </ul>
     </div>
 
-    <div class="col-md-10">
-        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
 
-            <div class="custom-article">
+    <div class="col-md-9">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+            <div class="custom-article block-left">
                 <div class="col-md-6">
                     <h4 class="custom-activity-title">{{ activity.title }}</h4>
-                    <img class="img-responsive" src="{{ ! activity.picture ? 'images/no-image.png' : 'uploads/'+activity.picture }}" alt="">
+                    <img class="img-responsive img-rounded" src="{{ ! activity.picture ? 'images/no-image.png' : 'uploads/'+activity.picture }}" alt="">
                 </div>
                 <div class="col-md-6">
                     <h4>
@@ -27,14 +29,11 @@
                     </div>
                 </div>
                 <div class="clearfix"></div>
-                <h4>
+                <h4 class="block-left">
+                    <span class="pull-left label label-info"><i class="fa fa-calendar"></i> {{activity.date | date: "d/MMM/yyyy 'a las' HH:mm'h'" }}</span>
                     <span class="pull-right label label-success"><i class="fa fa-tag"></i> {{activity.category.title}}</span>
                 </h4>
             </div>
-
-
-
-
         </div>
     </div>
 
