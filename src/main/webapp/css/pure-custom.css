@@ -101,11 +101,12 @@
 }
 
 .custom-article .block-left {
-    padding-left: 25px;
+    padding-left: 15px;
+    margin-right: 20px;
 }
 
-.custom-article .block-left {
-    margin-right: 20px;
+.custom-article .block-left .tag {
+    margin-right: 10px;
 }
 
 .custom-article .category {
@@ -130,3 +131,8 @@
 .nav-stacked .title{
     background-color: #eaeaea;
 }
+
+.button-xlarge {
+    font-size: 125%;
+}
+
