@@ -58,6 +58,7 @@ public class ActivityJPA {
             Activity oldActivity = query.getSingleResult();
             oldActivity.setTitle( activity.getTitle() );
             oldActivity.setDescription( activity.getDescription() );
+            oldActivity.setPlace( activity.getPlace() );
             oldActivity.setCategory( activity.getCategory() );
             oldActivity.setDate( activity.getDate() );
             oldActivity.setPicture( activity.getPicture() );

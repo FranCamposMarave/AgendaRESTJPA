@@ -282,6 +282,10 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
                 console.log("Error updating activity. Error code: " + status );
                 if ( status == 400 ){
                     toastr.error('La actividad a modificar no existe', 'Actualizar');
+                }else if ( status == 409 ){
+                    toastr.error('Ya existe esa actividad en la base de datos.', 'Añadir');
+                }else if ( status == 403 ){
+                    toastr.error('Los datos introducidos son incorrectos.', 'Añadir');
                 }else if ( status == 500 ){
                     toastr.error('Error interno del servidor', 'Actualizar');
                 }else{
