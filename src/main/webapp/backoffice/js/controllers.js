@@ -263,6 +263,8 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
     );
 
     $scope.submit = function () {
+
+        $scope.activity.remainingPlaces = $scope.activity.totalPlaces;
         if ( $scope.action == 'Crear' ){
             ActivityService.addActivity($scope.activity)
             .success(function(data) {
@@ -279,6 +281,7 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
                 }
             });
         }else{
+            $scope.activity.remainingPlaces = $scope.activity.totalPlaces;
             ActivityService.updateActivity($scope.activity)
             .success(function(data) {
                 console.log("Activity updated");
