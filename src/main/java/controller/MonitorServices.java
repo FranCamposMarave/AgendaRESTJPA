@@ -84,18 +84,18 @@ public class MonitorServices {
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateMonitors(@PathParam("id") Long id, Monitor monitor) {
         if( !id.equals(monitor.getId())  ) {
-            return Response.status(Response.Status.BAD_REQUEST).build();
+            return Response.status(Response.Status.BAD_REQUEST).build(); //400 -> Error en conexión
         }
         else {
             if ( !validatorMonitor.validate( monitor) ){
-                return Response.status( Response.Status.FORBIDDEN ).build();
+                return Response.status( Response.Status.FORBIDDEN ).build(); //403  -> Datos Incorrectos
             }
             Monitor existent = monitorDAO.getByNif(monitor.getNif());
             if ( existent != MonitorJPA.NULL && ! existent.equals(monitor) ){
-                return Response.status( Response.Status.CONFLICT ).build();
+                return Response.status( Response.Status.CONFLICT ).build();  //409  -> Nif ya existe
             }
             if ( monitorDAO.update( monitor ) ){
-                return Response.status(Response.Status.NO_CONTENT).build();
+                return Response.status(Response.Status.NO_CONTENT).build(); //401 -> Error en conexión
             }else {
                 monitorDAO.add( monitor );
                 return Response.ok( monitor ).build();

@@ -1,7 +1,7 @@
 package controller;
 
 
-import controller.validators.ActivityValidator;
+
 import controller.validators.Validator;
 import model.dao.ActivityJPA;
 import model.entities.Activity;
@@ -58,8 +58,16 @@ public class ActivityServices {
     @Produces(MediaType.APPLICATION_JSON)
     public Response addActivity(Activity activity) {
         if ( !validatorActivity.validate( activity) ){
-            return Response.status( Response.Status.FORBIDDEN ).build();
+            return Response.status( Response.Status.FORBIDDEN ).build();  //403  -> Datos Incorrectos
         }
+        Activity existent = activityDAO.getByTitleDateCategory(activity.getTitle(), activity.getDate(), activity.getCategory());
+        System.out.println("AAAAAAAAAAAAAA"+existent);
+        System.out.println(existent != activityDAO.NULL);
+        System.out.println(existent.equals(activity));
+        if ( existent != activityDAO.NULL){
+            return Response.status( Response.Status.CONFLICT ).build(); //409  -> Actividad ya existe
+        }
+
         System.out.println(activity);
 
         activityDAO.add( activity );
@@ -89,21 +97,45 @@ public class ActivityServices {
     public Response updateActivity(@PathParam("id") long id, Activity activity) {
         String oldPicture = activityDAO.get(id).getPicture();
         if( id != activity.getId() ) {
-            return Response.status(Response.Status.BAD_REQUEST).build();
+            return Response.status(Response.Status.BAD_REQUEST).build();  //400 -> Error en conexión
         }
         else {
+            if ( !validatorActivity.validate(activity)){
+                return Response.status( Response.Status.FORBIDDEN ).build(); //403  -> Datos Incorrectos
+            }
+            Activity existent = activityDAO.getByTitleDateCategory(activity.getTitle(), activity.getDate(), activity.getCategory());
+            if (existent != ActivityJPA.NULL && ! existent.equals(activity)){
+                return Response.status( Response.Status.CONFLICT ).build();  //409  -> Actividad ya existe
+            }
             if ( activityDAO.update( activity ) ){
                 if (!(oldPicture==null) && !(activity.getPicture().equals(null)) && !(oldPicture.equals(activity.getPicture()))){
                     ImageUploaderService service = new ImageUploaderService();
                     service.deleteImage(oldPicture);
                 }
-                return Response.status(Response.Status.NO_CONTENT).build();
+                return Response.status(Response.Status.NO_CONTENT).build();  //401 -> Error en conexión
             }else {
                 activityDAO.add( activity );
                 return Response.ok( activity ).build();
             }
         }
     }
+    /*
+    else {
+            if ( !validatorMonitor.validate( monitor) ){
+                return Response.status( Response.Status.FORBIDDEN ).build(); //403  -> Datos Incorrectos
+            }
+            Monitor existent = monitorDAO.getByNif(monitor.getNif());
+            if ( existent != MonitorJPA.NULL && ! existent.equals(monitor) ){
+                return Response.status( Response.Status.CONFLICT ).build();  //409  -> Nif ya existe
+            }
+            if ( monitorDAO.update( monitor ) ){
+                return Response.status(Response.Status.NO_CONTENT).build(); //401 -> Error en conexión
+            }else {
+                monitorDAO.add( monitor );
+                return Response.ok( monitor ).build();
+            }
+        }
+     */
 
     @POST
     @Path("/image")

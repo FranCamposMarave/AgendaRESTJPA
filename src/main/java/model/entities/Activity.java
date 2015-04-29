@@ -11,11 +11,13 @@ import java.util.Date;
 @XmlRootElement
 @Entity
 @Table( uniqueConstraints={
-        @UniqueConstraint( columnNames={"title", "date"} )
+        @UniqueConstraint( columnNames={"title", "date", "category_id"} )
 })
 @NamedQueries({
         @NamedQuery(name="Activity.getAll", query = "SELECT a FROM Activity a"),
         @NamedQuery(name="Activity.get", query = "SELECT a FROM Activity a WHERE a.id = :id"),
+        @NamedQuery(name="Activity.getByTitleDateCategory", query = "SELECT a FROM Activity a WHERE a.title = :title and a.date = :date and a.category_id = :category"),
+        //@NamedQuery(name="Activity.getByTitleDateCategory", query = "SELECT a FROM Activity a WHERE a.title = :title"),
         @NamedQuery(name="Activity.deleteById", query = "DELETE FROM Activity a WHERE a.id = :id")
 
 })
@@ -33,7 +35,7 @@ public class Activity {
 
     private String place;
 
-    private Category category;
+    private Category category_id;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
@@ -56,7 +58,7 @@ public class Activity {
         this.date = date;
         this.description = description;
         this.place = place;
-        this.category=category;
+        this.category_id=category;
         this.price = price;
         this.totalPlaces = totalPlaces;
         this.remainingPlaces = remainingPlaces;
@@ -100,11 +102,11 @@ public class Activity {
     }
 
     public Category getCategory(){
-        return category;
+        return category_id;
     }
 
     public void setCategory(Category category){
-        this.category=category;
+        this.category_id=category;
     }
 
     public void setDate(Date date) {
@@ -150,7 +152,7 @@ public class Activity {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", place='" + place + '\'' +
-                ", category='" + category + '\'' +
+                ", category='" + category_id + '\'' +
                 ", date=" + date +
                 ", price=" + price +
                 ", totalPlaces=" + totalPlaces +

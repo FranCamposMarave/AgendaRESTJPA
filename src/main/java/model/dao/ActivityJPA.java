@@ -1,12 +1,15 @@
 package model.dao;
 
 import model.entities.Activity;
+import model.entities.Category;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import java.math.BigInteger;
+import java.util.Date;
 import java.util.List;
 
 @Stateless
@@ -28,6 +31,18 @@ public class ActivityJPA {
     public Activity get(long id) {
         TypedQuery<Activity> query = em.createNamedQuery("Activity.get", Activity.class);
         query.setParameter("id", id);
+        try {
+            return query.getSingleResult();
+        } catch (NoResultException e) {
+            return NULL;
+        }
+    }
+
+    public Activity getByTitleDateCategory(String title, Date date, Category category) {
+        TypedQuery<Activity> query = em.createNamedQuery("Activity.getByTitleDateCategory", Activity.class);
+        query.setParameter("title", title);
+        query.setParameter("date", date);
+        query.setParameter("category", category);
         try {
             return query.getSingleResult();
         } catch (NoResultException e) {
@@ -57,6 +72,12 @@ public class ActivityJPA {
         try {
             Activity oldActivity = query.getSingleResult();
             oldActivity.setTitle( activity.getTitle() );
+            oldActivity.setDescription(activity.getDescription());
+            oldActivity.setPlace(activity.getPlace());
+            oldActivity.setCategory( activity.getCategory() );
+            oldActivity.setDate( activity.getDate() );
+            oldActivity.setPicture( activity.getPicture() );
+            oldActivity.setPrice( activity.getPrice() );
             oldActivity.setDescription(activity.getDescription());
             oldActivity.setPlace(activity.getPlace());
             oldActivity.setCategory(activity.getCategory());

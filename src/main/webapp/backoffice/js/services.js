@@ -79,6 +79,7 @@
         }
 
         this.addMonitor = function (monitor) {
+            console.log(monitor);
             var url = app.baseURI + app.monitorURI;
             console.log(url);
             var data = "{monitor:" + JSON.stringify(monitor) + "}";

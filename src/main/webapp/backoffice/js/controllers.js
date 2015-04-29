@@ -275,6 +275,10 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
             }).error(function(data, status, headers, config) {
                 if ( status == 500 ){
                     toastr.error('Error interno del servidor', 'Añadir');
+                }else if ( status == 409 ){
+                    toastr.error('Ya existe esa actividad en la base de datos.', 'Añadir');
+                }else if ( status == 403 ){
+                    toastr.error('Los datos introducidos son incorrectos.', 'Añadir');
                 }else{
                     console.log("Error adding activity. Error code: " + status );
                     toastr.error('Error en la conexión al servidor', 'Añadir');
