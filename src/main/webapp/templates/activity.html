@@ -32,10 +32,10 @@
                 <h4 class="block-left">
                     <span class="pull-left label label-info tag"><i class="fa fa-calendar"></i> {{activity.date | date: "d/MMM/yyyy 'a las' HH:mm'h'" }}</span>
                     <span class="pull-left label label-success tag"><i class="fa fa-tag"></i> {{activity.category.title}}</span>
-                    <span class="pull-left label label-danger tag"><i class="fa fa-user"></i> {{activity.category.remainingPlaces}} plazas libres</span>
+                    <span class="pull-left label label-danger tag"><i class="fa fa-user"></i> {{activity.remainingPlaces}} plazas libres</span>
                 </h4><div class="clearfix"></div>
                 <h4 class="block-right">
-                    <a href="" class="pure-button button-warning pull-right button-xlarge" ng-disabled="remainingPlaces == 0" ><i class="fa fa-ticket"></i> Reservar</a>
+                    <a href="" class="pure-button button-warning pull-right button-xlarge" ng-disabled="activity.remainingPlaces == 0" ><i class="fa fa-ticket"></i> Reservar</a>
                 </h4>
             </div>
         </div>
