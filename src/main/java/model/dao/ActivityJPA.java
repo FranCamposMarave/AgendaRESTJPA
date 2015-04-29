@@ -57,12 +57,14 @@ public class ActivityJPA {
         try {
             Activity oldActivity = query.getSingleResult();
             oldActivity.setTitle( activity.getTitle() );
-            oldActivity.setDescription( activity.getDescription() );
-            oldActivity.setPlace( activity.getPlace() );
-            oldActivity.setCategory( activity.getCategory() );
-            oldActivity.setDate( activity.getDate() );
-            oldActivity.setPicture( activity.getPicture() );
-            oldActivity.setPrice( activity.getPrice() );
+            oldActivity.setDescription(activity.getDescription());
+            oldActivity.setPlace(activity.getPlace());
+            oldActivity.setCategory(activity.getCategory());
+            oldActivity.setDate(activity.getDate());
+            oldActivity.setPicture(activity.getPicture());
+            oldActivity.setPrice(activity.getPrice());
+            oldActivity.setTotalPlaces(activity.getTotalPlaces());
+            oldActivity.setRemainingPlaces( activity.getRemainingPlaces() );
             return true;
         } catch (NoResultException e) {
             return false;

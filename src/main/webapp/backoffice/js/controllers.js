@@ -242,7 +242,7 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
         $scope.activity = {};
     }
 
-    $scope.remainingChars = { "title" : 255, "description" : 255 };
+    $scope.remainingChars = { "title" : 255, "description" : 255, "place" : 255 };
     $scope.$watch(
         function(scope){ return scope.activity.title },
         function(newValue, oldValue){
@@ -253,6 +253,12 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
         function(scope){ return scope.activity.description },
         function(newValue, oldValue){
             $scope.remainingChars.description = 255 - newValue.length;
+        }
+    );
+    $scope.$watch(
+        function(scope){ return scope.activity.place },
+        function(newValue, oldValue){
+            $scope.remainingChars.place = 255 - newValue.length;
         }
     );
 

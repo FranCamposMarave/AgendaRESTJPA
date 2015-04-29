@@ -40,13 +40,17 @@ public class Activity {
 
     private float price;
 
+    private int totalPlaces;
+
+    private int remainingPlaces;
+
     private String picture;
 
     public Activity() {
         super();
     }
 
-    public Activity(Long id, String title, String description, String place, Category category, Date date, float price, String picture) {
+    public Activity(Long id, String title, String description, String place, Category category, Date date, float price, int totalPlaces, int remainingPlaces, String picture) {
         this.id = id;
         this.title = title;
         this.date = date;
@@ -54,6 +58,8 @@ public class Activity {
         this.place = place;
         this.category=category;
         this.price = price;
+        this.totalPlaces = totalPlaces;
+        this.remainingPlaces = remainingPlaces;
         this.picture = picture;
     }
 
@@ -113,6 +119,22 @@ public class Activity {
         this.price = price;
     }
 
+    public int getTotalPlaces() {
+        return totalPlaces;
+    }
+
+    public void setTotalPlaces(int totalPlaces) {
+        this.totalPlaces = totalPlaces;
+    }
+
+    public int getRemainingPlaces() {
+        return remainingPlaces;
+    }
+
+    public void setRemainingPlaces(int remainingPlaces) {
+        this.remainingPlaces = remainingPlaces;
+    }
+
     public String getPicture() {
         return picture;
     }
@@ -131,6 +153,8 @@ public class Activity {
                 ", category='" + category + '\'' +
                 ", date=" + date +
                 ", price=" + price +
+                ", totalPlaces=" + totalPlaces +
+                ", remainingPlaces=" + remainingPlaces +
                 ", picture='" + picture + '\'' +
                 '}';
     }
