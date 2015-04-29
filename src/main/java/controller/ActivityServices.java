@@ -61,9 +61,6 @@ public class ActivityServices {
             return Response.status( Response.Status.FORBIDDEN ).build();  //403  -> Datos Incorrectos
         }
         Activity existent = activityDAO.getByTitleDateCategory(activity.getTitle(), activity.getDate(), activity.getCategory());
-        System.out.println("AAAAAAAAAAAAAA"+existent);
-        System.out.println(existent != activityDAO.NULL);
-        System.out.println(existent.equals(activity));
         if ( existent != activityDAO.NULL){
             return Response.status( Response.Status.CONFLICT ).build(); //409  -> Actividad ya existe
         }
