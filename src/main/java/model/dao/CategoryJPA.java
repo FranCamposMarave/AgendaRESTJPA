@@ -37,6 +37,16 @@ public class CategoryJPA {
         }
     }
 
+    public Category getByTitle(String title) {
+        TypedQuery<Category> query = em.createNamedQuery("Category.getByTitle", Category.class);
+        query.setParameter("title", title);
+        try {
+            return query.getSingleResult();
+        } catch (NoResultException e) {
+            return NULL;
+        }
+    }
+
     public boolean delete(long id) {
         TypedQuery<Category> query = em.createNamedQuery("Category.deleteById", Category.class);
         query.setParameter("id", id);

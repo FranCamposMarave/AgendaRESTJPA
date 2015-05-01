@@ -16,6 +16,7 @@ import java.util.Date;
 @NamedQueries({
         @NamedQuery(name="Category.getAll", query = "SELECT c FROM Category c"),
         @NamedQuery(name="Category.get", query = "SELECT c FROM Category c WHERE c.id = :id"),
+        @NamedQuery(name="Category.getByTitle", query = "SELECT c FROM Category c WHERE c.title = :title"),
         @NamedQuery(name="Category.deleteById", query = "DELETE FROM Category c WHERE c.id = :id")
 })
 public class Category {

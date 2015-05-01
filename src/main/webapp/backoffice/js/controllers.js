@@ -426,10 +426,18 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
                     $location.path('categories');
                     $scope.categoryForm.$submitted = true;
                 }).error(function(data, status, headers, config) {
-                    if ( status == 500 ){
+                    if ( status == 500 ) {
                         toastr.error('Error interno del servidor', 'Añadir');
-                    }else{
-                        console.log("Error adding category. Error code: " + status );
+                    }else if ( status == 400 ){
+                            toastr.error('La actividad a modificar no existe', 'Actualizar');
+                    }else if ( status == 409 ){
+                            toastr.error('Ya existe esa categoria en la base de datos.', 'Añadir');
+                    }else if ( status == 403 ){
+                            toastr.error('Los datos introducidos son incorrectos.', 'Añadir');
+                    }else if ( status == 500 ){
+                            toastr.error('Error interno del servidor', 'Actualizar');
+                    }else {
+                        console.log("Error adding category. Error code: " + status);
                         toastr.error('Error en la conexión al servidor', 'Añadir');
                     }
                 });
@@ -442,11 +450,17 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
                 }).error(function(data, status, headers, config) {
                     console.log("Error updating category. Error code: " + status );
                     if ( status == 400 ){
-                        toastr.error('La categoría a modificar no existe', 'Actualizar');
+                        toastr.error('La actividad a modificar no existe', 'Actualizar');
+                    }else if ( status == 409 ){
+                        toastr.error('Ya existe esa categoria en la base de datos.', 'Actualizar');
+                    }else if ( status == 403 ){
+                        toastr.error('Los datos introducidos son incorrectos.', 'Actualizar');
                     }else if ( status == 500 ){
                         toastr.error('Error interno del servidor', 'Actualizar');
-                    }else{
-                        toastr.error('Error en la conexión al servidor', 'Actualizar');}
+                    }else {
+                        console.log("Error updating category. Error code: " + status);
+                        toastr.error('Error en la conexión al servidor', 'Actualizar');
+                    }
                 });
         }
     };
