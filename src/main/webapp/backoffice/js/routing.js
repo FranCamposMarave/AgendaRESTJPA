@@ -48,6 +48,10 @@ app.config(function($routeProvider) {
             templateUrl : 'templates/monitor.html',
             controller 	: 'monitorCtrl'
         })
+        .when('/assignMonitors', {
+            templateUrl : 'templates/assignMonitors.html',
+            controller 	: 'activitiesCtrl'
+        })
 		.otherwise({
 			redirectTo: '/'
 		});

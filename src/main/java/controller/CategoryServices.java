@@ -45,6 +45,11 @@ public class CategoryServices {
     @Produces(MediaType.APPLICATION_JSON)
     public Response addCategory(Category category) {
 
+        Category existent = categoryDAO.getByTitle(category.getTitle());
+        if(existent != categoryDAO.NULL){
+            return Response.status( Response.Status.CONFLICT ).build();  //409  -> Categoria ya existe
+        }
+
         //System.out.println(category);
 
         categoryDAO.add( category );
@@ -70,12 +75,16 @@ public class CategoryServices {
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateCategory(@PathParam("id") long id, Category category) {
+        Category existent = categoryDAO.getByTitle(category.getTitle());
+        if(existent != categoryDAO.NULL){
+            return Response.status( Response.Status.CONFLICT ).build();  //409  -> Categoria ya existe
+        }
         if( id != category.getId() ) {
-            return Response.status(Response.Status.BAD_REQUEST).build();
+            return Response.status(Response.Status.BAD_REQUEST).build(); //400 -> Error en conexión
         }
         else {
             if ( categoryDAO.update( category ) ){
-                return Response.status(Response.Status.NO_CONTENT).build();
+                return Response.status(Response.Status.NO_CONTENT).build(); //401 -> Error en conexión
             }else {
                 categoryDAO.add( category );
                 return Response.ok( category ).build();
