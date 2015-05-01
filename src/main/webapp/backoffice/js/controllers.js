@@ -1,6 +1,3 @@
-/**
- * Created by oscar on 13/11/14.
- */
 
 var app = angular.module('bk-controllers',
     ['rest', 'ui.bootstrap', 'angularFileUpload','angular-loading-bar',
@@ -93,8 +90,8 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
     }
 ]);
 
-app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
-    function ($scope, $rootScope, $timeout, $modal, ActivityService, FileUploader, toastr) {
+app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ActivityService', 'MonitorService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, ActivityService, MonitorService, FileUploader, toastr) {
         $scope.retrieveAll = function () {
             ActivityService.retrieveAll()
                 .success(function(data) {
@@ -102,6 +99,11 @@ app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                    console.log("Retrieve activities (count): " + $scope.activities.length);
             })
         };
+        MonitorService.retrieveAll()
+            .success(function(data) {
+                $scope.monitors = data.monitor;
+                console.log("Retrieve monitors (count): " + $scope.monitors.length);
+            });
         $scope.retrieveAll();
         $scope.retrieve = function(id) {
             ActivityService.retrieveActivity(id)
