@@ -76,8 +76,6 @@ public class CategoryServices {
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateCategory(@PathParam("id") long id, Category category) {
         Category existent = categoryDAO.getByTitle(category.getTitle());
-        System.out.println("AAAAAAAAAAA"+existent);
-        System.out.println(existent != categoryDAO.NULL);
         if(existent != categoryDAO.NULL){
             return Response.status( Response.Status.CONFLICT ).build();  //409  -> Categoria ya existe
         }
