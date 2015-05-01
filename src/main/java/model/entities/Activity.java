@@ -42,13 +42,17 @@ public class Activity {
 
     private int remainingPlaces;
 
+    @OneToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="MONITOR_ID")
+    private Monitor monitor;
+
     private String picture;
 
     public Activity() {
         super();
     }
 
-    public Activity(Long id, String title, String description, String place, Category category, Date date, float price, int totalPlaces, int remainingPlaces, String picture) {
+    public Activity(Long id, String title, String description, String place, Category category, Date date, float price, int totalPlaces, int remainingPlaces, Monitor monitor, String picture) {
         this.id = id;
         this.title = title;
         this.date = date;
@@ -58,6 +62,7 @@ public class Activity {
         this.price = price;
         this.totalPlaces = totalPlaces;
         this.remainingPlaces = remainingPlaces;
+        this.monitor=monitor;
         this.picture = picture;
     }
 
@@ -133,6 +138,10 @@ public class Activity {
         this.remainingPlaces = remainingPlaces;
     }
 
+    public Monitor getMonitor() { return monitor; }
+
+    public void setMonitor(Monitor monitor) { this.monitor=monitor; }
+
     public String getPicture() {
         return picture;
     }
@@ -153,6 +162,7 @@ public class Activity {
                 ", price=" + price +
                 ", totalPlaces=" + totalPlaces +
                 ", remainingPlaces=" + remainingPlaces +
+                ", monitor=" + monitor +
                 ", picture='" + picture + '\'' +
                 '}';
     }
