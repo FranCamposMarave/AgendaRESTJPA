@@ -21,7 +21,10 @@ app.config(function($routeProvider) {
             templateUrl : 'templates/activity.html',
             controller 	: 'activityCtrl'
         })
-
+        .when('/activity/:id/reservation', {
+            templateUrl : 'templates/reservation.html',
+            controller 	: 'reservationCtrl'
+        })
 		.otherwise({
 			redirectTo: '/'
 		});

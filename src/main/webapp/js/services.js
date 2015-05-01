@@ -5,6 +5,7 @@
     app.baseURI = 'http://localhost:8080/naturAdventure/';
     app.activityURI = "activities/";
     app.categoryURI = "categories/";
+    app.reservationURI = "reservations/";
 
     app.service('ActivityService', ['$http', function($http) {
 
@@ -66,6 +67,37 @@
         this.updateCategory = function (category) {
             var url = app.baseURI + app.categoryURI + category.id ;
             var data = "{category:" + JSON.stringify(category) + "}";
+            return $http.put(url, data );
+        }
+    }]);
+
+    app.service('ReservationService', ['$http', function($http) {
+
+        this.retrieveAll = function() {
+            return $http.get(app.baseURI + app.reservationURI);
+        }
+
+        this.addReservation = function (reservation) {
+            var url = app.baseURI + app.reservationURI;
+            var data = "{reservation:" + JSON.stringify(reservation) + "}";
+            console.log(reservation);
+            return $http.post(url, data);
+        }
+
+        this.retrieveReservation = function(id) {
+            var url = app.baseURI + app.reservationURI + id;
+            return $http.get(url);
+        }
+
+        this.deleteReservation = function(id) {
+            var url = app.baseURI + app.reservationURI + id;
+            var data = {'id': id}
+            return $http.delete(url, data);
+        }
+
+        this.updateReservation = function (reservation) {
+            var url = app.baseURI + app.reservationURI + reservation.id ;
+            var data = "{reservation:" + JSON.stringify(reservation) + "}";
             return $http.put(url, data );
         }
     }]);

@@ -1,6 +1,3 @@
-/**
- * Created by oscar on 13/11/14.
- */
 
 var app = angular.module('controllers',
     ['rest', 'ui.bootstrap', 'angularFileUpload','angular-loading-bar', 'ngAnimate', 'toastr']);
@@ -177,3 +174,47 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
 
     console.info('uploader', uploader);
 });
+
+
+app.controller('reservationCtrl', function ($scope, $rootScope, $routeParams, FileUploader, ActivityService, ReservationService, $location, toastr) {
+
+
+    $scope.reservation ={};
+
+    ActivityService.retrieveActivity($routeParams.id)
+        .success(function(data) {
+            $scope.activity = data.activity;
+            console.log("Retrieved activity: " + $scope.activity.title);
+        });
+
+    $scope.validateDNI = function( dni ) {
+        var dni_letters = "TRWAGMYFPDXBNJZSQVHLCKE";
+        var letter = dni_letters.charAt( parseInt( dni, 10 ) % 23 );
+
+        return letter == dni.charAt(8);
+    };
+
+    $scope.submit = function () {
+        $scope.reservation.activity = $scope.activity;
+        ReservationService.addReservation( $scope.reservation)
+            .success(function(data) {
+                console.log("Activity added");
+                $rootScope.$broadcast('toastMessage', function(){
+                    toastr.success('La reserva ha sido añadida!', 'Añadir');
+                });
+                $location.path('activities');
+                $scope.activityForm.$submitted = true;
+            }).error(function(data, status, headers, config) {
+                if ( status == 500 ){
+                    toastr.error('Error interno del servidor', 'Actualizar');
+                }else{
+                    console.log("Error al hacer la reserva. Error code: " + status );
+                    toastr.error('Error en la conexión al servidor', 'Añadir');
+                }
+            });
+
+    };
+
+});
+
+

@@ -35,7 +35,7 @@
                     <span class="pull-left label label-danger tag"><i class="fa fa-user"></i> {{activity.remainingPlaces}} plazas libres</span>
                 </h4><div class="clearfix"></div>
                 <h4 class="block-right">
-                    <a href="" class="pure-button button-warning pull-right button-xlarge" ng-disabled="activity.remainingPlaces == 0" ><i class="fa fa-ticket"></i> Reservar</a>
+                    <a href="#/activity/{{activity.id}}/reservation" class="pure-button button-warning pull-right button-xlarge" ng-disabled="activity.remainingPlaces == 0" ><i class="fa fa-ticket"></i> Reservar</a>
                 </h4>
             </div>
         </div>

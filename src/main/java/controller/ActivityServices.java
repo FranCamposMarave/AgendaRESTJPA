@@ -30,7 +30,6 @@ public class ActivityServices {
     @Context
     private UriInfo uriInfo;
 
-
     public ActivityServices() {
         super();
     }

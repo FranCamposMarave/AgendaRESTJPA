@@ -5,9 +5,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.Date;
 
-/**
- * Created by oscar on 27/11/14.
- */
 @XmlRootElement
 @Entity
 @Table( uniqueConstraints={
@@ -27,7 +24,6 @@ public class Activity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @XmlTransient
     private Long id;
-
 
     private String title;
 
