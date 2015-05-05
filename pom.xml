@@ -100,6 +100,11 @@
             <version>2.45.0</version>
         </dependency>
         <!-- Fin de cucumber -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
     </dependencies>
 
     <build>
