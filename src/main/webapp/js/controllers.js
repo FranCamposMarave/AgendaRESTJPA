@@ -243,6 +243,8 @@ app.controller('reservationCtrl', function ($scope, $rootScope, $routeParams, Fi
                     toastr.error('Error en la conexión al servidor', 'Añadir');
                 }
             });
+        $scope.activity.remainingPlaces = $scope.activity.remainingPlaces - $scope.reservation.places;
+        ActivityService.updateActivity($scope.activity);
 
     };
 
