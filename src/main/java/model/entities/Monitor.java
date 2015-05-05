@@ -17,7 +17,7 @@ import java.util.Set;
 public class Monitor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @XmlTransient
     private Long id;
 

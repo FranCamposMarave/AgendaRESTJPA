@@ -6,6 +6,7 @@ var app = angular.module('app',
 app.config(function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.latencyThreshold = 10;
 });
+
 // Config routes
 app.config(function($routeProvider) {
 	$routeProvider
@@ -14,6 +15,10 @@ app.config(function($routeProvider) {
             controller 	: 'homeCtrl'
         })
         .when('/activities', {
+            templateUrl : 'templates/activities.html',
+            controller 	: 'activitiesCtrl'
+        })
+        .when('/activities/:categoryName', {
             templateUrl : 'templates/activities.html',
             controller 	: 'activitiesCtrl'
         })

@@ -28,6 +28,15 @@ public class ActivityJPA {
         return activities;
     }
 
+    public Activity[] listAllByCategory(String categoryName) {
+        TypedQuery<Activity> query = em.createNamedQuery("Activity.getAllByCategory", Activity.class);
+        query.setParameter("category", categoryName);
+        List<Activity> activitiesList = query.getResultList();
+        Activity[] activities = new Activity[activitiesList.size()];
+        activitiesList.toArray(activities);
+        return activities;
+    }
+
     public Activity get(long id) {
         TypedQuery<Activity> query = em.createNamedQuery("Activity.get", Activity.class);
         query.setParameter("id", id);

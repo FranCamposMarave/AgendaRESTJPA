@@ -13,6 +13,10 @@
             return $http.get(app.baseURI + app.activityURI);
         }
 
+        this.retrieveByCategory = function(categoryName) {
+            return $http.get(app.baseURI + app.activityURI + "category/" + categoryName);
+        }
+
         this.addActivity = function (activity) {
             var url = app.baseURI + app.activityURI;
             var data = "{activity:" + JSON.stringify(activity) + "}";

@@ -16,13 +16,28 @@ app.controller('homeCtrl', ['$scope',
     }
 ]);
 
-app.controller('activitiesCtrl', ['$scope', 'ActivityService', 'CategoryService',
-    function($scope, ActivityService, CategoryService){
+app.controller('activitiesCtrl', ['$scope', 'ActivityService', 'CategoryService', '$routeParams',
+    function($scope, ActivityService, CategoryService, $routeParams){
         CategoryService.retrieveAll()
         .success(function(data) {
             $scope.categories = data.category;
             console.log("Retrieve categories (count): " + $scope.categories.length);
         });
+        $scope.retrieveByCategory = function (categoryName) {
+            ActivityService.retrieveByCategory(categoryName)
+            .success(function(data) {
+                $scope.activities = data.activity;
+                console.log("Retrieve activities (count): " + $scope.activities.length);
+            })
+            .error(function(data, status, headers, config) {
+                console.log("Error retrieving activities. Error code: " + status );
+                if ( status == 500 ){
+                    console.log('Error interno del servidor');
+                }else{
+                    console.log('Error con la conexión al servidor');
+                }
+            });
+        };
         $scope.retrieveAll = function () {
             ActivityService.retrieveAll()
             .success(function(data) {
@@ -40,7 +55,23 @@ app.controller('activitiesCtrl', ['$scope', 'ActivityService', 'CategoryService'
                 }
             });
         };
-        $scope.retrieveAll();
+        if ($routeParams.categoryName){
+            $scope.retrieveByCategory($routeParams.categoryName);
+        }else{
+            $scope.retrieveAll();
+        }
+    }
+]);
+
+
+app.controller('searchMenuCtrl', ['$scope', '$routeParams', 'CategoryService',
+    function($scope, $routeParams, CategoryService){
+        CategoryService.retrieveAll()
+        .success(function(data) {
+            $scope.categories = data.category;
+            console.log("Retrieve categories (count): " + $scope.categories.length);
+        });
+        $scope.selectedCategory = $routeParams.categoryName ? $routeParams.categoryName : '';
     }
 ]);
 

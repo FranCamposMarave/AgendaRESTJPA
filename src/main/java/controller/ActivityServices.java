@@ -42,6 +42,14 @@ public class ActivityServices {
     }
 
     @GET
+    @Path("/category/{category}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response listAllActivitiesByCategory(@PathParam("category") String category) {
+        Activity[] activities = activityDAO.listAllByCategory(category);
+        return Response.ok(activities).build();
+    }
+
+    @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getActivity(@PathParam("id") long id ) {

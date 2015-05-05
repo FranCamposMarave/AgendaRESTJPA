@@ -8,12 +8,13 @@ import java.util.Date;
 @XmlRootElement
 @Entity
 @Table( uniqueConstraints={
-        @UniqueConstraint( columnNames={"title", "date", "category_id"} )
+        @UniqueConstraint( columnNames={"title", "date", "category"} )
 })
 @NamedQueries({
         @NamedQuery(name="Activity.getAll", query = "SELECT a FROM Activity a"),
+        @NamedQuery(name="Activity.getAllByCategory", query = "SELECT a FROM Activity a JOIN a.category c WHERE c.title = :category"),
         @NamedQuery(name="Activity.get", query = "SELECT a FROM Activity a WHERE a.id = :id"),
-        @NamedQuery(name="Activity.getByTitleDateCategory", query = "SELECT a FROM Activity a WHERE a.title = :title and a.date = :date and a.category_id = :category"),
+        @NamedQuery(name="Activity.getByTitleDateCategory", query = "SELECT a FROM Activity a WHERE a.title = :title and a.date = :date and a.category = :category"),
         //@NamedQuery(name="Activity.getByTitleDateCategory", query = "SELECT a FROM Activity a WHERE a.title = :title"),
         @NamedQuery(name="Activity.deleteById", query = "DELETE FROM Activity a WHERE a.id = :id")
 
@@ -31,7 +32,7 @@ public class Activity {
 
     private String place;
 
-    private Category category_id;
+    private Category category;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
@@ -58,7 +59,7 @@ public class Activity {
         this.date = date;
         this.description = description;
         this.place = place;
-        this.category_id=category;
+        this.category =category;
         this.price = price;
         this.totalPlaces = totalPlaces;
         this.remainingPlaces = remainingPlaces;
@@ -103,11 +104,11 @@ public class Activity {
     }
 
     public Category getCategory(){
-        return category_id;
+        return category;
     }
 
     public void setCategory(Category category){
-        this.category_id=category;
+        this.category =category;
     }
 
     public void setDate(Date date) {
@@ -157,7 +158,7 @@ public class Activity {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", place='" + place + '\'' +
-                ", category='" + category_id + '\'' +
+                ", category='" + category + '\'' +
                 ", date=" + date +
                 ", price=" + price +
                 ", totalPlaces=" + totalPlaces +

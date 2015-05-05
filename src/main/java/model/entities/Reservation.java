@@ -16,7 +16,7 @@ import model.entities.Activity;
 public class Reservation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @XmlTransient
     private Long id;
 
