@@ -26,6 +26,8 @@ public class Reservation {
 
     private String lastName;
 
+    private String email;
+
     @OneToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="ACTIVITY_ID")
     private Activity activity;
@@ -36,11 +38,12 @@ public class Reservation {
        super();
     }
 
-    public Reservation(Long id, String nif, String name, String lastName, Activity activity, int places) {
+    public Reservation(Long id, String nif, String name, String lastName, String email, Activity activity, int places) {
         this.id = id;
         this.nif = nif;
         this.name = name;
         this.lastName = lastName;
+        this.email = email;
         this.activity = activity;
         this.places = places;
     }
@@ -67,6 +70,13 @@ public class Reservation {
     public Long getId() { return id;}
     public void setId(Long id) {this.id = id;}
 
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public int getPlaces() {
         return places;
     }
@@ -90,6 +100,7 @@ public class Reservation {
                 ", nif=" + nif +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
                 ", places='" + places + '\'' +
                 '}';
     }
