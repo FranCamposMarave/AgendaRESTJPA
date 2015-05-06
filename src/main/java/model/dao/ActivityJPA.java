@@ -79,6 +79,7 @@ public class ActivityJPA {
         TypedQuery<Activity> query = em.createNamedQuery("Activity.get", Activity.class);
         query.setParameter("id", activity.getId());
         try {
+            System.out.println(activity.toString());
             Activity oldActivity = query.getSingleResult();
             oldActivity.setTitle( activity.getTitle() );
             oldActivity.setDescription(activity.getDescription());
@@ -95,6 +96,7 @@ public class ActivityJPA {
             oldActivity.setPrice(activity.getPrice());
             oldActivity.setTotalPlaces(activity.getTotalPlaces());
             oldActivity.setRemainingPlaces( activity.getRemainingPlaces() );
+            oldActivity.setMonitor(activity.getMonitor());
             return true;
         } catch (NoResultException e) {
             return false;

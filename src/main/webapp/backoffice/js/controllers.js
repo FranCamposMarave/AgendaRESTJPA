@@ -99,6 +99,12 @@ app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                    console.log("Retrieve activities (count): " + $scope.activities.length);
             })
         };
+
+        $scope.updateMonitor = function(a) {
+            ActivityService.updateActivity(a);
+            console.log("Updated monitor: " + a.monitor.name);
+        };
+
         MonitorService.retrieveAll()
             .success(function(data) {
                 $scope.monitors = data.monitor;
