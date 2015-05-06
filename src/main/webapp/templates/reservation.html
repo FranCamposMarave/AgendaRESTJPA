@@ -91,6 +91,23 @@
                             </div>
                         </div>
 
+                        <div class="form-group col-md-6">
+                            <label>Correo electrónico:</label>
+                            <input type="text" ng-model="reservation.email" ng-model-options="{ updateOn: 'blur' }"
+                                   name="email" required class="form-control" ng-maxlength="40">
+
+                            <div>
+                                <span class="helpBlock">*Campo obligatorio</span>
+                            </div>
+                            <div class="text-danger">
+                                <p ng-show="reservationForm.email.$error.required && monitorForm.email.$dirty">El email es un
+                                    campo obligatorio.</p>
+
+                                <p ng-show="reservationForm.email.$dirty && !validateEmail(reservation.email)">El email introducido no
+                                    es válido</p>
+                            </div>
+                        </div>
+
 
                         <div class="form-group col-md-6">
                             <label>Plazas:</label>

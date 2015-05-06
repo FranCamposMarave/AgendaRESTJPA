@@ -225,6 +225,13 @@ app.controller('reservationCtrl', function ($scope, $rootScope, $routeParams, Fi
         return letter == dni.charAt(8);
     };
 
+    $scope.validateEmail = function( email ) {
+        expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if ( !expr.test(email) )
+            return false;
+        return true;
+    };
+
     $scope.submit = function () {
         $scope.reservation.activity = $scope.activity;
         ReservationService.addReservation( $scope.reservation)
