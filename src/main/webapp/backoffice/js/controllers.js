@@ -75,7 +75,7 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                       if ( status == 404 ){
                         toastr.error('No existe la actividad', 'Borrar');
                       }else if ( status == 500 ){
-                        toastr.error('Error interno del servidor', 'Borrar');
+                        toastr.error('La actividad tiene reservas y no se puede borrar', 'Borrar');
                       }else{
                         toastr.error('Error en la conexión al servidor', 'Borrar');
                       }
@@ -101,8 +101,9 @@ app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
         };
 
         $scope.updateMonitor = function(a) {
-            ActivityService.updateActivity(a);
-            console.log("Updated monitor: " + a.monitor.name);
+            ActivityService.updateActivity(a).success(function(data) {
+                    toastr.success('El monitor ha sido modificado', 'Asignar Monitor');
+                });
         };
 
         MonitorService.retrieveAll()
@@ -148,7 +149,7 @@ app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                       if ( status == 404 ){
                         toastr.error('No existe la actividad', 'Borrar');
                       }else if ( status == 500 ){
-                        toastr.error('Error interno del servidor', 'Borrar');
+                        toastr.error('La actividad tiene reservas y no se puede borrar', 'Borrar');
                       }else{
                         toastr.error('Error en la conexión al servidor', 'Borrar');
                       }
@@ -213,7 +214,7 @@ app.controller('categoriesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                         if ( status == 404 ){
                             toastr.error('No existe la categoria', 'Borrar');
                         }else if ( status == 500 ){
-                            toastr.error('Error interno del servidor', 'Borrar');
+                            toastr.error('Hay actividades relacionadas con esta categoría. No se puede borrar', 'Borrar');
                         }else{
                             toastr.error('Error en la conexión al servidor', 'Borrar');
                         }
@@ -243,6 +244,7 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
         ActivityService.retrieveActivity($routeParams.id)
         .success(function(data) {
            $scope.activity = data.activity;
+           $scope.oldTotalPlaces = data.activity.totalPlaces;
            console.log("Retrieved activity: " + $scope.activity.title);
         });
     }else{
@@ -271,9 +273,8 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
     );
 
     $scope.submit = function () {
-
-        $scope.activity.remainingPlaces = $scope.activity.totalPlaces;
         if ( $scope.action == 'Crear' ){
+            $scope.activity.remainingPlaces = $scope.activity.totalPlaces;
             ActivityService.addActivity($scope.activity)
             .success(function(data) {
                 console.log("Activity added");
@@ -293,7 +294,14 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
                 }
             });
         }else{
-            $scope.activity.remainingPlaces = $scope.activity.totalPlaces;
+            console.log("remaining antes"+$scope.activity.remainingPlaces);
+            console.log("total antes"+$scope.activity.totalPlaces);
+            console.log("totalold antes"+$scope.oldR);
+            $scope.activity.remainingPlaces += $scope.activity.totalPlaces - $scope.oldTotalPlaces;
+            console.log("remaining luego"+$scope.activity.remainingPlaces);
+            console.log("total luego"+$scope.activity.totalPlaces);
+            console.log("totalold luego"+$scope.oldR);
+
             ActivityService.updateActivity($scope.activity)
             .success(function(data) {
                 console.log("Activity updated");
@@ -611,7 +619,7 @@ app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'M
                     if ( status == 404 ){
                         toastr.error('No existe el monitor', 'Borrar');
                     }else if ( status == 500 ){
-                        toastr.error('Error interno del servidor', 'Borrar');
+                        toastr.error('El monitor tiene actividades asignadas. No se puede borrar', 'Borrar');
                     }else{
                         toastr.error('Error en la conexión al servidor', 'Borrar');
                     }

@@ -34,7 +34,6 @@
         this.updateActivity = function (activity) {
             var url = app.baseURI + app.activityURI + activity.id ;
             var data = "{activity:" + JSON.stringify(activity) + "}";
-            console.log("HOLA"+activity.id);
             return $http.put(url, data );
         }
     }]);
