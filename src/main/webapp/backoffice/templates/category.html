@@ -17,7 +17,7 @@
     <form novalidate name="categoryForm" ng-submit="submit()">
         <div class="form-group col-md-12">
             <label>Título:</label>
-            <input type="text" ng-model="category.title" name="title" required class="form-control" ng-maxlength="255">
+            <input type="text" ng-model="category.title" name="title" required class="form-control" ng-maxlength="255" ng-minlength="1">
             <div>
                 <span class="helpBlock">*Campo obligatorio</span>
                 | <span class="text-info">Caracteres restantes: {{ remainingChars.title }}</span>
@@ -25,11 +25,12 @@
             <div ng-show="!categoryForm.title.$pristine">
                 <p class="text-danger" ng-show="categoryForm.title.$error.required">El título es un campo obligatorio.</p>
                 <p class="text-danger" ng-show="categoryForm.title.$error.maxlength">Máximo 255 caracteres.</p>
+                <p class="text-danger" ng-show="categoryForm.title.$error.minlength">Pongale un nombre a la categoria.</p>
             </div>
         </div>
 
         <div class="col-md-12 text-right">
-            <button type="submit" class="pure-button pure-button-primary">
+            <button type="submit" class="pure-button pure-button-primary" ng-disabled="categoryForm.$invalid">
                 <i class="fa fa-check"></i> {{ action }}</button>
         </div>
     </form>

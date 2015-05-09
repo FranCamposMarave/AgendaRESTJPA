@@ -237,9 +237,11 @@ app.controller('reservationCtrl', function ($scope, $rootScope, $routeParams, Fi
         ReservationService.addReservation( $scope.reservation)
             .success(function(data) {
                 console.log("Activity added");
+                toastr.success('La reserva ha sido añadida!', 'Añadir');
+                /*
                 $rootScope.$broadcast('toastMessage', function(){
                     toastr.success('La reserva ha sido añadida!', 'Añadir');
-                });
+                });*/
                 $location.path('activities');
                 $scope.activityForm.$submitted = true;
             }).error(function(data, status, headers, config) {
