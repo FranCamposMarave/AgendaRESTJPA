@@ -6,6 +6,7 @@
     app.activityURI = "activities/";
     app.categoryURI = "categories/";
     app.monitorURI = "monitors/";
+    app.userURI = "users/";
 
     app.service('ActivityService', ['$http', function($http) {
 
@@ -104,4 +105,39 @@
             return $http.put(url, data );
         }
     }]);
+
+    app.service('UserService', ['$http', function($http) {
+
+        this.retrieveAll = function() {
+            console.log(app.baseURI + app.userURI);
+            return $http.get(app.baseURI + app.userURI);
+        }
+
+        this.addUser = function (user) {
+            console.log(user);
+            var url = app.baseURI + app.userURI;
+            console.log(url);
+            var data = "{user:" + JSON.stringify(user) + "}";
+            console.log(user);
+            return $http.post(url, data);
+        }
+
+        this.retrieveUser = function(id) {
+            var url = app.baseURI + app.userURI + id;
+            return $http.get(url);
+        }
+
+        this.deleteUser = function(id) {
+            var url = app.baseURI + app.userURI + id;
+            var data = {'id': id}
+            return $http.delete(url, data);
+        }
+
+        this.updateUser = function (user) {
+            var url = app.baseURI + app.userURI + user.id ;
+            var data = "{user:" + JSON.stringify(user) + "}";
+            return $http.put(url, data );
+        }
+    }]);
+
 })();

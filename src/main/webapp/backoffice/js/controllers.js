@@ -636,3 +636,63 @@ app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'M
         });
     }
 ]);
+
+app.controller('usersCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'UserService', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, UserService, toastr) {
+        $scope.retrieveAll = function () {
+            UserService.retrieveAll()
+                .success(function(data) {
+                    $scope.users = data.user;
+                    console.log("Retrieve users (count): " + $scope.users.length);
+                })
+        };
+
+        $scope.retrieveAll();
+        $scope.retrieve = function(id) {
+            UserService.retrieve(id)
+                .success(function(data) {
+                    $scope.currentUser = data.user;
+                    console.log("Retrieved user: " + $scope.currentUser);
+                })
+        };
+        $scope.delete = function(id) {
+            UserService.deleteUser(id)
+                .success(function(data) {
+                    console.log("User deleted");
+                    $scope.retrieveAll();
+                });
+        };
+
+        $scope.openConfirmationModal = function (act) {
+            var modalInstance = $modal.open({
+                templateUrl: 'confirmationModalContent.html',
+                controller: 'confirmationModalCtrl',
+                resolve: {
+                    'activity': function () {
+                        return act;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (user) {
+                UserService.deleteUser(user.id)
+                    .success(function(data) {
+                        toastr.success('El usuario ha sido borrado', 'Borrar');
+                        console.log("Usuario deleted");
+                        $scope.retrieveAll();
+
+                    })
+                    .error(function(data, status, headers, config) {
+                        console.log("Error deleting user. Error code: " + status );
+                        if ( status == 404 ){
+                            toastr.error('No existe el usuario', 'Borrar');
+                        }else if ( status == 500 ){
+                            toastr.error('El usuario tiene actividades asignadas. No se puede borrar', 'Borrar');
+                        }else{
+                            toastr.error('Error en la conexión al servidor', 'Borrar');
+                        }
+                    });
+            });
+        };
+    }
+]);
