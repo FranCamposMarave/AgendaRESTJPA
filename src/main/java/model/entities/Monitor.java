@@ -27,6 +27,10 @@ public class Monitor {
 
     private String lastName;
 
+    private String email;
+
+    private String phone;
+
     @OneToMany
     @JoinTable
     (name="MONITOR_CATEGORY",
@@ -69,6 +73,12 @@ public class Monitor {
     public Long getId() { return id;}
     public void setId(Long id) {this.id = id;}
 
+    public String getEmail() {return email;}
+    public void setEmail(String email) {this.email = email;}
+
+    public String getPhone() {return phone;}
+    public void setPhone(String phone) {this.phone = phone;}
+
     public Set<Category> getCategories() {
         return categories;
     }
@@ -81,10 +91,13 @@ public class Monitor {
     @Override
     public String toString() {
         return "Monitor{" +
-                "id = "+ id +
-                "nif=" + nif +
+                "id=" + id +
+                ", nif='" + nif + '\'' +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", categories=" + categories +
                 '}';
     }
 
