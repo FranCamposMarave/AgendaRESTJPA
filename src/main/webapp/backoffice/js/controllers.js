@@ -515,6 +515,13 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
         }
     );
 
+    $scope.validateEmail = function( email ) {
+        expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if ( !expr.test(email) )
+            return false;
+        return true;
+    };
+
     $scope.validateDNI = function( dni ) {
         var dni_letters = "TRWAGMYFPDXBNJZSQVHLCKE";
         var letter = dni_letters.charAt( parseInt( dni, 10 ) % 23 );
