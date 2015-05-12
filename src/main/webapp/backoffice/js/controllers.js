@@ -9,9 +9,13 @@ app.config(function(uiSelectConfig) {
 
 app.controller('headerCtrl', ['$scope', '$location',
     function($scope, $location){
-        $scope.isActive = function (viewLocation) {
-            return viewLocation === $location.path();
-        };
+        $scope.currentLocation = $location.path();
+    }
+]);
+
+app.controller('menuCtrl', ['$scope', '$location',
+    function($scope, $location){
+        $scope.path = $location.path();
     }
 ]);
 

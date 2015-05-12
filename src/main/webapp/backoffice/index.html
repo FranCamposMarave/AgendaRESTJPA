@@ -53,22 +53,25 @@
     <div id="menu" ng-controller="headerCtrl">
         <div class="pure-menu">
             <a class="pure-menu-heading" href="#">NaturAdventure</a>
-
             <ul class="pure-menu-list">
                 <li class="pure-menu-item">
-                    <a href="#/" class="pure-menu-link">Inicio</a>
+                    <a href="#/" ng-class="{menu-selected: currentLocation == '/' }" class="pure-menu-link">Inicio</a>
                 </li>
                 <li class="pure-menu-item">
-                    <a href="#/activities" class="pure-menu-link">Actividades</a>
+                    <a href="#/activities" ng-class="{menu-selected: currentLocation == '/activities' }"
+                       class="pure-menu-link active">Actividades</a>
                 </li>
                 <li class="pure-menu-item">
-                    <a href="#/categories" class="pure-menu-link">Categorías</a>
+                    <a href="#/categories" ng-class="{menu-selected: currentLocation == '/activities' }"
+                       class="pure-menu-link">Categorías</a>
                 </li>
                 <li class="pure-menu-item">
-                    <a href="#/monitors" class="pure-menu-link">Monitores</a>
+                    <a href="#/monitors" ng-class="{menu-selected: currentLocation == '/activities' }"
+                       class="pure-menu-link">Monitores</a>
                 </li>
                 <li class="pure-menu-item">
-                    <a href="#/assignMonitors" class="pure-menu-link">Asignar Monitores</a>
+                    <a href="#/assignMonitors" ng-class="{menu-selected: currentLocation == '/activities' }"
+                       class="pure-menu-link">Asignar Monitores</a>
                 </li>
             </ul>
         </div>

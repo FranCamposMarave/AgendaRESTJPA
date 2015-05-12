@@ -136,3 +136,7 @@
     font-size: 125%;
 }
 
+.menu-selected{
+    background: #999;
+    font-weight: bold;
+}
