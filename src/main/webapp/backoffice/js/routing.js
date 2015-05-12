@@ -64,6 +64,10 @@ app.config(function($routeProvider) {
             templateUrl : 'templates/user.html',
             controller 	: 'userCtrl'
         })
+        .when('/reservations', {
+            templateUrl : 'templates/reservations.html',
+            controller 	: 'reservationsCtrl'
+        })
 		.otherwise({
 			redirectTo: '/'
 		});

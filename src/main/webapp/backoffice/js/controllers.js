@@ -703,3 +703,75 @@ app.controller('usersCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'User
         };
     }
 ]);
+
+app.controller('reservationsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ReservationService', 'ActivityService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, ReservationService, ActivityService, FileUploader, toastr) {
+        $scope.retrieveAll = function () {
+            ReservationService.retrieveAll()
+                .success(function(data) {
+                    $scope.reservations = data.reservation;
+                    console.log("Retrieve reservations (count): " + $scope.reservations.length);
+                })
+        };
+
+        ActivityService.retrieveAll()
+            .success(function(data) {
+                $scope.activities = data.activity;
+                console.log("Retrieve activities (count): " + $scope.activities.length);
+            });
+        $scope.retrieveAll();
+
+        $scope.retrieve = function(id) {
+            ReservationService.retrieveReservation(id)
+                .success(function(data) {
+                    $scope.currentReservation = data.reservation;
+                    console.log("Retrieved reservation: " + $scope.currentReservation.id);
+                })
+        };
+        $scope.delete = function(id) {
+            ReservationService.deleteReservation(id)
+                .success(function(data) {
+                    console.log("Reservation deleted");
+                    $scope.retrieveAll();
+                });
+        };
+
+        $scope.openConfirmationModal = function (res) {
+            var modalInstance = $modal.open({
+                templateUrl: 'confirmationModalContent.html',
+                controller: 'confirmationModalCtrl',
+                resolve: {
+                    'reservation': function () {
+                        return res;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (reservation) {
+                ReservationService.deleteReservation(reservation.id)
+                    .success(function(data) {
+                        toastr.success('La reserva ha sido borrada', 'Borrar');
+                        console.log("Reservation deleted");
+                        $scope.retrieveAll();
+                    }).error(function(data, status, headers, config) {
+                        console.log("Error deleting reservation. Error code: " + status );
+                        if ( status == 404 ){
+                            toastr.error('No existe la reserva', 'Borrar');
+                        }else if ( status == 500 ){
+                            toastr.error('La reserva no se puede borrar', 'Borrar');
+                        }else{
+                            toastr.error('Error en la conexión al servidor', 'Borrar');
+                        }
+                    });
+            });
+        };
+
+        $scope.file = null;
+        $scope.uploadImage = function(){
+        }
+
+        $rootScope.$on('toastMessage', function(event, toast){
+            $timeout( toast, 1000 );
+        });
+    }
+]);
