@@ -79,7 +79,7 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                       if ( status == 404 ){
                         toastr.error('No existe la actividad', 'Borrar');
                       }else if ( status == 500 ){
-                        toastr.error('Error interno del servidor', 'Borrar');
+                        toastr.error('La actividad tiene reservas y no se puede borrar', 'Borrar');
                       }else{
                         toastr.error('Error en la conexión al servidor', 'Borrar');
                       }
@@ -103,6 +103,13 @@ app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                    console.log("Retrieve activities (count): " + $scope.activities.length);
             })
         };
+
+        $scope.updateMonitor = function(a) {
+            ActivityService.updateActivity(a).success(function(data) {
+                    toastr.success('El monitor ha sido modificado', 'Asignar Monitor');
+                });
+        };
+
         MonitorService.retrieveAll()
             .success(function(data) {
                 $scope.monitors = data.monitor;
@@ -146,7 +153,7 @@ app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                       if ( status == 404 ){
                         toastr.error('No existe la actividad', 'Borrar');
                       }else if ( status == 500 ){
-                        toastr.error('Error interno del servidor', 'Borrar');
+                        toastr.error('La actividad tiene reservas y no se puede borrar', 'Borrar');
                       }else{
                         toastr.error('Error en la conexión al servidor', 'Borrar');
                       }
@@ -211,7 +218,7 @@ app.controller('categoriesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                         if ( status == 404 ){
                             toastr.error('No existe la categoria', 'Borrar');
                         }else if ( status == 500 ){
-                            toastr.error('Error interno del servidor', 'Borrar');
+                            toastr.error('Hay actividades relacionadas con esta categoría. No se puede borrar', 'Borrar');
                         }else{
                             toastr.error('Error en la conexión al servidor', 'Borrar');
                         }
@@ -241,6 +248,7 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
         ActivityService.retrieveActivity($routeParams.id)
         .success(function(data) {
            $scope.activity = data.activity;
+           $scope.oldTotalPlaces = data.activity.totalPlaces;
            console.log("Retrieved activity: " + $scope.activity.title);
         });
     }else{
@@ -269,9 +277,8 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
     );
 
     $scope.submit = function () {
-
-        $scope.activity.remainingPlaces = $scope.activity.totalPlaces;
         if ( $scope.action == 'Crear' ){
+            $scope.activity.remainingPlaces = $scope.activity.totalPlaces;
             ActivityService.addActivity($scope.activity)
             .success(function(data) {
                 console.log("Activity added");
@@ -291,7 +298,14 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
                 }
             });
         }else{
-            $scope.activity.remainingPlaces = $scope.activity.totalPlaces;
+            console.log("remaining antes"+$scope.activity.remainingPlaces);
+            console.log("total antes"+$scope.activity.totalPlaces);
+            console.log("totalold antes"+$scope.oldR);
+            $scope.activity.remainingPlaces += $scope.activity.totalPlaces - $scope.oldTotalPlaces;
+            console.log("remaining luego"+$scope.activity.remainingPlaces);
+            console.log("total luego"+$scope.activity.totalPlaces);
+            console.log("totalold luego"+$scope.oldR);
+
             ActivityService.updateActivity($scope.activity)
             .success(function(data) {
                 console.log("Activity updated");
@@ -505,6 +519,13 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
         }
     );
 
+    $scope.validateEmail = function( email ) {
+        expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if ( !expr.test(email) )
+            return false;
+        return true;
+    };
+
     $scope.validateDNI = function( dni ) {
         var dni_letters = "TRWAGMYFPDXBNJZSQVHLCKE";
         var letter = dni_letters.charAt( parseInt( dni, 10 ) % 23 );
@@ -609,11 +630,143 @@ app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'M
                     if ( status == 404 ){
                         toastr.error('No existe el monitor', 'Borrar');
                     }else if ( status == 500 ){
-                        toastr.error('Error interno del servidor', 'Borrar');
+                        toastr.error('El monitor tiene actividades asignadas. No se puede borrar', 'Borrar');
                     }else{
                         toastr.error('Error en la conexión al servidor', 'Borrar');
                     }
                 });
+            });
+        };
+
+        $scope.file = null;
+        $scope.uploadImage = function(){
+        }
+
+        $rootScope.$on('toastMessage', function(event, toast){
+            $timeout( toast, 1000 );
+        });
+    }
+]);
+
+app.controller('usersCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'UserService', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, UserService, toastr) {
+        $scope.retrieveAll = function () {
+            UserService.retrieveAll()
+                .success(function(data) {
+                    $scope.users = data.user;
+                    console.log("Retrieve users (count): " + $scope.users.length);
+                })
+        };
+
+        $scope.retrieveAll();
+        $scope.retrieve = function(id) {
+            UserService.retrieve(id)
+                .success(function(data) {
+                    $scope.currentUser = data.user;
+                    console.log("Retrieved user: " + $scope.currentUser);
+                })
+        };
+        $scope.delete = function(id) {
+            UserService.deleteUser(id)
+                .success(function(data) {
+                    console.log("User deleted");
+                    $scope.retrieveAll();
+                });
+        };
+
+        $scope.openConfirmationModal = function (act) {
+            var modalInstance = $modal.open({
+                templateUrl: 'confirmationModalContent.html',
+                controller: 'confirmationModalCtrl',
+                resolve: {
+                    'activity': function () {
+                        return act;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (user) {
+                UserService.deleteUser(user.id)
+                    .success(function(data) {
+                        toastr.success('El usuario ha sido borrado', 'Borrar');
+                        console.log("Usuario deleted");
+                        $scope.retrieveAll();
+
+                    })
+                    .error(function(data, status, headers, config) {
+                        console.log("Error deleting user. Error code: " + status );
+                        if ( status == 404 ){
+                            toastr.error('No existe el usuario', 'Borrar');
+                        }else if ( status == 500 ){
+                            toastr.error('El usuario tiene actividades asignadas. No se puede borrar', 'Borrar');
+                        }else{
+                            toastr.error('Error en la conexión al servidor', 'Borrar');
+                        }
+                    });
+            });
+        };
+    }
+]);
+
+app.controller('reservationsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ReservationService', 'ActivityService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, ReservationService, ActivityService, FileUploader, toastr) {
+        $scope.retrieveAll = function () {
+            ReservationService.retrieveAll()
+                .success(function(data) {
+                    $scope.reservations = data.reservation;
+                    console.log("Retrieve reservations (count): " + $scope.reservations.length);
+                })
+        };
+
+        ActivityService.retrieveAll()
+            .success(function(data) {
+                $scope.activities = data.activity;
+                console.log("Retrieve activities (count): " + $scope.activities.length);
+            });
+        $scope.retrieveAll();
+
+        $scope.retrieve = function(id) {
+            ReservationService.retrieveReservation(id)
+                .success(function(data) {
+                    $scope.currentReservation = data.reservation;
+                    console.log("Retrieved reservation: " + $scope.currentReservation.id);
+                })
+        };
+        $scope.delete = function(id) {
+            ReservationService.deleteReservation(id)
+                .success(function(data) {
+                    console.log("Reservation deleted");
+                    $scope.retrieveAll();
+                });
+        };
+
+        $scope.openConfirmationModal = function (res) {
+            var modalInstance = $modal.open({
+                templateUrl: 'confirmationModalContent.html',
+                controller: 'confirmationModalCtrl',
+                resolve: {
+                    'reservation': function () {
+                        return res;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (reservation) {
+                ReservationService.deleteReservation(reservation.id)
+                    .success(function(data) {
+                        toastr.success('La reserva ha sido borrada', 'Borrar');
+                        console.log("Reservation deleted");
+                        $scope.retrieveAll();
+                    }).error(function(data, status, headers, config) {
+                        console.log("Error deleting reservation. Error code: " + status );
+                        if ( status == 404 ){
+                            toastr.error('No existe la reserva', 'Borrar');
+                        }else if ( status == 500 ){
+                            toastr.error('La reserva no se puede borrar', 'Borrar');
+                        }else{
+                            toastr.error('Error en la conexión al servidor', 'Borrar');
+                        }
+                    });
             });
         };
 

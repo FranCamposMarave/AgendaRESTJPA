@@ -52,6 +52,22 @@ app.config(function($routeProvider) {
             templateUrl : 'templates/assignMonitors.html',
             controller 	: 'activitiesCtrl'
         })
+        .when('/users', {
+            templateUrl : 'templates/users.html',
+            controller 	: 'usersCtrl'
+        })
+        .when('/user/:id', {
+            templateUrl : 'templates/user.html',
+            controller 	: 'userCtrl'
+        })
+        .when('/user', {
+            templateUrl : 'templates/user.html',
+            controller 	: 'userCtrl'
+        })
+        .when('/reservations', {
+            templateUrl : 'templates/reservations.html',
+            controller 	: 'reservationsCtrl'
+        })
 		.otherwise({
 			redirectTo: '/'
 		});
