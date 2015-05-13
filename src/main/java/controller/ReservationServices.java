@@ -4,6 +4,8 @@ import controller.validators.Validator;
 import model.dao.ActivityJPA;
 import model.dao.ReservationJPA;
 import model.entities.Reservation;
+import services.mail.IMailService;
+import services.mail.MailService;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -96,6 +98,9 @@ public class ReservationServices {
                 return Response.status( Response.Status.CONFLICT ).build();
             }
             if ( reservationDAO.update( reservation ) ){
+                //Enviar emilio de confirmación de reserva realizada
+                IMailService mailService = new MailService();
+                mailService.sendInfoEmailReservationToUser( reservation );
                 return Response.status(Response.Status.NO_CONTENT).build();
             }else {
                 reservationDAO.add( reservation );

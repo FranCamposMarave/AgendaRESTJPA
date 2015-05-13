@@ -13,6 +13,8 @@ public class SenderMailThread extends Thread {
     }
 
     public void run(){
+        System.out.println("Inicio de envio de email...");
         senderMailing.send();
+        System.out.println("Email Enviado!!");
     }
 }
