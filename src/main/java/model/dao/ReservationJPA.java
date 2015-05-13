@@ -2,6 +2,7 @@ package model.dao;
 
 import model.entities.Reservation;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
@@ -11,6 +12,9 @@ import java.util.List;
 public class ReservationJPA {
 
     public static Reservation NULL = new Reservation();
+
+    @Inject
+    private ActivityJPA activityDAO;
 
     @PersistenceContext(unitName = "naturAdventureJTA")
     EntityManager em;
@@ -34,10 +38,14 @@ public class ReservationJPA {
     }
 
     public boolean delete(Long id) {
+        Reservation reservation = get(id);
         TypedQuery<Reservation> query = em.createNamedQuery("Reservation.deleteById", Reservation.class);
         query.setParameter("id", id);
         try {
             int deletedRows = query.executeUpdate();
+            if(deletedRows == 1){
+                activityDAO.increaseRemainingPlaces(reservation.getActivity().getId(),reservation.getPlaces());
+            }
             return deletedRows == 1;
         } catch (NoResultException e) {
             return false;
@@ -59,6 +67,7 @@ public class ReservationJPA {
             oldReservation.setLastName(Reservation.getLastName());
             oldReservation.setActivity(Reservation.getActivity());
             oldReservation.setPlaces(Reservation.getPlaces());
+            oldReservation.setConfirmed(Reservation.isConfirmed());
             return true;
         } catch (NoResultException e) {
             return false;

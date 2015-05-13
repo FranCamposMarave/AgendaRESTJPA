@@ -740,13 +740,24 @@ app.controller('reservationsCtrl', ['$scope', '$rootScope', '$timeout', '$modal'
                 });
         };
 
-        $scope.openConfirmationModal = function (res) {
+        $scope.update = function(r) {
+            console.log("Retrieved reservation 1: " + r.id);
+            r.confirmed = true;
+            ReservationService.updateReservation(r)
+                .success(function(data) {
+                    toastr.success('La reserva ha sido actualizada', 'Actualizar');
+                    console.log("Reservation updated");
+                    $scope.retrieveAll();
+                });
+        };
+
+        $scope.openConfirmationModal = function (act) {
             var modalInstance = $modal.open({
                 templateUrl: 'confirmationModalContent.html',
                 controller: 'confirmationModalCtrl',
                 resolve: {
-                    'reservation': function () {
-                        return res;
+                    'activity': function () {
+                        return act;
                     }
                 }
             });

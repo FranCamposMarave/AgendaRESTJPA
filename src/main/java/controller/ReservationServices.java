@@ -1,6 +1,7 @@
 package controller;
 
 import controller.validators.Validator;
+import model.dao.ActivityJPA;
 import model.dao.ReservationJPA;
 import model.entities.Reservation;
 
@@ -14,6 +15,7 @@ import java.net.URI;
 @Path("reservations")
 @Stateless
 public class ReservationServices {
+
 
     @Inject
     private ReservationJPA reservationDAO;

@@ -34,11 +34,13 @@ public class Reservation {
 
     private int places;
 
+    private boolean confirmed;
+
     public Reservation() {
        super();
     }
 
-    public Reservation(Long id, String nif, String name, String lastName, String email, Activity activity, int places) {
+    public Reservation(Long id, String nif, String name, String lastName, String email, Activity activity, int places, boolean confirmed) {
         this.id = id;
         this.nif = nif;
         this.name = name;
@@ -46,6 +48,7 @@ public class Reservation {
         this.email = email;
         this.activity = activity;
         this.places = places;
+        this.confirmed = confirmed;
     }
 
     public String getNif() {
@@ -85,6 +88,10 @@ public class Reservation {
         this.places = places;
     }
 
+    public boolean isConfirmed() { return confirmed;}
+
+    public void setConfirmed(boolean confirmed) { this.confirmed = confirmed; }
+
     public Activity getActivity() {
         return activity;
     }
@@ -102,6 +109,7 @@ public class Reservation {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", places='" + places + '\'' +
+                ", confirmed='" + confirmed + '\'' +
                 '}';
     }
 

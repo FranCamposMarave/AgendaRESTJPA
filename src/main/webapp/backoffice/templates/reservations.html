@@ -15,11 +15,11 @@
                 <h5>{{ reservation.name }} {{reservation.lastName}}</h5>
                 <h5>Plazas reservadas: {{ reservation.places }}</h5>
                 <p>
-                    <!--<a href="#/activity/{{ activity.id }}" class="pure-button button-success" id="update:{{activity.id}}">
-                        <i class="fa fa-edit"></i> Editar
-                    </a>-->
+                    <button type="button" class="pure-button button-success" ng-click="update(reservation)" ng-disabled="reservation.confirmed" id="update:{{reservation.id}}">
+                        <i class="fa fa-edit"></i> Confirmar
+                    </button>
                     <button type="button" class="pure-button button-error" ng-click="openConfirmationModal(reservation)" id="delete:{{reservation.id}}">
-                        <i class="fa fa-trash-o"></i> Borrar
+                        <i class="fa fa-trash-o"></i> Anular
                     </button>
                 </p>
             </div>

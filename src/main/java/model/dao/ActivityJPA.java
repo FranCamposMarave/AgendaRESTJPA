@@ -71,7 +71,7 @@ public class ActivityJPA {
     }
 
     public boolean add(Activity activity) {
-        em.persist( activity );
+        em.persist(activity);
         return true;
     }
 
@@ -101,6 +101,19 @@ public class ActivityJPA {
         } catch (NoResultException e) {
             return false;
         }
+    }
+
+    public boolean increaseRemainingPlaces(Long id, int increase) {
+        TypedQuery<Activity> query = em.createNamedQuery("Activity.get", Activity.class);
+        query.setParameter("id", id);
+        try {
+            Activity oldActivity = query.getSingleResult();
+            oldActivity.setRemainingPlaces(oldActivity.getRemainingPlaces()+increase);
+            return true;
+        } catch (NoResultException e) {
+            return false;
+        }
+
     }
 
 }
