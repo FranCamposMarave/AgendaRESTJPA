@@ -11,6 +11,7 @@ import java.util.Set;
         @NamedQuery(name="User.getAll", query = "SELECT u FROM User u"),
         @NamedQuery(name="User.get", query = "SELECT u FROM User u WHERE u.id = :id"),
         @NamedQuery(name="User.getByUserName", query = "SELECT u FROM User u WHERE u.userName = :userName"),
+        @NamedQuery(name="User.getByUserNameAndPassword", query = "SELECT u FROM User u WHERE u.userName = :userName AND u.password =:password"),
         @NamedQuery(name="User.delete", query = "DELETE FROM User u WHERE u.id = :id")
 })
 
@@ -73,6 +74,11 @@ public class User {
         super();
     }
 
+    public User(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+
     public User(Long id, String userName, String password, int permission) {
         this.id = id;
         this.userName = userName;
@@ -91,5 +97,16 @@ public class User {
         if (!id.equals(monitor.id)) return false;
 
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", permission=" + permission +
+                ", token='" + token + '\'' +
+                '}';
     }
 }

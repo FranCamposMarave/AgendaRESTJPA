@@ -259,3 +259,23 @@ app.controller('reservationCtrl', function ($scope, $rootScope, $routeParams, Fi
 });
 
 
+app.controller('loginCtrl', ['$scope', '$routeParams', 'LoginService',
+    function($scope, $routeParams, LoginService){
+
+        $scope.submit = function () {
+            console.log("USer: " + $scope.user);
+            LoginService.login($scope.user)
+                .success(function(data) {
+                    localStorage.setItem("token",data);
+                    console.log("Retrieve login token: " + data);
+                });
+        };
+
+
+
+    }
+]);
+
+
+
+

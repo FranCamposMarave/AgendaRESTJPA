@@ -1,7 +1,5 @@
 package controller;
 
-
-
 import controller.validators.Validator;
 import model.dao.ActivityJPA;
 import model.entities.Activity;
@@ -14,7 +12,6 @@ import javax.ws.rs.core.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
-
 
 
 @Path("activities")

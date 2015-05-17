@@ -74,6 +74,8 @@ public class UserServices {
         }
     }
 
+
+
     @PUT
     @Path("/{id}")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
@@ -98,6 +100,8 @@ public class UserServices {
             }
         }
     }
+
+
 
 
 }

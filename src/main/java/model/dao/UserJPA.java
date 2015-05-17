@@ -33,6 +33,17 @@ public class UserJPA {
         }
     }
 
+    public User get(String userName, String password) {
+        TypedQuery<User> query = em.createNamedQuery("User.getByUserNameAndPassword", User.class);
+        query.setParameter("userName", userName);
+        query.setParameter("password", password);
+        try {
+            return query.getSingleResult();
+        } catch (NoResultException e) {
+            return NULL;
+        }
+    }
+
     public User getByUserName(String userName) {
         TypedQuery<User> query = em.createNamedQuery("User.getByUserName", User.class);
         query.setParameter("userName", userName);

@@ -6,6 +6,7 @@
     app.activityURI = "activities/";
     app.categoryURI = "categories/";
     app.reservationURI = "reservations/";
+    app.loginURI = "login/";
 
     app.service('ActivityService', ['$http', function($http) {
 
@@ -106,5 +107,12 @@
         }
     }]);
 
+    app.service('LoginService', ['$http', function($http) {
+        this.login = function (user) {
+            var url = app.baseURI + app.loginURI;
+            var data = "{user:" + JSON.stringify(user) + "}";
+            return $http.put(url, data);
+        }
+    }]);
 
 })();

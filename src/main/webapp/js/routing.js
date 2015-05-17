@@ -18,6 +18,7 @@ app.config(function($routeProvider) {
             templateUrl : 'templates/activities.html',
             controller 	: 'activitiesCtrl'
         })
+
         .when('/activities/:categoryName', {
             templateUrl : 'templates/activities.html',
             controller 	: 'activitiesCtrl'
@@ -29,6 +30,10 @@ app.config(function($routeProvider) {
         .when('/activity/:id/reservation', {
             templateUrl : 'templates/reservation.html',
             controller 	: 'reservationCtrl'
+        })
+        .when('/login', {
+            templateUrl : 'templates/login.html',
+            controller 	: 'loginCtrl'
         })
 		.otherwise({
 			redirectTo: '/'
