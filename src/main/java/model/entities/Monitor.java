@@ -14,12 +14,8 @@ import java.util.Set;
         @NamedQuery(name="Monitor.getByNif", query = "SELECT m FROM Monitor m WHERE m.nif = :nif"),
         @NamedQuery(name="Monitor.deleteByNif", query = "DELETE FROM Monitor m WHERE m.id = :id")
 })
-public class Monitor {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @XmlTransient
-    private Long id;
+@DiscriminatorValue("MONITOR")
+public class Monitor extends User{
 
     private String nif;
 
@@ -44,7 +40,8 @@ public class Monitor {
     }
 
     public Monitor(Long id, String nif, String name, String lastName, Set<Category> categories) {
-        this.id = id;
+        super();
+        setId( id );
         this.nif = nif;
         this.name = name;
         this.lastName = lastName;
@@ -70,9 +67,6 @@ public class Monitor {
         this.lastName = lastName;
     }
 
-    public Long getId() { return id;}
-    public void setId(Long id) {this.id = id;}
-
     public String getEmail() {return email;}
     public void setEmail(String email) {this.email = email;}
 
@@ -91,7 +85,7 @@ public class Monitor {
     @Override
     public String toString() {
         return "Monitor{" +
-                "id=" + id +
+                "id=" + getId() +
                 ", nif='" + nif + '\'' +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
@@ -108,7 +102,7 @@ public class Monitor {
 
         Monitor monitor = (Monitor) o;
 
-        if (!id.equals(monitor.id)) return false;
+        if (!getId().equals(monitor.getId())) return false;
 
         return true;
     }

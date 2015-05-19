@@ -27,7 +27,6 @@ public class MonitorValidator implements Validator<Monitor> {
             try{
                 int nifNumber = Integer.parseInt( object.getNif().substring(0, 7) );
                 if ( VALID_LETTERS.charAt( nifNumber % 23 ) != object.getNif().charAt(8) ){
-                    System.out.println( "false dni (" + object.getNif() + ")" );
                     return true;
                 }
             }catch (NumberFormatException e){

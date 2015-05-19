@@ -14,8 +14,8 @@ import java.util.Set;
         @NamedQuery(name="User.getByUserNameAndPassword", query = "SELECT u FROM User u WHERE u.userName = :userName AND u.password =:password"),
         @NamedQuery(name="User.delete", query = "DELETE FROM User u WHERE u.id = :id")
 })
-
-
+@Inheritance(strategy=InheritanceType.JOINED)
+@DiscriminatorColumn(name="ROLE")
 public class User {
 
     @Id
