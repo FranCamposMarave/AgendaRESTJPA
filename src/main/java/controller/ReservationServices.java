@@ -77,7 +77,7 @@ public class ReservationServices {
         Reservation reservation = reservationDAO.get( id );
         if (reservationDAO.delete(id)) {
             IMailService mailService = new MailService();
-            mailService.sendInfoEmailReservationToUser( reservation );
+            mailService.sendInfoEmailReservationCancel( reservation );
             return Response.status(Response.Status.ACCEPTED).build();
         } else {
             return Response.status(Response.Status.NOT_FOUND).build();

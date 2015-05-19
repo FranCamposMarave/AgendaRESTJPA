@@ -112,7 +112,7 @@ public class MailService implements IMailService {
         content = content.replace("${TITLE_ACTIVITY}", titleActivity).replace("${NAME}", name)
                 .replace("${LASTNAME}", lastname).replace("${HOUR}", hourAct).replace("${DATE}", dateAct);
 
-        sendEmail("Confirmación de reserva", content, receiver);
+        sendEmail("Cancelación de reserva", content, receiver);
     }
 
     private void sendEmail(String subject, String content, String receiver){
