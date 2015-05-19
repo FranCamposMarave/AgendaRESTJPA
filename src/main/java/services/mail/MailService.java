@@ -80,6 +80,41 @@ public class MailService implements IMailService {
         sendEmail("Confirmación de reserva", content, receiver);
     }
 
+    public void sendInfoEmailReservationCancel( Reservation reservation ){
+        Activity activity = reservation.getActivity();
+
+        String name = reservation.getName();
+        String lastname = reservation.getLastName();
+        String titleActivity = activity.getTitle();
+        int places = reservation.getPlaces();
+        Date date = activity.getDate();
+        DateFormat formatterDate = new SimpleDateFormat("dd/MM/yyyy");
+        DateFormat formatterHour = new SimpleDateFormat("HH:mm");
+        String dateAct = formatterDate.format( date );
+        String hourAct = formatterHour.format( date );
+        String receiver = reservation.getEmail();
+
+        String content = "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "    <meta charset=\"ISO-8859-1\">\n" +
+                "    <title>Información de cancelación de reserva</title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "<h2>Reserva de ${TITLE_ACTIVITY}</h2>\n" +
+                "<p>Estimado/a ${NAME} ${LASTNAME} nos complace comunicarle que la reserva de la actividad ${TITLE_ACTIVITY} " +
+                "    del día ${DATE} a las ${HOUR} se cancelado por motivos justificados.</p><br><br>\n" +
+                "<p>Disculpe las moléstias</p>\n" +
+                "\n" +
+                "</body>\n" +
+                "</html>";
+
+        content = content.replace("${TITLE_ACTIVITY}", titleActivity).replace("${NAME}", name)
+                .replace("${LASTNAME}", lastname).replace("${HOUR}", hourAct).replace("${DATE}", dateAct);
+
+        sendEmail("Confirmación de reserva", content, receiver);
+    }
+
     private void sendEmail(String subject, String content, String receiver){
         Mail mail = new Mail();
         try {
