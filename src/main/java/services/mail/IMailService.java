@@ -10,4 +10,6 @@ public interface IMailService {
 
     public void sendInfoEmailReservationToUser( Reservation reservation );
 
+    public void sendInfoEmailReservationCancel( Reservation reservation );
+
 }
