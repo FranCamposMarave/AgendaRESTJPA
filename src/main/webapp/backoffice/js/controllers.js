@@ -154,6 +154,8 @@ app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                         toastr.error('No existe la actividad', 'Borrar');
                       }else if ( status == 500 ){
                         toastr.error('La actividad tiene reservas y no se puede borrar', 'Borrar');
+                      }else if ( status == 401 || status == 405){
+                          toastr.error('No tienes permisos para realizar la acción', 'Borrar');
                       }else{
                         toastr.error('Error en la conexión al servidor', 'Borrar');
                       }
@@ -290,6 +292,8 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
                     toastr.error('Error interno del servidor', 'Añadir');
                 }else if ( status == 409 ){
                     toastr.error('Ya existe esa actividad en la base de datos.', 'Añadir');
+                }else if ( status == 401 || status == 405){
+                    toastr.error('No tienes permisos para realizar la acción', 'Añadir');
                 }else if ( status == 403 ){
                     toastr.error('Los datos introducidos son incorrectos.', 'Añadir');
                 }else{
@@ -313,12 +317,14 @@ app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileU
                 $location.path('activities');
             }).error(function(data, status, headers, config) {
                 console.log("Error updating activity. Error code: " + status );
-                if ( status == 400 ){
+                if ( status == 400 ) {
                     toastr.error('La actividad a modificar no existe', 'Actualizar');
+                }else if ( status == 401 || status == 405){
+                        toastr.error('No tienes permisos para realizar la acción', 'Actualizar');
                 }else if ( status == 409 ){
-                    toastr.error('Ya existe esa actividad en la base de datos.', 'Añadir');
+                    toastr.error('Ya existe esa actividad en la base de datos.', 'Actualizar');
                 }else if ( status == 403 ){
-                    toastr.error('Los datos introducidos son incorrectos.', 'Añadir');
+                    toastr.error('Los datos introducidos son incorrectos.', 'Actualizar');
                 }else if ( status == 500 ){
                     toastr.error('Error interno del servidor', 'Actualizar');
                 }else{
