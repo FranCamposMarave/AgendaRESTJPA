@@ -85,9 +85,15 @@ public class ActivityServices {
     }
 
     @DELETE
-    @Path("/{id}")
+    @Path("/{id}/{token}")
     @Produces("application/json")
-    public Response deleteActivity(@PathParam("id") long id) {
+    public Response deleteActivity(@PathParam("id") long id, @PathParam("token") String token) {
+
+        Response r = tokenValidator.validate(token);
+        if(r != null) {
+            return r;
+        }
+
         Activity activity = activityDAO.get(id);
         if (activityDAO.delete(id)) {
             ImageUploaderService service = new ImageUploaderService();
