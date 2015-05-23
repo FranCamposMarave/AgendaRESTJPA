@@ -2,6 +2,7 @@ package controller;
 
 import controller.validators.Validator;
 import model.dao.UserJPA;
+import model.entities.Monitor;
 import model.entities.User;
 
 import javax.ejb.Stateless;
@@ -52,7 +53,7 @@ public class UserServices {
         System.out.println(user.toString());
 
         /*
-        if ( !validatorUser.validate( user) ){
+        if ( !validatorUser.validate(user) ){
             return Response.status( Response.Status.FORBIDDEN ).build();
         }
         */
