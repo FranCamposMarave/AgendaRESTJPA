@@ -12,7 +12,10 @@
     app.service('ActivityService', ['$http', function($http) {
 
         this.retrieveAll = function() {
-            return $http.get(app.baseURI + app.activityURI);
+            if(localStorage.getItem("token")==null){
+                return $http.get(app.baseURI + app.activityURI);
+            }
+            return $http.get(app.baseURI + app.activityURI + localStorage.getItem("token"));
         }
 
         this.addActivity = function (activity) {
