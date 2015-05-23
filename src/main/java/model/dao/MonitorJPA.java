@@ -67,9 +67,14 @@ public class MonitorJPA {
         query.setParameter("id", monitor.getId());
         try {
             Monitor oldMonitor = query.getSingleResult();
+            oldMonitor.setPassword(monitor.getPassword());
+            oldMonitor.setUserName(monitor.getUserName());
+            oldMonitor.setPermission(monitor.getPermission());
             oldMonitor.setNif(monitor.getNif());
             oldMonitor.setName(monitor.getName());
             oldMonitor.setLastName(monitor.getLastName());
+            oldMonitor.setPhone(monitor.getPhone());
+            
             oldMonitor.setCategories( monitor.getCategories() );
             return true;
         } catch (NoResultException e) {

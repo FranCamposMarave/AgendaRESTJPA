@@ -1,0 +1,112 @@
+<!-- Container Start -->
+<div class="col-md-12">
+
+    <!-- PageHeader Start -->
+    <div class="page-header">
+        <h2 class="text-primary"><i class="fa {{action=='Crear'?'fa-plus-circle': 'fa-pencil-square-o'}}"></i> Usuario nuevo</h2>
+    </div>
+
+    <!-- PageHeader End -->
+    <!-- Activity Form Start -->
+    <form novalidate name="userForm" ng-submit="submit()">
+
+        <div class="form-group col-md-12">
+            <label>Nombre de usuario:</label>
+            <input type="text" ng-model="user.userName" ng-model-options="{ updateOn: 'blur' }"
+                   name="userName" required class="form-control" ng-maxlength="9">
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+            </div>
+            <div class="text-danger">
+                <p ng-show="userForm.userName.$error.required && userForm.userName.$dirty">El nombre de usuario es un campo obligatorio.</p>
+                <p ng-show="userForm.userName.$dirty && !validateUserName(user.userName)">El nombre de usuario introducido no es válido</p>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label>Contraseña:</label>
+            <input type="text" ng-model="user.password" ng-model-options="{ updateOn: 'blur' }"
+                   name="password" required class="form-control" ng-maxlength="9">
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+            </div>
+            <div class="text-danger">
+                <p ng-show="userForm.password.$error.required && userForm.password.$dirty">La contraseña es un campo obligatorio.</p>
+            </div>
+        </div>
+
+
+        <div class="form-group col-md-12">
+            <label>NIF:</label>
+            <input type="text" ng-model="user.nif" ng-model-options="{ updateOn: 'blur' }"
+                   name="nif" required class="form-control" ng-maxlength="9">
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+            </div>
+            <div class="text-danger">
+                <p ng-show="userForm.nif.$error.required && userForm.nif.$dirty">El NIF es un campo obligatorio.</p>
+                <p ng-show="userForm.nif.$dirty && !validateDNI(user.nif)">El NIF introducido no es válido</p>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label>Nombre:</label>
+            <input type="text" ng-model="user.name" ng-model-options="{ updateOn: 'blur' }"
+                   name="name" required class="form-control" ng-maxlength="255">
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+            </div>
+            <div class="text-danger">
+                <span ng-show="userForm.name.$error.required && !userForm.name.$pristine">El nombre es un campo obligatorio.</span>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label>Apellidos:</label>
+            <input type="text" ng-model="user.lastName" ng-model-options="{ updateOn: 'blur' }"
+                   name="lastName" required class="form-control" ng-maxlength="255">
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+            </div>
+            <div class="text-danger">
+                <span ng-show="userForm.lastName.$error.required && !userForm.lastName.$pristine">El apellido es un campo obligatorio.</span>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label>email:</label>
+            <input type="text" ng-model="user.email" ng-model-options="{ updateOn: 'blur' }"
+                   name="email" required class="form-control" ng-maxlength="255">
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+            </div>
+            <div class="text-danger">
+                <span ng-show="userForm.email.$error.required && !userForm.email.$pristine">El email es un campo obligatorio.</span>
+                <p ng-show="userForm.email.$dirty && !validateEmail(user.email)">El email introducido no es válido</p>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label>Telefono:</label>
+            <input type="text" ng-model="user.phone" ng-model-options="{ updateOn: 'blur' }"
+                   name="phone" required class="form-control" ng-maxlength="9">
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+            </div>
+            <div class="text-danger">
+                <span ng-show="userForm.phone.$error.required && !userForm.phone.$pristine">El telefono es un campo obligatorio.</span>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 text-right">
+            <button type="submit" class="pure-button pure-button-primary">
+                <i class="fa fa-check"></i> Crear </button>
+        </div>
+    </form>
+    <!-- Activity Form End-->
+</div>
+
+<!-- Container End-->
+<div class="clearfix"></div>
+<hr/>

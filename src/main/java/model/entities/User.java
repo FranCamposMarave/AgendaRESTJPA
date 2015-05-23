@@ -11,21 +11,33 @@ import java.util.Set;
         @NamedQuery(name="User.getAll", query = "SELECT u FROM User u"),
         @NamedQuery(name="User.get", query = "SELECT u FROM User u WHERE u.id = :id"),
         @NamedQuery(name="User.getByUserName", query = "SELECT u FROM User u WHERE u.userName = :userName"),
+        @NamedQuery(name="User.getByToken", query = "SELECT u FROM User u WHERE u.token = :token"),
         @NamedQuery(name="User.getByUserNameAndPassword", query = "SELECT u FROM User u WHERE u.userName = :userName AND u.password =:password"),
         @NamedQuery(name="User.delete", query = "DELETE FROM User u WHERE u.id = :id")
 })
+
 @Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorColumn(name="ROLE")
+@DiscriminatorValue("USER")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @XmlTransient
     private Long id;
-
     private String userName;
     private String password;
     private int permission;
+    private String token;
+    private String nif;
+    private String name;
+    private String lastName;
+    private String email;
+    private String phone;
+
+
+
+    private String ROLE;
 
     public String getToken() {
         return token;
@@ -34,8 +46,6 @@ public class User {
     public void setToken(String token) {
         this.token = token;
     }
-
-    private String token;
 
     public Long getId() {
         return id;
@@ -69,6 +79,34 @@ public class User {
         this.permission = permission;
     }
 
+    public String getNif() {
+        return nif;
+    }
+    public void setNif(String nif) {this.nif = nif;}
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {return email;}
+    public void setEmail(String email) {this.email = email;}
+
+    public String getPhone() {return phone;}
+    public void setPhone(String phone) {this.phone = phone;}
+
+    public String getROLE() {
+        return ROLE;
+    }
 
     public User() {
         super();
@@ -79,11 +117,15 @@ public class User {
         this.password = password;
     }
 
-    public User(Long id, String userName, String password, int permission) {
+    public User(Long id, String userName, String password, int permission, String nif, String name, String lastName) {
         this.id = id;
         this.userName = userName;
         this.password = password;
         this.permission = permission;
+        this.id = id;
+        this.nif = nif;
+        this.name = name;
+        this.lastName = lastName;
     }
 
 
@@ -107,6 +149,11 @@ public class User {
                 ", password='" + password + '\'' +
                 ", permission=" + permission +
                 ", token='" + token + '\'' +
+                ", nif='" + nif + '\'' +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
                 '}';
     }
 }

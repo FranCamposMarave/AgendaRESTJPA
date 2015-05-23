@@ -83,7 +83,7 @@
             <label>Categorías:</label>
             <div>
                 <ui-select name="categories" required class="form-control" multiple style="width: 100%;"
-                           tagging tagging-label="(custom 'new' label)" ng-model="monitor.categories" theme="bootstrap" sortable="true" ng-disabled="disabled" style="width: 300px;" title="Choose a color">
+                           tagging tagging-label="(custom 'new' label)" ng-model="monitor.categories" theme="bootstrap" sortable="true" ng-disabled="disabled" style="width: 300px;" title="Elige una categoría">
                     <ui-select-match placeholder="Selecciona las categorías...">{{$item.title}}</ui-select-match>
                     <ui-select-choices repeat="category in categories">
                         {{category.title}}

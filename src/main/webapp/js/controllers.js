@@ -270,12 +270,21 @@ app.controller('loginCtrl', ['$scope', '$routeParams', 'LoginService',
                     console.log("Retrieve login token: " + data);
                 });
         };
-
-
-
     }
 ]);
 
 
+app.controller('registrationCtrl', ['$scope', '$routeParams', 'RegistrationService',
+    function($scope, $routeParams, RegistrationService, toastr){
 
+        $scope.submit = function () {
+            console.log("User: " + $scope.user);
+            RegistrationService.registration($scope.user)
+                .success(function(data) {
+                    toastr.success('La reserva ha sido añadida!', 'Añadir');
+                    console.log("Registration: " + data);
+                });
+        };
+    }
+]);
 

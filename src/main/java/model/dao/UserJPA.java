@@ -54,6 +54,16 @@ public class UserJPA {
         }
     }
 
+    public User getByToken(String token) {
+        TypedQuery<User> query = em.createNamedQuery("User.getByToken", User.class);
+        query.setParameter("token", token);
+        try {
+            return query.getSingleResult();
+        } catch (NoResultException e) {
+            return NULL;
+        }
+    }
+
     public boolean delete(Long id) {
         TypedQuery<User> query = em.createNamedQuery("User.delete", User.class);
         query.setParameter("id", id);
@@ -78,6 +88,10 @@ public class UserJPA {
             oldUser.setPassword(user.getPassword());
             oldUser.setUserName(user.getUserName());
             oldUser.setPermission(user.getPermission());
+            oldUser.setNif(user.getNif());
+            oldUser.setName(user.getName());
+            oldUser.setLastName(user.getLastName());
+            oldUser.setPhone(user.getPhone());
             return true;
         } catch (NoResultException e) {
             return false;

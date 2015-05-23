@@ -17,8 +17,8 @@ public class UserServices {
     @Inject
     private UserJPA userDAO;
 
-    @Inject
-    private Validator<User> validatorUser;
+    //@Inject
+    //private Validator<User> validatorUser;
 
     @Context
     private UriInfo uriInfo;
@@ -50,10 +50,12 @@ public class UserServices {
     @Produces(MediaType.APPLICATION_JSON)
     public Response addUser(User user) {
         System.out.println(user.toString());
+
+        /*
         if ( !validatorUser.validate( user) ){
             return Response.status( Response.Status.FORBIDDEN ).build();
         }
-
+        */
         if ( userDAO.get(user.getId()) != UserJPA.NULL ){
             return Response.status( Response.Status.CONFLICT ).build();
         }
@@ -74,8 +76,6 @@ public class UserServices {
         }
     }
 
-
-
     @PUT
     @Path("/{id}")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
@@ -85,9 +85,10 @@ public class UserServices {
             return Response.status(Response.Status.BAD_REQUEST).build(); //400 -> Error en conexión
         }
         else {
+            /*
             if ( !validatorUser.validate( user) ){
                 return Response.status( Response.Status.FORBIDDEN ).build(); //403  -> Datos Incorrectos
-            }
+            }*/
             User existent = userDAO.getByUserName(user.getUserName());
             if ( existent != UserJPA.NULL && ! existent.equals(user) ){
                 return Response.status( Response.Status.CONFLICT ).build();  //409  -> Nif ya existe

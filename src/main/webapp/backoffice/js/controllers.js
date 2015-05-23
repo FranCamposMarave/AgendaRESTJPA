@@ -494,6 +494,8 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
         MonitorService.retrieveMonitor($routeParams.id)
             .success(function(data) {
                 $scope.monitor = data.monitor;
+                $scope.monitor.categories = !$scope.monitor.categories ? [] : $scope.monitor.categories;
+                $scope.monitor.categories = [].concat( $scope.monitor.categories );
                 console.log("Retrieved monitor: " + $scope.monitor.title);
             })
     }else{

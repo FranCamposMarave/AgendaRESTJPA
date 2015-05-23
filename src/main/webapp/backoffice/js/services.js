@@ -28,13 +28,13 @@
         }
 
         this.deleteActivity = function(id) {
-            var url = app.baseURI + app.activityURI + id;
+            var url = app.baseURI + app.activityURI + id  +"/" + localStorage.getItem("token");
             var data = {'id': id}
             return $http.delete(url, data);
         }
 
         this.updateActivity = function (activity) {
-            var url = app.baseURI + app.activityURI + activity.id ;
+            var url = app.baseURI + app.activityURI + activity.id +"/" + localStorage.getItem("token");
             var data = "{activity:" + JSON.stringify(activity) + "}";
             return $http.put(url, data );
         }

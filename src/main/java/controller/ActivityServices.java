@@ -1,8 +1,12 @@
 package controller;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+import controller.validators.TokenValidator;
 import controller.validators.Validator;
 import model.dao.ActivityJPA;
+import model.dao.UserJPA;
 import model.entities.Activity;
+import model.entities.User;
 import services.ImageUploaderService;
 
 import javax.ejb.Stateless;
@@ -23,6 +27,9 @@ public class ActivityServices {
 
     @Inject
     private Validator<Activity> validatorActivity;
+
+    @Inject
+    private TokenValidator tokenValidator;
 
     @Context
     private UriInfo uriInfo;
@@ -92,10 +99,17 @@ public class ActivityServices {
     }
 
     @PUT
-    @Path("/{id}")
+    @Path("/{id}/{token}")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.APPLICATION_JSON)
-    public Response updateActivity(@PathParam("id") long id, Activity activity) {
+    public Response updateActivity(@PathParam("id") long id, @PathParam("token") String token, Activity activity) {
+
+        Response r = tokenValidator.validate(token);
+        if(r != null) {
+            return r;
+        }
+
+        //System.out.println(user.getROLE());
         String oldPicture = activityDAO.get(id).getPicture();
         if( id != activity.getId() ) {
             return Response.status(Response.Status.BAD_REQUEST).build();  //400 -> Error en conexión
