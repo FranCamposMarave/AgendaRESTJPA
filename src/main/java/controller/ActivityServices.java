@@ -65,9 +65,16 @@ public class ActivityServices {
     }
 
     @POST
+    @Path("/{token}")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.APPLICATION_JSON)
-    public Response addActivity(Activity activity) {
+    public Response addActivity(@PathParam("token") String token, Activity activity) {
+
+        Response r = tokenValidator.validate(token);
+        if(r != null) {
+            return r;
+        }
+
         if ( !validatorActivity.validate( activity) ){
             return Response.status( Response.Status.FORBIDDEN ).build();  //403  -> Datos Incorrectos
         }
