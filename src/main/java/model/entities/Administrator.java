@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 
 @DiscriminatorValue("ADMIN")
-public class Admin2 extends User {
+public class Administrator extends User {
 
 
-    public Admin2() {
+    public Administrator() {
         super();
     }
 
-    public Admin2(Long id, String userName, String password, int permission, String nif, String name, String lastName) {
+    public Administrator(Long id, String userName, String password, int permission, String nif, String name, String lastName) {
         super(id, userName, password, permission, nif, name, lastName);
-        Admin2 a = new Admin2();
+        Administrator a = new Administrator();
     }
 
     public void nono(){
