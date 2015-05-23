@@ -259,30 +259,36 @@ app.controller('reservationCtrl', function ($scope, $rootScope, $routeParams, Fi
 });
 
 
-app.controller('loginCtrl', ['$scope', '$routeParams', 'LoginService',
-    function($scope, $routeParams, LoginService){
+app.controller('loginCtrl', ['$scope', '$routeParams', 'LoginService', '$location', 'toastr',
+    function($scope, $routeParams, LoginService, $location, toastr){
 
         $scope.submit = function () {
-            console.log("USer: " + $scope.user);
+            console.log("User: " + $scope.user);
             LoginService.login($scope.user)
                 .success(function(data) {
                     localStorage.setItem("token",data);
+                    toastr.success('Login correcto!', 'Login');
+                    $location.path('/');
                     console.log("Retrieve login token: " + data);
+                }).error(function(data) {
+                    toastr.error('Login incorrecto', 'Login');
                 });
         };
     }
 ]);
 
 
-app.controller('registrationCtrl', ['$scope', '$routeParams', 'RegistrationService',
-    function($scope, $routeParams, RegistrationService, toastr){
+app.controller('registrationCtrl', ['$scope', '$routeParams', 'RegistrationService', '$location', 'toastr',
+    function($scope, $routeParams, RegistrationService, $location, toastr){
 
         $scope.submit = function () {
-            console.log("User: " + $scope.user);
+            console.log("User: " + $scope.user.userName);
             RegistrationService.registration($scope.user)
                 .success(function(data) {
-                    toastr.success('La reserva ha sido añadida!', 'Añadir');
                     console.log("Registration: " + data);
+                    toastr.success('Usuario creado!', 'Añadir');
+                    $location.path('/');
+                    $scope.userForm.$submitted = true;
                 });
         };
     }
