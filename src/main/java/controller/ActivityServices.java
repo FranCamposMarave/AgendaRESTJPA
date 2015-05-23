@@ -65,10 +65,14 @@ public class ActivityServices {
     }
 
     @POST
-    @Path("/{token}")
+    @Path("/a/{token}")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.APPLICATION_JSON)
     public Response addActivity(@PathParam("token") String token, Activity activity) {
+
+        System.out.println("=========================="+token);
+        System.out.println("=========================="+token);
+        System.out.println("=========================="+token);
 
         Response r = tokenValidator.validate(token);
         if(r != null) {

@@ -16,8 +16,9 @@
         }
 
         this.addActivity = function (activity) {
-            var url = app.baseURI + app.activityURI  +"/" + localStorage.getItem("token");
+            var url = app.baseURI + app.activityURI  +"a/" + localStorage.getItem("token");
             var data = "{activity:" + JSON.stringify(activity) + "}";
+            console.log(url);
             console.log(activity);
             return $http.post(url, data);
         }
