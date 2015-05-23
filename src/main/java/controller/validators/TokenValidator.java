@@ -13,7 +13,7 @@ public class TokenValidator {
     private UserJPA userDAO;
 
     public Response validate(String token) {
-        if (token == null) {
+        if (token == null || token.equals("")) {
             return Response.status( Response.Status.UNAUTHORIZED ).build();
         }
 
