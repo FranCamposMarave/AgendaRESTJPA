@@ -35,6 +35,8 @@ public class Monitor extends User {
         this.categories = categories;
     }
 
+
+
     public Set<Category> getCategories() {
         return categories;
     }
@@ -42,4 +44,5 @@ public class Monitor extends User {
     public void setCategories(Set<Category> categories) {
         this.categories = categories;
     }
+
 }

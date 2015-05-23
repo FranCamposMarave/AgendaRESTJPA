@@ -16,7 +16,7 @@ import java.util.Set;
         @NamedQuery(name="User.delete", query = "DELETE FROM User u WHERE u.id = :id")
 })
 
-@Inheritance(strategy=InheritanceType.JOINED)
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="ROLE")
 @DiscriminatorValue("USER")
 public class User {
@@ -35,9 +35,13 @@ public class User {
     private String email;
     private String phone;
 
+    public String ROLE;
 
 
-    private String ROLE;
+    public String getROLE() {
+        return ROLE;
+    }
+
 
     public String getToken() {
         return token;
@@ -104,10 +108,6 @@ public class User {
     public String getPhone() {return phone;}
     public void setPhone(String phone) {this.phone = phone;}
 
-    public String getROLE() {
-        return ROLE;
-    }
-
     public User() {
         super();
     }
@@ -127,7 +127,6 @@ public class User {
         this.name = name;
         this.lastName = lastName;
     }
-
 
     @Override
     public boolean equals(Object o) {
@@ -154,6 +153,7 @@ public class User {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
+                ", ROLE='" + ROLE + '\'' +
                 '}';
     }
 }

@@ -1,12 +1,9 @@
 package controller;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
 import controller.validators.TokenValidator;
 import controller.validators.Validator;
 import model.dao.ActivityJPA;
-import model.dao.UserJPA;
 import model.entities.Activity;
-import model.entities.User;
 import services.ImageUploaderService;
 
 import javax.ejb.Stateless;
@@ -70,11 +67,7 @@ public class ActivityServices {
     @Produces(MediaType.APPLICATION_JSON)
     public Response addActivity(@PathParam("token") String token, Activity activity) {
 
-        System.out.println("=========================="+token);
-        System.out.println("=========================="+token);
-        System.out.println("=========================="+token);
-
-        Response r = tokenValidator.validate(token);
+        Response r = tokenValidator.validate(token,Permissions.ADD_ACTIVITY);
         if(r != null) {
             return r;
         }
@@ -100,7 +93,7 @@ public class ActivityServices {
     @Produces("application/json")
     public Response deleteActivity(@PathParam("id") long id, @PathParam("token") String token) {
 
-        Response r = tokenValidator.validate(token);
+        Response r = tokenValidator.validate(token,Permissions.DELETE_ACTIVITY);
         if(r != null) {
             return r;
         }
@@ -121,7 +114,7 @@ public class ActivityServices {
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateActivity(@PathParam("id") long id, @PathParam("token") String token, Activity activity) {
 
-        Response r = tokenValidator.validate(token);
+        Response r = tokenValidator.validate(token, Permissions.UPDATE_ACTIVITY);
         if(r != null) {
             return r;
         }

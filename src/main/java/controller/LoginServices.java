@@ -30,12 +30,14 @@ public class LoginServices {
     public Response login(User user) {
 
         User existent = userDAO.get(user.getUserName(),user.getPassword());
-
+        System.out.println("=== LOGIN USER=="+user.getUserName()+",,"+user.getPassword());
+        System.out.println("=== LOGIN USER=="+ existent.toString());
         if ( existent != UserJPA.NULL && ! existent.equals(user) ){
 
             int randomNum = 1 + (int) (Math.random() * 100);
 
             existent.setToken(randomNum+""+existent.getId());
+
             if ( userDAO.update( existent ) ){
                 return Response.ok( existent.getToken()).build();
             }else {
