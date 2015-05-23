@@ -18,6 +18,31 @@
     <form novalidate name="monitorForm" ng-submit="submit()">
 
         <div class="form-group col-md-12">
+            <label>Nombre de usuario:</label>
+            <input type="text" ng-model="monitor.userName" ng-model-options="{ updateOn: 'blur' }"
+                   name="userName" required class="form-control" ng-maxlength="9">
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+            </div>
+            <div class="text-danger">
+                <p ng-show="monitorForm.userName.$error.required && monitorForm.userName.$dirty">El nombre de usuario es un campo obligatorio.</p>
+                <p ng-show="monitorForm.userName.$dirty && !validateUserName(monitor.userName)">El nombre de usuario introducido no es válido</p>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label>Contraseña:</label>
+            <input type="text" ng-model="monitor.password" ng-model-options="{ updateOn: 'blur' }"
+                   name="password" required class="form-control" ng-maxlength="9">
+            <div>
+                <span class="helpBlock">*Campo obligatorio</span>
+            </div>
+            <div class="text-danger">
+                <p ng-show="monitorForm.password.$error.required && monitorForm.password.$dirty">La contraseña es un campo obligatorio.</p>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
             <label>NIF:</label>
             <input type="text" ng-model="monitor.nif" ng-model-options="{ updateOn: 'blur' }"
                    name="nif" required class="form-control" ng-maxlength="9">
