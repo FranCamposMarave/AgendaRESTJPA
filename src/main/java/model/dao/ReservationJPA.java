@@ -44,7 +44,7 @@ public class ReservationJPA {
         try {
             int deletedRows = query.executeUpdate();
             if(deletedRows == 1){
-                activityDAO.increaseRemainingPlaces(reservation.getActivity().getId(),reservation.getPlaces());
+                //activityDAO.increaseRemainingPlaces(reservation.getActivity().getId(),reservation.getPlaces());
             }
             return deletedRows == 1;
         } catch (NoResultException e) {

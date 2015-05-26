@@ -80,6 +80,8 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                         toastr.error('No existe la actividad', 'Borrar');
                       }else if ( status == 500 ){
                         toastr.error('La actividad tiene reservas y no se puede borrar', 'Borrar');
+                      }else if ( status == 401 || status == 405){
+                          toastr.error('No tienes permisos para realizar la acción', 'Borrar');
                       }else{
                         toastr.error('Error en la conexión al servidor', 'Borrar');
                       }
