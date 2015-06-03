@@ -44,6 +44,14 @@
         }
     }]);
 
+    app.service('LoginService', ['$http', function($http) {
+        this.login = function (user) {
+            var url = app.baseURI + app.loginURI;
+            var data = "{user:" + JSON.stringify(user) + "}";
+            return $http.put(url, data);
+        }
+    }]);
+
     app.service('CategoryService', ['$http', function($http) {
 
         this.retrieveAll = function() {

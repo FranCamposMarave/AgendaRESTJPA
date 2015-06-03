@@ -32,11 +32,25 @@ app.controller('homeCtrl', ['$scope', '$http',
     }
 ]);
 
-app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
-    function ($scope, $rootScope, $timeout, $modal, ActivityService, FileUploader, toastr) {
+app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ActivityService', 'LoginService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, ActivityService, LoginService, FileUploader, toastr) {
         if(localStorage.getItem("token")==null){
             toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
         }
+
+        $scope.submit = function () {
+            console.log("User: " + $scope.user);
+            LoginService.login($scope.user)
+                .success(function(data) {
+                    localStorage.setItem("token",data);
+                    toastr.success('Login correcto!', 'Login');
+                    $location.path('/');
+                    console.log("Retrieve login token: " + data);
+                }).error(function(data) {
+                    toastr.error('Login incorrecto', 'Login');
+                });
+        };
+
         $scope.retrieveAll = function () {
             ActivityService.retrieveAll()
                 .success(function(data) {
