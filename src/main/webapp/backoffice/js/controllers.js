@@ -7,10 +7,17 @@ app.config(function(uiSelectConfig) {
     uiSelectConfig.theme = 'selectize';
 });
 
-app.controller('headerCtrl', ['$scope', '$location',
-    function($scope, $location){
+app.controller('headerCtrl', ['$scope', '$location', 'toastr',
+    function($scope, $location, toastr){
         $scope.currentLocation = $location.path();
+
+        $scope.logout = function () {
+            toastr.success('Adios', 'Log Out');
+            localStorage.clear();
+            $location.path('/naturAdventure/#/');
+        }
     }
+
 ]);
 
 app.controller('menuCtrl', ['$scope', '$location',
@@ -32,11 +39,8 @@ app.controller('homeCtrl', ['$scope', '$http',
     }
 ]);
 
-app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ActivityService', 'LoginService', 'FileUploader', 'toastr',
-    function ($scope, $rootScope, $timeout, $modal, ActivityService, LoginService, FileUploader, toastr) {
-        if(localStorage.getItem("token")==null){
-            toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
-        }
+app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'ActivityService', 'LoginService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, $location, ActivityService, LoginService, FileUploader, toastr) {
 
         $scope.submit = function () {
             console.log("User: " + $scope.user);
@@ -44,7 +48,7 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
                 .success(function(data) {
                     localStorage.setItem("token",data);
                     toastr.success('Login correcto!', 'Login');
-                    $location.path('/');
+                    $location.path('activities');
                     console.log("Retrieve login token: " + data);
                 }).error(function(data) {
                     toastr.error('Login incorrecto', 'Login');
@@ -116,6 +120,7 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
 app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'ActivityService', 'MonitorService', 'FileUploader', 'toastr',
     function ($scope, $rootScope, $timeout, $modal, $location, ActivityService, MonitorService, FileUploader, toastr) {
         if(localStorage.getItem("token")==null){
+            toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
             $location.path('home');
         }
         $scope.retrieveAll = function () {
@@ -198,6 +203,7 @@ app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal', 
 app.controller('categoriesCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'CategoryService', 'FileUploader', 'toastr',
     function ($scope, $rootScope, $timeout, $modal, $location, CategoryService, FileUploader, toastr) {
         if(localStorage.getItem("token")==null){
+            toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
             $location.path('home');
         }
         $scope.retrieveAll = function () {
@@ -266,6 +272,7 @@ app.controller('categoriesCtrl', ['$scope', '$rootScope', '$timeout', '$modal', 
 app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileUploader, ActivityService, CategoryService, $location, toastr) {
 
     if(localStorage.getItem("token")==null){
+        toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
         $location.path('home');
     }
     CategoryService.retrieveAll()
@@ -451,6 +458,7 @@ app.controller('DropdownCtrl', function ($scope, $log) {
 app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, CategoryService, $location, toastr) {
 
     if(localStorage.getItem("token")==null){
+        toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
         $location.path('home');
     }
 
@@ -528,6 +536,7 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
 app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, MonitorService, $location, toastr, CategoryService) {
 
     if(localStorage.getItem("token")==null){
+        toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
         $location.path('home');
     }
 
@@ -627,6 +636,7 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
 app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'MonitorService', 'FileUploader', 'toastr',
     function ($scope, $rootScope, $timeout, $modal, $location, MonitorService, FileUploader, toastr) {
         if(localStorage.getItem("token")==null){
+            toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
             $location.path('home');
         }
         $scope.retrieveAll = function () {
@@ -698,6 +708,7 @@ app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$
 app.controller('usersCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'UserService', 'toastr',
     function ($scope, $rootScope, $timeout, $modal, $location, UserService, toastr) {
         if(localStorage.getItem("token")==null){
+            toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
             $location.path('home');
         }
         $scope.retrieveAll = function () {
@@ -761,6 +772,7 @@ app.controller('usersCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$loc
 app.controller('reservationsCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'ReservationService', 'ActivityService', 'FileUploader', 'toastr',
     function ($scope, $rootScope, $timeout, $modal, $location, ReservationService, ActivityService, FileUploader, toastr) {
         if(localStorage.getItem("token")==null){
+            toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
             $location.path('home');
         }
         $scope.retrieveAll = function () {

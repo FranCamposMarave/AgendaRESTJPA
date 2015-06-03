@@ -8,6 +8,7 @@
     app.monitorURI = "monitors/";
     app.userURI = "users/";
     app.reservationURI = "reservations/";
+    app.loginURI = "login/";
 
     app.service('ActivityService', ['$http', function($http) {
 
