@@ -4,119 +4,166 @@
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="description" content=""> 
+    <meta name="author" content="">  
+    <title>NaturAdventure - Pasión por la aventura</title>  
 
-    <title>NaturAdventure - Pasión por la aventura</title>
+    <!-- Bootstrap Core CSS --> 
+    <link href="css/bootstrap.css" rel="stylesheet"> 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- Angular UI -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/ui-select/master/dist/select.min.css">
-    <!-- Pure CSS-->
-    <link href="css/pure.min.css" rel="stylesheet">
-    <link href="css/pure-custom.css" rel="stylesheet">
-    <!-- FontAwesome CSS-->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <!-- Bootstrap Social CSS-->
-    <link href="css/bootstrap-social.css" rel="stylesheet">
-    <!--Loading Bar -->
-    <link href="css/bootstrap-social.css" rel="stylesheet">
-    <!-- Toast AngularJS -->
-    <link rel="stylesheet" type="text/css" href="css/angular-toastr.css" />
+    <!-- Angular UI --> 
+    <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/ui-select/master/dist/select.min.css"> 
+
+    <!-- Pure CSS--> 
+    <link href="css/pure.min.css" rel="stylesheet"> 
+    <link href="css/pure-custom.css" rel="stylesheet"> 
+
+    <!-- FontAwesome CSS--> 
+    <link href="css/font-awesome.min.css" rel="stylesheet"> 
+
+    <!-- Bootstrap Social CSS--> 
+    <link href="css/bootstrap-social.css" rel="stylesheet"> 
+
+    <!--Loading Bar --> 
+    <link href="css/bootstrap-social.css" rel="stylesheet"> 
+
+    <!-- Toast AngularJS --> 
+    <link rel="stylesheet" type="text/css" href="css/angular-toastr.css" /> 
+
+    <!-- Custom CSS --> 
+    <link href="css/style.css" rel="stylesheet">  
+
+    <!--[if lte IE 8]> 
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css"> 
+    <![endif]-->     <!--[if gt IE 8]><!--> 
+    <link rel="stylesheet" href="css/layouts/side-menu.css"> 
+    <!--<![endif]-->     <!--[if lt IE 9]> 
+    <script src="js/html5shiv.js"></script> 
+    <![endif]--> 
+
+
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
 
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="css/layouts/side-menu.css">
-    <!--<![endif]-->
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <![endif]-->
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
 
-<div id="layout">
-    <!-- Menu toggle -->
-    <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
-    </a>
+<div id="wrapper">
 
-    <div id="menu" ng-controller="headerCtrl">
-        <div class="pure-menu">
-            <a class="pure-menu-heading" href="/naturAdventure/#/">NaturAdventure</a>
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item">
-                    <a href="#/" ng-class="{menu-selected: currentLocation == '/' }" class="pure-menu-link">Inicio</a>
+    <!-- Navigation -->
+    <nav class="navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand white" href="index.html">NaturAdventure</a>
+        </div>
+        <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">
+
+            <li class="dropdown">
+                <a class="dropdown-toggle white" data-toggle="dropdown"><i class="fa fa-user white"> John Smithh</i><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="headerCtrl">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="index.html"> <i class="fa fa-fw fa-sign-in"></i> Login</a>
                 </li>
-                <li class="pure-menu-item">
-                    <a href="#/activities" ng-class="{menu-selected: currentLocation == '/activities' }"
-                       class="pure-menu-link active">Actividades</a>
+                <li>
+                    <a href="#/activities"><i class="fa fa-fw fa-futbol-o"></i> Actividades</a>
                 </li>
-                <li class="pure-menu-item">
-                    <a href="#/categories" ng-class="{menu-selected: currentLocation == '/activities' }"
-                       class="pure-menu-link">Categorías</a>
+                <li>
+                    <a href="#/categories"><i class="fa fa-fw fa-tags"></i> Categorías</a>
                 </li>
-                <li class="pure-menu-item">
-                    <a href="#/monitors" ng-class="{menu-selected: currentLocation == '/activities' }"
-                       class="pure-menu-link">Monitores</a>
+                <li>
+                    <a href="#/monitors"><i class="fa fa-fw fa-group"></i> Monitores</a>
                 </li>
-                <li class="pure-menu-item">
-                    <a href="#/assignMonitors" ng-class="{menu-selected: currentLocation == '/activities' }"
-                       class="pure-menu-link">Asignar Monitores</a>
+                <li>
+                    <a href="#/assignMonitors"><i class="fa fa-fw fa-check-circle-o"></i> Asignar Monitores</a>
                 </li>
-                <li class="pure-menu-item">
-                    <a href="#/reservations" class="pure-menu-link">Reservas</a>
+                <li>
+                    <a href="#/reservations"><i class="fa fa-fw fa-ticket"></i> Gestión Resevas</a>
                 </li>
             </ul>
         </div>
-    </div>
+        <!-- /.navbar-collapse -->
+    </nav>
 
+    <div id="page-wrapper">
 
-    <!-- Page Content Start -->
-    <div class=" col-md-offset-1 col-md-10 col-sm-12" ng-view></div>
-    <!-- Page Content End -->
+        <div class="container-fluid">
 
-    <div class="clearfix"></div>
-
-    <footer>
-        <div class="col-lg-12 text-center">
-            <p>Copyright &copy; NatureAdventure 2015</p>
+            <div class=" col-md-offset-1 col-md-10 col-sm-12" ng-view></div> 
+            <div class="clearfix"></div>
         </div>
-    </footer>
+        <!-- /.container-fluid -->
+        <footer> 
+            <div class="col-lg-12 text-center"> 
+                <p>Copyright &copy; NatureAdventure 2015</p> 
+            </div> 
+        </footer>
+
+    </div>
+    <!-- /#page-wrapper -->
 
 </div>
+<!-- /#wrapper -->
 
-<!-- AngularJS core -->
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.1/angular.min.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- AngularJS core --> 
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.1/angular.min.js"></script>  
 <!-- AngularJS Modules -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-<!-- http://angular-ui.github.io/bootstrap/ -->
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script> 
+<!-- http://angular-ui.github.io/bootstrap/ --> 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.min.js"></script>
-<script type="text/javascript" src="js/ui-bootstrap-tpls-0.12.1.min.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.min.js"></script> 
+<script type="text/javascript" src="js/ui-bootstrap-tpls-0.12.1.min.js"></script> 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.1/angular-animate.js"></script>
-<script type="text/javascript" src="js/angular-file-upload.min.js"></script>
-<script type="text/javascript" src="js/loading-bar.js"></script>
+ <script type="text/javascript" src="js/angular-file-upload.min.js"></script> 
+<script type="text/javascript" src="js/loading-bar.js"></script> 
 <script type="text/javascript" src="js/angular-toastr.tpls.js"></script>
-<script src="https://cdn.rawgit.com/angular-ui/ui-select/master/dist/select.min.js"></script>
+ <script src="https://cdn.rawgit.com/angular-ui/ui-select/master/dist/select.min.js"></script>
 
-<!-- AngularJS Services -->
-<script type="text/javascript" src="js/services.js"></script>
-
+  <!-- AngularJS Services --> 
+<script type="text/javascript" src="js/services.js"></script>  
 <!-- AngularJS Routing -->
-<script type="text/javascript" src="js/routing.js"></script>
-<script type="text/javascript" src="js/controllers.js"></script>
+ <script type="text/javascript" src="js/routing.js">
+
+</script> <script type="text/javascript" src="js/controllers.js"></script>
 
 </body>
+
 
 </html>

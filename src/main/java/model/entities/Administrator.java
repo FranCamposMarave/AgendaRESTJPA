@@ -20,8 +20,4 @@ public class Administrator extends User {
         Administrator a = new Administrator();
     }
 
-    public void nono(){
-
-    }
-
 }
