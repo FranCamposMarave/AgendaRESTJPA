@@ -116,4 +116,9 @@ public class ActivityJPA {
 
     }
 
+public boolean decreseRemainingPlaces(Long id, int decrese) {
+
+    return increaseRemainingPlaces(id,-decrese);
+}
+
 }
