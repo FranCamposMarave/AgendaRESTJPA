@@ -34,6 +34,9 @@ app.controller('homeCtrl', ['$scope', '$http',
 
 app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ActivityService', 'FileUploader', 'toastr',
     function ($scope, $rootScope, $timeout, $modal, ActivityService, FileUploader, toastr) {
+        if(localStorage.getItem("token")==null){
+            toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
+        }
         $scope.retrieveAll = function () {
             ActivityService.retrieveAll()
                 .success(function(data) {
@@ -96,8 +99,11 @@ app.controller('backofficeCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
     }
 ]);
 
-app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ActivityService', 'MonitorService', 'FileUploader', 'toastr',
-    function ($scope, $rootScope, $timeout, $modal, ActivityService, MonitorService, FileUploader, toastr) {
+app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'ActivityService', 'MonitorService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, $location, ActivityService, MonitorService, FileUploader, toastr) {
+        if(localStorage.getItem("token")==null){
+            $location.path('home');
+        }
         $scope.retrieveAll = function () {
             ActivityService.retrieveAll()
                 .success(function(data) {
@@ -175,8 +181,11 @@ app.controller('activitiesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
     }
 ]);
 
-app.controller('categoriesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'CategoryService', 'FileUploader', 'toastr',
-    function ($scope, $rootScope, $timeout, $modal, CategoryService, FileUploader, toastr) {
+app.controller('categoriesCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'CategoryService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, $location, CategoryService, FileUploader, toastr) {
+        if(localStorage.getItem("token")==null){
+            $location.path('home');
+        }
         $scope.retrieveAll = function () {
             CategoryService.retrieveAll()
                 .success(function(data) {
@@ -242,6 +251,9 @@ app.controller('categoriesCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,
 
 app.controller('activityCtrl', function ($scope, $rootScope, $routeParams, FileUploader, ActivityService, CategoryService, $location, toastr) {
 
+    if(localStorage.getItem("token")==null){
+        $location.path('home');
+    }
     CategoryService.retrieveAll()
     .success(function(data) {
         $scope.categories = data.category;
@@ -424,6 +436,10 @@ app.controller('DropdownCtrl', function ($scope, $log) {
 
 app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, CategoryService, $location, toastr) {
 
+    if(localStorage.getItem("token")==null){
+        $location.path('home');
+    }
+
     if ( $routeParams.id ){
         $scope.action = "Editar";
         CategoryService.retrieveCategory($routeParams.id)
@@ -496,6 +512,10 @@ app.controller('categoryCtrl', function ($scope, $rootScope, $routeParams, Categ
 });
 
 app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, MonitorService, $location, toastr, CategoryService) {
+
+    if(localStorage.getItem("token")==null){
+        $location.path('home');
+    }
 
     if ( $routeParams.id ){
         $scope.action = "Editar";
@@ -590,8 +610,11 @@ app.controller('monitorCtrl', function ($scope, $rootScope, $routeParams, Monito
 
 });
 
-app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'MonitorService', 'FileUploader', 'toastr',
-    function ($scope, $rootScope, $timeout, $modal, MonitorService, FileUploader, toastr) {
+app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'MonitorService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, $location, MonitorService, FileUploader, toastr) {
+        if(localStorage.getItem("token")==null){
+            $location.path('home');
+        }
         $scope.retrieveAll = function () {
             MonitorService.retrieveAll()
             .success(function(data) {
@@ -658,8 +681,11 @@ app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'M
     }
 ]);
 
-app.controller('usersCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'UserService', 'toastr',
-    function ($scope, $rootScope, $timeout, $modal, UserService, toastr) {
+app.controller('usersCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'UserService', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, $location, UserService, toastr) {
+        if(localStorage.getItem("token")==null){
+            $location.path('home');
+        }
         $scope.retrieveAll = function () {
             UserService.retrieveAll()
                 .success(function(data) {
@@ -718,8 +744,11 @@ app.controller('usersCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'User
     }
 ]);
 
-app.controller('reservationsCtrl', ['$scope', '$rootScope', '$timeout', '$modal' ,'ReservationService', 'ActivityService', 'FileUploader', 'toastr',
-    function ($scope, $rootScope, $timeout, $modal, ReservationService, ActivityService, FileUploader, toastr) {
+app.controller('reservationsCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'ReservationService', 'ActivityService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, $location, ReservationService, ActivityService, FileUploader, toastr) {
+        if(localStorage.getItem("token")==null){
+            $location.path('home');
+        }
         $scope.retrieveAll = function () {
             ReservationService.retrieveAll()
                 .success(function(data) {
