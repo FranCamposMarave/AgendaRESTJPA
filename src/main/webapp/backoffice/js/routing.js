@@ -50,7 +50,11 @@ app.config(function($routeProvider) {
         })
         .when('/assignMonitors', {
             templateUrl : 'templates/assignMonitors.html',
-            controller 	: 'activitiesCtrl'
+            controller 	: 'asignMonitorCtrl'
+        })
+        .when('/manageMonitors', {
+            templateUrl : 'templates/manageMonitors.html',
+            controller 	: 'manageMonitorCtrl'
         })
         .when('/users', {
             templateUrl : 'templates/users.html',

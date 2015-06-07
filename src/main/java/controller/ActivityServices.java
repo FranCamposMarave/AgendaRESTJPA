@@ -43,6 +43,22 @@ public class ActivityServices {
     }
 
     @GET
+    @Path("/withoutMonitor")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response listAllActivitiesWithoutMonitor() {
+        Activity[] activities = activityDAO.listAllWithoutMonitor();
+        return Response.ok(activities).build();
+    }
+
+    @GET
+    @Path("/withMonitor")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response listAllActivitiesWithMonitor() {
+        Activity[] activities = activityDAO.listAllWithMonitor();
+        return Response.ok(activities).build();
+    }
+
+    @GET
     @Path("/category/{category}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response listAllActivitiesByCategory(@PathParam("category") String category) {

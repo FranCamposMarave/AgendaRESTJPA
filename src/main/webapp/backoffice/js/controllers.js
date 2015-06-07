@@ -705,6 +705,103 @@ app.controller('monitorsCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$
     }
 ]);
 
+app.controller('asignMonitorCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'ActivityService', 'MonitorService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, $location, ActivityService, MonitorService, FileUploader, toastr) {
+        if(localStorage.getItem("token")==null){
+            toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
+            $location.path('home');
+        }
+        $scope.retrieveAll = function () {
+            ActivityService.retrieveAllWithoutMonitor()
+                .success(function(data) {
+                    $scope.activities = data.activity;
+                    console.log("Retrieve activities (count): " + $scope.activities.length);
+                })
+        };
+
+        $scope.updateMonitor = function(a) {
+            ActivityService.updateActivity(a).success(function(data) {
+                toastr.success('El monitor ha sido modificado', 'Asignar Monitor');
+            });
+        };
+
+        MonitorService.retrieveAll()
+            .success(function(data) {
+                $scope.monitors = data.monitor;
+                console.log("Retrieve monitors (count): " + $scope.monitors.length);
+            });
+        $scope.retrieveAll();
+        $scope.retrieve = function(id) {
+            ActivityService.retrieveActivity(id)
+                .success(function(data) {
+                    $scope.currentActivity = data.activity;
+                    console.log("Retrieved activity: " + $scope.currentActivity.title);
+                })
+        };
+
+        $scope.openConfirmationModal = function (act) {
+            var modalInstance = $modal.open({
+                templateUrl: 'confirmationModalContent.html',
+                controller: 'confirmationModalCtrl',
+                resolve: {
+                    'activity': function () {
+                        return act;
+                    }
+                }
+            });
+        };
+
+        $rootScope.$on('toastMessage', function(event, toast){
+            $timeout( toast, 1000 );
+        });
+    }
+]);
+
+app.controller('manageMonitorCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'ActivityService', 'MonitorService', 'FileUploader', 'toastr',
+    function ($scope, $rootScope, $timeout, $modal, $location, ActivityService, MonitorService, FileUploader, toastr) {
+        if(localStorage.getItem("token")==null){
+            toastr.error('No estás logueado, logueate para utilizar el backoffice', 'Login');
+            $location.path('home');
+        }
+        $scope.retrieveAll = function () {
+            ActivityService.retrieveAllWithMonitor()
+                .success(function(data) {
+                    $scope.activities = data.activity;
+                    console.log("Retrieve activities (count): " + $scope.activities.length);
+                })
+        };
+
+        $scope.updateMonitor = function(a) {
+            ActivityService.updateActivity(a).success(function(data) {
+                toastr.success('El monitor ha sido modificado', 'Asignar Monitor');
+            });
+        };
+
+        MonitorService.retrieveAll()
+            .success(function(data) {
+                $scope.monitors = data.monitor;
+                console.log("Retrieve monitors (count): " + $scope.monitors.length);
+            });
+        $scope.retrieveAll();
+
+        $scope.openConfirmationModal = function (act) {
+            var modalInstance = $modal.open({
+                templateUrl: 'confirmationModalContent.html',
+                controller: 'confirmationModalCtrl',
+                resolve: {
+                    'activity': function () {
+                        return act;
+                    }
+                }
+            });
+        };
+
+        $rootScope.$on('toastMessage', function(event, toast){
+            $timeout( toast, 1000 );
+        });
+    }
+]);
+
 app.controller('usersCtrl', ['$scope', '$rootScope', '$timeout', '$modal', '$location', 'UserService', 'toastr',
     function ($scope, $rootScope, $timeout, $modal, $location, UserService, toastr) {
         if(localStorage.getItem("token")==null){

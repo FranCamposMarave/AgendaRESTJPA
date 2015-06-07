@@ -28,6 +28,22 @@ public class ActivityJPA {
         return activities;
     }
 
+    public Activity[] listAllWithoutMonitor() {
+        TypedQuery<Activity> query = em.createNamedQuery("Activity.getAllWithoutMonitor", Activity.class);
+        List<Activity> activitiesList = query.getResultList();
+        Activity[] activities = new Activity[activitiesList.size()];
+        activitiesList.toArray(activities);
+        return activities;
+    }
+
+    public Activity[] listAllWithMonitor() {
+        TypedQuery<Activity> query = em.createNamedQuery("Activity.getAllWithMonitor", Activity.class);
+        List<Activity> activitiesList = query.getResultList();
+        Activity[] activities = new Activity[activitiesList.size()];
+        activitiesList.toArray(activities);
+        return activities;
+    }
+
     public Activity[] listAllByCategory(String categoryName) {
         TypedQuery<Activity> query = em.createNamedQuery("Activity.getAllByCategory", Activity.class);
         query.setParameter("category", categoryName);

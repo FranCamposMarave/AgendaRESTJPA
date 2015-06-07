@@ -19,6 +19,14 @@
             //return $http.get(app.baseURI + app.activityURI + localStorage.getItem("token"));
         }
 
+        this.retrieveAllWithoutMonitor = function() {
+            return $http.get(app.baseURI + app.activityURI + "withoutMonitor/");
+        }
+
+        this.retrieveAllWithMonitor = function() {
+            return $http.get(app.baseURI + app.activityURI + "withMonitor/");
+        }
+
         this.addActivity = function (activity) {
             var url = app.baseURI + app.activityURI  +"a/" + localStorage.getItem("token");
             var data = "{activity:" + JSON.stringify(activity) + "}";

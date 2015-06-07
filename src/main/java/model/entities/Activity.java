@@ -12,10 +12,11 @@ import java.util.Date;
 })
 @NamedQueries({
         @NamedQuery(name="Activity.getAll", query = "SELECT a FROM Activity a"),
+        @NamedQuery(name="Activity.getAllWithoutMonitor", query = "SELECT a FROM Activity a WHERE a.monitor IS NULL"),
+        @NamedQuery(name="Activity.getAllWithMonitor", query = "SELECT a FROM Activity a WHERE a.monitor IS NOT NULL"),
         @NamedQuery(name="Activity.getAllByCategory", query = "SELECT a FROM Activity a JOIN a.category c WHERE c.title = :category"),
         @NamedQuery(name="Activity.get", query = "SELECT a FROM Activity a WHERE a.id = :id"),
         @NamedQuery(name="Activity.getByTitleDateCategory", query = "SELECT a FROM Activity a WHERE a.title = :title and a.date = :date and a.category = :category"),
-        //@NamedQuery(name="Activity.getByTitleDateCategory", query = "SELECT a FROM Activity a WHERE a.title = :title"),
         @NamedQuery(name="Activity.deleteById", query = "DELETE FROM Activity a WHERE a.id = :id")
 
 })
