@@ -130,24 +130,4 @@ public class MailService implements IMailService {
         }
     }
 
-
-    private String readFile(String fileName){
-        String content = "";
-        String line;
-        FileReader fr;
-        try {
-            URL pathFile = MailService.class.getResource(fileName);
-            System.out.println("URL: " + pathFile + " Filename: " + fileName );
-            fr = new FileReader( pathFile.getPath().toString() );
-            BufferedReader br = new BufferedReader(fr);
-            while( ( line = br.readLine() ) != null) {
-                content += line;
-            }
-            br.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return content;
-    }
-
 }

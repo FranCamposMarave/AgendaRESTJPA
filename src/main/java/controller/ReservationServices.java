@@ -78,6 +78,7 @@ public class ReservationServices {
         if (reservationDAO.delete(id)) {
             IMailService mailService = new MailService();
             mailService.sendInfoEmailReservationCancel( reservation );
+            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAÆ\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             return Response.status(Response.Status.ACCEPTED).build();
         } else {
             return Response.status(Response.Status.NOT_FOUND).build();
